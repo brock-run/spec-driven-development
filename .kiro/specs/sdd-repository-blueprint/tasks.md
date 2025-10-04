@@ -15,14 +15,14 @@
     - Add domain-specific template variations (frontend, backend, API, mobile)
     - _Requirements: 1.2, 4.1_
 
-  - [-] 2.2 Build interactive decision trees using Mermaid
+  - [x] 2.2 Build interactive decision trees using Mermaid
     - Create project initiation decision tree (SDD vs traditional, AI agent selection)
     - Implement integration decision tree for legacy systems and hybrid workflows
     - Build validation decision tree for spec quality gates and review checkpoints
     - Design escalation decision tree for human reviewer involvement
     - _Requirements: 2.1, 8.1_
 
-  - [ ] 2.3 Develop quality assurance checklists
+  - [-] 2.3 Develop quality assurance checklists
     - Write spec quality checklist with completeness and clarity criteria
     - Create cross-functional review checklist for alignment validation
     - Implement onboarding checklist for new team member integration
