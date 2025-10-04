@@ -8,14 +8,14 @@
   - _Requirements: 1.1, 7.1_
 
 - [-] 2. Implement core resource templates and decision trees
-  - [-] 2.1 Create GitHub Spec Kit compatible templates
+  - [x] 2.1 Create GitHub Spec Kit compatible templates
     - Write base spec.md template with user story and acceptance criteria sections
     - Create plan.md template for technical architecture and constraints
     - Implement tasks.md template with checkbox format and requirement references
     - Add domain-specific template variations (frontend, backend, API, mobile)
     - _Requirements: 1.2, 4.1_
 
-  - [ ] 2.2 Build interactive decision trees using Mermaid
+  - [-] 2.2 Build interactive decision trees using Mermaid
     - Create project initiation decision tree (SDD vs traditional, AI agent selection)
     - Implement integration decision tree for legacy systems and hybrid workflows
     - Build validation decision tree for spec quality gates and review checkpoints
