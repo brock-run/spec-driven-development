@@ -7,7 +7,7 @@
   - Set up initial README.md with project overview and navigation structure
   - _Requirements: 1.1, 7.1_
 
-- [-] 2. Implement core resource templates and decision trees
+- [x] 2. Implement core resource templates and decision trees
   - [x] 2.1 Create GitHub Spec Kit compatible templates
     - Write base spec.md template with user story and acceptance criteria sections
     - Create plan.md template for technical architecture and constraints
@@ -22,7 +22,7 @@
     - Design escalation decision tree for human reviewer involvement
     - _Requirements: 2.1, 8.1_
 
-  - [-] 2.3 Develop quality assurance checklists
+  - [x] 2.3 Develop quality assurance checklists
     - Write spec quality checklist with completeness and clarity criteria
     - Create cross-functional review checklist for alignment validation
     - Implement onboarding checklist for new team member integration
