@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spec-Driven Development with Spec-Kit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 50vh;
+        }
+        .flow-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            font-weight: 600;
+            flex-grow: 1;
+        }
+        .flow-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            line-height: 1;
+            color: #94a3b8;
+            padding: 0 1rem;
+            flex-shrink: 0;
+        }
+        pre {
+            background-color: #1e293b;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        @media (max-width: 1023px) {
+            .flow-arrow {
+                transform: rotate(90deg);
+                padding: 1rem 0;
+            }
+        }
+        .gemini-output {
+            white-space: pre-wrap;
+            background-color: #f1f5f9;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            min-height: 100px;
+            border: 1px solid #e2e8f0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 4px solid #0a9396;
+            width: 30px;
+            height: 30px;
+            -webkit-animation: spin 2s linear infinite; /* Safari */
+            animation: spin 2s linear infinite;
+            margin: 1rem auto;
+        }
+
+        /* Safari */
+        @-webkit-keyframes spin {
+          0% { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <header class="text-center mb-12 md:mb-16">
+            <h1 class="text-4xl md:text-6xl font-black" style="color: #005f73;">Spec-Driven Development with Spec-Kit</h1>
+            <p class="text-lg md:text-xl mt-4 text-gray-600 max-w-3xl mx-auto">A structured approach to AI-assisted development that produces reliable, high-quality code aligned with your intent.</p>
+        </header>
+
+        <section class="mb-12 md:mb-20">
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4" style="color: #0a9396;">The Challenge with AI Coding</h2>
+                    <p class="text-gray-600 mb-4">AI coding assistants can be powerful, but without structure, they often produce code that misses requirements, uses wrong patterns, or needs extensive rework. You spend more time fixing AI output than you would have coding it yourself.</p>
+                </div>
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4" style="color: #0a9396;">The Spec-Driven Solution</h2>
+                    <p class="text-gray-600">Spec-driven development separates <b style="color: #bb3e03;">what</b> you want from <b style="color: #bb3e03;">how</b> to build it. Instead of hoping the AI understands vague prompts, you provide explicit specifications and let the AI handle implementation details, leading to better results faster.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12 md:mb-20">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8" style="color: #0a9396;">The 5-Phase Spec-Kit Flow</h2>
+            <p class="text-center text-gray-600 mb-10 max-w-4xl mx-auto">Think of this as five green traffic lights you advance through. Each phase uses a slash-command in your AI agent to build upon the last, ensuring the AI stays aligned with your intent.</p>
+            <div class="flex flex-col lg:flex-row items-stretch justify-center gap-y-4">
+                <div class="flow-step" style="background-color: #e9d8a6; color: #ca6702;"><span>1. /constitution</span><span class="text-sm font-normal mt-1">Set Principles</span></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step" style="background-color: #94d2bd; color: #005f73;"><span>2. /specify</span><span class="text-sm font-normal mt-1">Define "What"</span></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step" style="background-color: #0a9396; color: white;"><span>3. /plan</span><span class="text-sm font-normal mt-1">Choose "How"</span></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step" style="background-color: #005f73; color: white;"><span>4. /tasks</span><span class="text-sm font-normal mt-1">Break Down Work</span></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step" style="background-color: #ae2012; color: white;"><span>5. /implement</span><span class="text-sm font-normal mt-1">Generate Code</span></div>
+            </div>
+        </section>
+
+        <section class="mb-12 md:mb-20">
+             <h2 class="text-2xl md:text-3xl font-bold text-center mb-8" style="color: #0a9396;">✨ AI-Powered Spec Assistant</h2>
+             <p class="text-center text-gray-600 mb-10 max-w-4xl mx-auto">Experience the core of Spec-Driven Development. Describe a feature, and let Gemini generate the functional spec and technical plan, just like the `/specify` and `/plan` commands.</p>
+             <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <div>
+                    <h3 class="font-bold text-xl mb-2" style="color: #005f73;">Step 1: Describe Your Feature (The "What")</h3>
+                    <p class="text-sm text-gray-600 mb-4">Enter a high-level description of the feature you want to build. Focus on user needs and goals, not technology.</p>
+                    <textarea id="feature-description" class="w-full h-32 p-2 border rounded-md" placeholder="e.g., A feature for users to upload a profile picture. It should support JPG/PNG, be under 5MB, and allow basic cropping."></textarea>
+                    <button id="generate-spec-btn" class="mt-4 w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">✨ Generate Functional Spec (/specify)</button>
+                    <div id="spec-loader" class="loader hidden"></div>
+                    <div id="spec-output-container" class="mt-4 hidden">
+                        <h4 class="font-bold text-lg mb-2">Generated Functional Spec:</h4>
+                        <div id="spec-output" class="gemini-output"></div>
+                    </div>
+                </div>
+
+                <div id="plan-section" class="mt-8 pt-8 border-t border-gray-200 hidden">
+                    <h3 class="font-bold text-xl mb-2" style="color: #005f73;">Step 2: Define Technical Constraints (The "How")</h3>
+                    <p class="text-sm text-gray-600 mb-4">Now, provide any technical constraints or preferences. The AI will use these and the spec above to create a technical plan.</p>
+                    <textarea id="tech-constraints" class="w-full h-24 p-2 border rounded-md" placeholder="e.g., Use React for the frontend and a Node.js/Express server. Store images in an S3 bucket."></textarea>
+                    <button id="generate-plan-btn" class="mt-4 w-full bg-green-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-700 transition-colors">✨ Generate Technical Plan (/plan)</button>
+                    <div id="plan-loader" class="loader hidden"></div>
+                    <div id="plan-output-container" class="mt-4 hidden">
+                        <h4 class="font-bold text-lg mb-2">Generated Technical Plan:</h4>
+                        <div id="plan-output" class="gemini-output"></div>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <section class="mb-12 md:mb-20">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8" style="color: #0a9396;">Framework vs. IDE: Spec-Kit and Kiro</h2>
+            <p class="text-center text-gray-600 mb-8 max-w-4xl mx-auto">Both Spec-Kit and Kiro champion a spec-driven approach to AI development, but they occupy different parts of the ecosystem. Spec-Kit is a flexible toolkit that enhances your existing tools, while Kiro provides a fully integrated, all-in-one environment.</p>
+            <div class="bg-white rounded-lg shadow-lg p-4 md:p-8">
+                <div class="chart-container">
+                    <canvas id="comparisonChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12 md:mb-20">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8" style="color: #0a9396;">Common Use Cases</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <span class="text-4xl">🔧</span>
+                    <h3 class="font-bold text-xl mt-2">APIs & Microservices</h3>
+                    <p class="text-gray-600 mt-2">Define endpoints, contracts, and logic in the spec, then let AI generate the boilerplate, controllers, and service layers.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <span class="text-4xl">🖼️</span>
+                    <h3 class="font-bold text-xl mt-2">Frontend Components</h3>
+                    <p class="text-gray-600 mt-2">Specify component behavior, props, and accessibility requirements to generate clean, reusable UI code for any framework.</p>
+                </div>
+                 <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <span class="text-4xl">🔗</span>
+                    <h3 class="font-bold text-xl mt-2">Data & ETL Pipelines</h3>
+                    <p class="text-gray-600 mt-2">Detail data sources, transformations, and destinations to scaffold complex data processing workflows and validation logic.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <span class="text-4xl">☁️</span>
+                    <h3 class="font-bold text-xl mt-2">Infrastructure as Code</h3>
+                    <p class="text-gray-600 mt-2">Describe required resources, networking rules, and permissions to generate configurations for Terraform, Pulumi, or CloudFormation.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <span class="text-4xl">🐛</span>
+                    <h3 class="font-bold text-xl mt-2">Complex Bug Fixes</h3>
+                    <p class="text-gray-600 mt-2">Specify the problem, expected behavior, and acceptance criteria to guide the AI in creating a well-documented and targeted fix.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <span class="text-4xl">🔄</span>
+                    <h3 class="font-bold text-xl mt-2">Component Refactoring</h3>
+                    <p class="text-gray-600 mt-2">Define the "before" and "after" state with measurable improvement goals (e.g., performance) to guide a structured refactor.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12 md:mb-20">
+             <h2 class="text-2xl md:text-3xl font-bold text-center mb-8" style="color: #0a9396;">Getting Started (TL;DR)</h2>
+             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-xl mb-4">New Project</h3>
+                    <pre><code># 1) Initialize a new SDD project
+uvx --from git+https://github.com/github/spec-kit.git specify init my-project --ai cursor
+
+# 2) Open in your AI agent
+cd my-project
+cursor .
+
+# 3) Run commands in your agent's chat
+# /constitution → /specify → /plan → /tasks → /implement</code></pre>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-xl mb-4">Existing Project</h3>
+                    <pre><code># 1) Add Spec Kit to your project root
+uvx --from git+https://github.com/github/spec-kit.git specify init --here --ai cursor
+
+# 2) Run commands in your agent's chat
+# /constitution → /specify → /plan → /tasks → /implement</code></pre>
+                </div>
+             </div>
+        </section>
+
+        <section class="mb-12 md:mb-20">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8" style="color: #0a9396;">Common Questions & Concerns</h2>
+            <div class="space-y-6">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg">"I'm faster coding it myself."</h3>
+                    <p class="text-gray-600 mt-1">Spec Kit leverages AI to handle boilerplate and repetitive patterns, letting you focus on architecture and business logic. It's about augmenting your skills, not replacing them.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg">"AI gives me inconsistent results."</h3>
+                    <p class="text-gray-600 mt-1">That's exactly why Spec Kit exists. The structured 5-phase flow gives AI clear, consistent guidance instead of relying on ad-hoc prompts.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="font-bold text-lg">"What if the AI generates bad code?"</h3>
+                    <p class="text-gray-600 mt-1">You own all generated code. Spec Kit makes review easier by breaking work into small, testable tasks with clear acceptance criteria. The AI is your assistant; you are the engineer responsible for the final result.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center mt-12 md:mt-20 border-t pt-8">
+            <h3 class="text-xl md:text-2xl font-bold mb-4" style="color: #0a9396;">Start Small, Go Complete</h3>
+            <p class="text-gray-600 max-w-3xl mx-auto">
+                The key to success is using the full 5-phase workflow on small, complete projects. Choose something you understand well, like adding a new API endpoint or refactoring a small component. The goal is to learn the process, not wrestle with unfamiliar domain knowledge.
+            </p>
+        </footer>
+
+    </div>
+
+    <script>
+        const ctx = document.getElementById('comparisonChart').getContext('2d');
+        const comparisonChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Integration with Existing Tools', 'All-in-One Environment', 'Learning Curve', 'Workflow Flexibility'],
+                datasets: [{
+                    label: 'Spec-Kit',
+                    data: [9, 2, 3, 8],
+                    backgroundColor: '#94d2bd',
+                    borderColor: '#94d2bd',
+                    borderWidth: 1
+                }, {
+                    label: 'Kiro',
+                    data: [2, 9, 7, 4],
+                    backgroundColor: '#005f73',
+                    borderColor: '#005f73',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 10,
+                        title: {
+                            display: true,
+                            text: 'Relative Score (1-10)'
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Tooling Approach Comparison: Toolkit vs. IDE',
+                        font: {
+                            size: 18
+                        }
+                    }
+                }
+            }
+        });
+
+        // Gemini API Integration
+        const generateSpecBtn = document.getElementById('generate-spec-btn');
+        const generatePlanBtn = document.getElementById('generate-plan-btn');
+        const featureDescriptionInput = document.getElementById('feature-description');
+        const techConstraintsInput = document.getElementById('tech-constraints');
+
+        const specLoader = document.getElementById('spec-loader');
+        const planLoader = document.getElementById('plan-loader');
+        
+        const specOutputContainer = document.getElementById('spec-output-container');
+        const planOutputContainer = document.getElementById('plan-output-container');
+
+        const specOutput = document.getElementById('spec-output');
+        const planOutput = document.getElementById('plan-output');
+
+        const planSection = document.getElementById('plan-section');
+
+        const apiKey = ""; // API key will be injected at runtime
+
+        async function callGemini(prompt) {
+            const model = 'gemini-2.5-flash-preview-05-20';
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }],
+            };
+            
+            // Exponential backoff
+            let response;
+            let delay = 1000;
+            for (let i = 0; i < 5; i++) {
+                try {
+                    response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    if (response.ok) {
+                        const result = await response.json();
+                        const candidate = result.candidates?.[0];
+                        if (candidate && candidate.content?.parts?.[0]?.text) {
+                            return candidate.content.parts[0].text;
+                        } else {
+                           return "Error: Could not generate a response. The model may have returned empty content.";
+                        }
+                    }
+                } catch (error) {
+                     console.error(`Attempt ${i + 1} failed. Retrying in ${delay}ms...`, error);
+                }
+                await new Promise(resolve => setTimeout(resolve, delay));
+                delay *= 2;
+            }
+            
+            return "An error occurred after multiple retries. Please check the console for more details.";
+        }
+
+        generateSpecBtn.addEventListener('click', async () => {
+            const description = featureDescriptionInput.value;
+            if (!description.trim()) {
+                specOutput.textContent = "Please enter a feature description first.";
+                specOutputContainer.classList.remove('hidden');
+                return;
+            }
+
+            specLoader.classList.remove('hidden');
+            specOutputContainer.classList.add('hidden');
+            planSection.classList.add('hidden');
+
+            const prompt = `Act as an expert product manager using the Spec-Driven Development methodology.
+            Based on the following feature description, create a functional specification.
+            The spec should focus ONLY on the "what," not the "how."
+            Structure the output with clear headings for:
+            1.  **User Stories:** (e.g., As a [user type], I want to [action] so that [benefit].)
+            2.  **Requirements & Constraints:** (List specific functional requirements, e.g., "Image must be under 5MB.")
+            3.  **Acceptance Criteria:** (A checklist of conditions that must be met for the feature to be considered complete.)
+            4.  **Out of Scope (Non-Goals):** (Explicitly state what this feature will NOT include.)
+
+            Do not mention any specific technologies, libraries, or implementation details.
+
+            Feature Description:
+            ---
+            ${description}
+            ---`;
+            
+            const spec = await callGemini(prompt);
+            
+            specOutput.textContent = spec;
+            specLoader.classList.add('hidden');
+            specOutputContainer.classList.remove('hidden');
+            planSection.classList.remove('hidden');
+        });
+
+        generatePlanBtn.addEventListener('click', async () => {
+            const spec = specOutput.textContent;
+            const constraints = techConstraintsInput.value;
+            if (!spec.trim()) {
+                planOutput.textContent = "Please generate a functional spec first.";
+                planOutputContainer.classList.remove('hidden');
+                return;
+            }
+
+            planLoader.classList.remove('hidden');
+            planOutputContainer.classList.add('hidden');
+
+            const prompt = `Act as an expert software architect using the Spec-Driven Development methodology.
+            You have been given a functional specification and a set of technical constraints.
+            Your task is to create a technical plan that describes "how" to build the feature.
+            Structure the output with clear headings for:
+            1.  **Proposed Architecture:** (High-level overview of the components and how they interact.)
+            2.  **Technology Stack:** (List the specific libraries, frameworks, and services to be used.)
+            3.  **Data Model:** (Describe any new database schemas, tables, or data structures.)
+            4.  **API Contract (if applicable):** (Define endpoints, request/response formats.)
+            5.  **Key Implementation Steps:** (A brief, high-level outline of the steps to build this.)
+
+            Functional Specification:
+            ---
+            ${spec}
+            ---
+
+            Technical Constraints:
+            ---
+            ${constraints}
+            ---`;
+
+            const plan = await callGemini(prompt);
+
+            planOutput.textContent = plan;
+            planLoader.classList.add('hidden');
+            planOutputContainer.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
+
