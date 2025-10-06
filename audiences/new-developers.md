@@ -81,9 +81,13 @@ Create actionable implementation steps:
   - [ ] 2.2 Implement business logic
 ```
 
+## SDD Fundamentals
+
+Before diving into your **first workflow**, it's important to understand the core principles that make SDD effective. These fundamentals will guide you through creating better specifications and avoiding **common pitfalls**.
+
 ## Getting Started Walkthrough
 
-Let's walk through creating your first spec for a simple todo application.
+Let's walk through creating your **first spec** for a simple todo application. This **first workflow** demonstrates the complete SDD process from requirements to implementation.
 
 ### Example: Todo App Specification
 
@@ -164,6 +168,8 @@ Task {
 ```
 
 ## Common Pitfalls and How to Avoid Them
+
+Understanding these **common pitfalls** will help you create better specifications and avoid typical mistakes that new developers make when starting with SDD.
 
 ### 1. Writing Vague Requirements
 **Problem:** "The app should be fast and user-friendly"

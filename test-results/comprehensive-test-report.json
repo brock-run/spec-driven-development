@@ -1,0 +1,70 @@
+{
+  "summary": {
+    "timestamp": "2025-10-04T18:04:46.927656",
+    "total_duration": 0.6008319854736328,
+    "total_tests": 4,
+    "passed_tests": 3,
+    "failed_tests": 1,
+    "success_rate": 75.0,
+    "quality_score": 60.0
+  },
+  "test_breakdown": {
+    "required_tests": {
+      "total": 4,
+      "passed": 3,
+      "failed": 1,
+      "success_rate": 75.0
+    },
+    "optional_tests": {
+      "total": 0,
+      "passed": 0,
+      "failed": 0,
+      "success_rate": 0
+    }
+  },
+  "detailed_results": [
+    {
+      "suite_name": "Template Validation",
+      "success": false,
+      "duration": 0.35886096954345703,
+      "exit_code": 1,
+      "required": true,
+      "error_summary": null
+    },
+    {
+      "suite_name": "Example Validation",
+      "success": true,
+      "duration": 0.09640288352966309,
+      "exit_code": 0,
+      "required": true,
+      "error_summary": null
+    },
+    {
+      "suite_name": "Content Validation",
+      "success": true,
+      "duration": 1.0,
+      "exit_code": 0,
+      "required": true,
+      "error_summary": null
+    },
+    {
+      "suite_name": "User Journey Testing",
+      "success": true,
+      "duration": 0.1435542106628418,
+      "exit_code": 0,
+      "required": true,
+      "error_summary": null
+    }
+  ],
+  "critical_issues": [
+    {
+      "suite": "Template Validation",
+      "error": ""
+    }
+  ],
+  "recommendations": [
+    "Fix 1 critical test failures before deployment",
+    "Consider running optional test suites for comprehensive validation",
+    "Repository quality below 80% - review and improve failing areas"
+  ]
+}

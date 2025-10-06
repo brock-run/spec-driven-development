@@ -1,0 +1,76 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Show and Tell 🎉
+        
+        Share your SDD implementation, success story, or interesting use case with the community!
+
+  - type: input
+    id: project_name
+    attributes:
+      label: Project/Implementation Name
+      description: What's the name of your project or implementation?
+      placeholder: e.g., "E-commerce API Redesign", "Mobile App SDD Workflow"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Tell us about your implementation, what you built, and what made it interesting
+      placeholder: Describe your project, the challenges you faced, and how SDD helped
+    validations:
+      required: true
+
+  - type: dropdown
+    id: project_type
+    attributes:
+      label: Project Type
+      options:
+        - Greenfield Development
+        - Legacy System Integration
+        - Feature Addition
+        - Complete Modernization
+        - Process Improvement
+        - Other
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: tools_used
+    attributes:
+      label: Tools and Technologies Used
+      options:
+        - label: GitHub Spec Kit
+        - label: ChatPRD
+        - label: GitHub Copilot
+        - label: Claude
+        - label: Kiro IDE
+        - label: Cursor IDE
+        - label: Custom AI agents
+        - label: Other (specify in description)
+
+  - type: textarea
+    id: outcomes
+    attributes:
+      label: Results and Outcomes
+      description: What were the results? Metrics, improvements, lessons learned?
+      placeholder: Development time, code quality improvements, team satisfaction, etc.
+
+  - type: textarea
+    id: lessons_learned
+    attributes:
+      label: Key Lessons Learned
+      description: What would you do differently? What advice would you give others?
+      placeholder: Share insights that could help other teams
+
+  - type: checkboxes
+    id: sharing_permissions
+    attributes:
+      label: Sharing Permissions
+      options:
+        - label: I'm okay with this being featured in case studies or documentation
+        - label: I'm available for follow-up questions from the community
+        - label: I can provide additional details or resources if needed

@@ -1,0 +1,126 @@
+{
+  "summary": {
+    "total_journeys": 5,
+    "successful_journeys": 3,
+    "overall_success_rate": 76.66666666666666,
+    "average_completion_time": 0.0025522708892822266,
+    "timestamp": "2025-10-04 18:04:46"
+  },
+  "user_type_performance": {
+    "new_developer": {
+      "journeys_tested": 1,
+      "average_success_rate": 100.0,
+      "total_issues": 0,
+      "journeys": [
+        {
+          "name": "Complete Onboarding",
+          "success_rate": 100.0,
+          "completed_steps": "5/5",
+          "issues": []
+        }
+      ]
+    },
+    "experienced_developer": {
+      "journeys_tested": 1,
+      "average_success_rate": 50.0,
+      "total_issues": 2,
+      "journeys": [
+        {
+          "name": "Advanced Implementation",
+          "success_rate": 50.0,
+          "completed_steps": "2/4",
+          "issues": [
+            "Failed step: Legacy Integration Example",
+            "Failed step: Advanced Workflows"
+          ]
+        }
+      ]
+    },
+    "product_manager": {
+      "journeys_tested": 1,
+      "average_success_rate": 100.0,
+      "total_issues": 0,
+      "journeys": [
+        {
+          "name": "Requirements Management",
+          "success_rate": 100.0,
+          "completed_steps": "3/3",
+          "issues": []
+        }
+      ]
+    },
+    "team_lead": {
+      "journeys_tested": 1,
+      "average_success_rate": 100.0,
+      "total_issues": 0,
+      "journeys": [
+        {
+          "name": "Team Implementation",
+          "success_rate": 100.0,
+          "completed_steps": "3/3",
+          "issues": []
+        }
+      ]
+    },
+    "specialist": {
+      "journeys_tested": 1,
+      "average_success_rate": 33.33333333333333,
+      "total_issues": 2,
+      "journeys": [
+        {
+          "name": "Domain Implementation",
+          "success_rate": 33.33333333333333,
+          "completed_steps": "1/3",
+          "issues": [
+            "Failed step: Specialist Guidance",
+            "Failed step: Domain Template"
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [
+    "Improve resources/templates/frontend/spec.md for Domain-specific template structure",
+    "Improve examples/legacy-integration/payment-modernization/spec.md for Real-world integration example",
+    "Improve how-to/advanced-flows.md for Advanced implementation patterns",
+    "Improve audiences/specialists.md for Role-specific SDD guidance"
+  ],
+  "detailed_results": [
+    {
+      "user_type": "new_developer",
+      "journey": "Complete Onboarding",
+      "success_rate": 100.0,
+      "issues": []
+    },
+    {
+      "user_type": "experienced_developer",
+      "journey": "Advanced Implementation",
+      "success_rate": 50.0,
+      "issues": [
+        "Failed step: Legacy Integration Example",
+        "Failed step: Advanced Workflows"
+      ]
+    },
+    {
+      "user_type": "product_manager",
+      "journey": "Requirements Management",
+      "success_rate": 100.0,
+      "issues": []
+    },
+    {
+      "user_type": "team_lead",
+      "journey": "Team Implementation",
+      "success_rate": 100.0,
+      "issues": []
+    },
+    {
+      "user_type": "specialist",
+      "journey": "Domain Implementation",
+      "success_rate": 33.33333333333333,
+      "issues": [
+        "Failed step: Specialist Guidance",
+        "Failed step: Domain Template"
+      ]
+    }
+  ]
+}

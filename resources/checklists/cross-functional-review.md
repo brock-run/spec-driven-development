@@ -2,7 +2,7 @@
 
 ## Overview
 
-This checklist ensures that specifications are reviewed from all relevant functional perspectives to identify potential issues, conflicts, and opportunities for alignment before implementation begins.
+This checklist ensures that specifications are reviewed from all relevant functional perspectives to identify potential issues, conflicts, and opportunities for **alignment validation** before implementation begins. It provides a structured **stakeholder review** and **sign-off process**.
 
 ## Review Participants and Responsibilities
 

@@ -1,0 +1,57 @@
+{
+  "summary": {
+    "total_tests": 132,
+    "successful_tests": 132,
+    "success_rate": 100.0,
+    "timestamp": "2025-10-04 17:58:44"
+  },
+  "agent_performance": {
+    "github_copilot": {
+      "total_tests": 33,
+      "successful_tests": 33,
+      "average_quality": 4.818181818181818,
+      "average_response_time": 0.10176320509477095
+    },
+    "claude": {
+      "total_tests": 33,
+      "successful_tests": 33,
+      "average_quality": 4.818181818181818,
+      "average_response_time": 0.10206062865979744
+    },
+    "gemini": {
+      "total_tests": 33,
+      "successful_tests": 33,
+      "average_quality": 4.818181818181818,
+      "average_response_time": 0.10141557635683002
+    },
+    "chatgpt": {
+      "total_tests": 33,
+      "successful_tests": 33,
+      "average_quality": 4.818181818181818,
+      "average_response_time": 0.10137414932250977
+    }
+  },
+  "test_type_performance": {
+    "template_compatibility": {
+      "total_tests": 84,
+      "successful_tests": 84,
+      "success_rate": 100.0
+    },
+    "spec_understanding": {
+      "total_tests": 36,
+      "successful_tests": 36,
+      "success_rate": 100.0
+    },
+    "code_generation": {
+      "total_tests": 12,
+      "successful_tests": 12,
+      "success_rate": 100.0
+    }
+  },
+  "issues": {
+    "errors": [],
+    "warnings": [
+      "Missing SHALL statements for clear requirements"
+    ]
+  }
+}

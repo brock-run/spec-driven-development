@@ -1,0 +1,381 @@
+name: Content Validation
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    # Run weekly to check for broken links
+    - cron: '0 0 * * 0'
+
+jobs:
+  markdown-lint:
+    name: Markdown Linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm install -g markdownlint-cli2
+          npm install -g markdown-link-check
+
+      - name: Run markdown linting
+        run: markdownlint-cli2 "**/*.md" "#node_modules"
+
+      - name: Check markdown formatting
+        run: |
+          # Check for consistent heading styles
+          echo "Checking heading consistency..."
+          find . -name "*.md" -not -path "./node_modules/*" -exec grep -H "^#" {} \; | \
+          grep -E "^[^:]+:#{1,6}[^#\s]" && echo "❌ Found headings without space after #" && exit 1 || echo "✅ Heading format is consistent"
+
+  link-check:
+    name: Link Validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install link checker
+        run: npm install -g markdown-link-check
+
+      - name: Create link check config
+        run: |
+          cat > .markdown-link-check.json << 'EOF'
+          {
+            "ignorePatterns": [
+              {
+                "pattern": "^http://localhost"
+              },
+              {
+                "pattern": "^https://localhost"
+              }
+            ],
+            "replacementPatterns": [
+              {
+                "pattern": "^/",
+                "replacement": "{{BASEURL}}/"
+              }
+            ],
+            "httpHeaders": [
+              {
+                "urls": ["https://github.com"],
+                "headers": {
+                  "Accept": "text/html"
+                }
+              }
+            ],
+            "timeout": "20s",
+            "retryOn429": true,
+            "retryCount": 3,
+            "fallbackRetryDelay": "30s",
+            "aliveStatusCodes": [200, 206]
+          }
+          EOF
+
+      - name: Check links in markdown files
+        run: |
+          find . -name "*.md" -not -path "./node_modules/*" | \
+          xargs -I {} markdown-link-check {} --config .markdown-link-check.json
+
+  template-validation:
+    name: Template Structure Validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Validate template structure
+        run: |
+          echo "Validating template structure..."
+          
+          # Check base templates exist
+          required_base_templates=("spec.md" "plan.md" "tasks.md")
+          for template in "${required_base_templates[@]}"; do
+            if [ ! -f "resources/templates/base/$template" ]; then
+              echo "❌ Missing base template: $template"
+              exit 1
+            fi
+          done
+          echo "✅ Base templates found"
+          
+          # Validate template format
+          echo "Checking template format..."
+          find resources/templates -name "*.md" -exec bash -c '
+            file="$1"
+            echo "Validating: $file"
+            
+            # Check for placeholder format [description]
+            if ! grep -q "\[.*\]" "$file"; then
+              echo "⚠️  Warning: $file may be missing placeholders"
+            fi
+            
+            # Check for requirement references
+            if grep -q "_Requirements:" "$file"; then
+              echo "✅ $file has requirement references"
+            else
+              echo "⚠️  Warning: $file may be missing requirement references"
+            fi
+          ' _ {} \;
+
+      - name: Validate decision tree syntax
+        run: |
+          echo "Validating decision trees..."
+          find resources/decision-trees -name "*.md" -exec bash -c '
+            file="$1"
+            echo "Checking: $file"
+            
+            # Check for Mermaid syntax
+            if grep -q "```mermaid" "$file"; then
+              echo "✅ $file contains Mermaid diagram"
+            else
+              echo "⚠️  Warning: $file may be missing Mermaid diagram"
+            fi
+          ' _ {} \;
+
+  content-quality:
+    name: Content Quality Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check file naming conventions
+        run: |
+          echo "Checking file naming conventions..."
+          
+          # Check for kebab-case in file names
+          find . -name "*.md" -not -path "./node_modules/*" -not -path "./.git/*" | while read file; do
+            basename=$(basename "$file" .md)
+            if [[ ! "$basename" =~ ^[a-z0-9]+(-[a-z0-9]+)*$ ]] && [[ "$basename" != "README" ]] && [[ "$basename" != "CONTRIBUTING" ]] && [[ "$basename" != "CODE_OF_CONDUCT" ]]; then
+              echo "⚠️  Warning: $file may not follow kebab-case convention"
+            fi
+          done
+
+      - name: Check for consistent terminology
+        run: |
+          echo "Checking terminology consistency..."
+          
+          # Check for consistent SDD terminology
+          inconsistent_terms=(
+            "spec driven development:Spec-Driven Development"
+            "spec-driven-development:Spec-Driven Development"  
+            "AI agent:AI agent"
+            "Github:GitHub"
+            "github:GitHub"
+          )
+          
+          for term_pair in "${inconsistent_terms[@]}"; do
+            incorrect="${term_pair%%:*}"
+            correct="${term_pair##*:}"
+            
+            if grep -r -i "$incorrect" --include="*.md" . --exclude-dir=node_modules --exclude-dir=.git; then
+              echo "⚠️  Found potentially inconsistent term: '$incorrect' (should be '$correct')"
+            fi
+          done
+
+      - name: Validate cross-references
+        run: |
+          echo "Validating internal cross-references..."
+          
+          # Find all internal markdown links
+          find . -name "*.md" -not -path "./node_modules/*" -not -path "./.git/*" -exec grep -H "\]\([^)]*\.md[^)]*\)" {} \; | while IFS: read -r file link; do
+            # Extract the file path from the link
+            link_path=$(echo "$link" | sed -n 's/.*](\([^)]*\.md[^)]*\)).*/\1/p')
+            
+            # Remove any anchors
+            clean_path=$(echo "$link_path" | cut -d'#' -f1)
+            
+            # Check if it's a relative path
+            if [[ "$clean_path" != http* ]] && [[ "$clean_path" != /* ]]; then
+              # Resolve relative path
+              dir=$(dirname "$file")
+              full_path="$dir/$clean_path"
+              
+              # Normalize path
+              normalized_path=$(realpath -m "$full_path" 2>/dev/null || echo "$full_path")
+              
+              if [ ! -f "$normalized_path" ]; then
+                echo "❌ Broken internal link in $file: $link_path"
+                echo "   Resolved to: $normalized_path"
+              fi
+            fi
+          done
+
+  spell-check:
+    name: Spell Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install cspell
+        run: npm install -g cspell
+
+      - name: Create cspell config
+        run: |
+          cat > .cspell.json << 'EOF'
+          {
+            "version": "0.2",
+            "language": "en",
+            "words": [
+              "SDD",
+              "Spec",
+              "ChatPRD",
+              "Copilot",
+              "Kiro",
+              "Mermaid",
+              "kebab",
+              "PRD",
+              "PRDs",
+              "API",
+              "APIs",
+              "GitHub",
+              "GitBook",
+              "markdownlint",
+              "frontend",
+              "backend",
+              "fullstack",
+              "DevOps",
+              "CI",
+              "CD",
+              "YAML",
+              "JSON",
+              "TypeScript",
+              "JavaScript",
+              "Node.js",
+              "npm",
+              "repo",
+              "repos",
+              "codebase",
+              "codebases",
+              "workflow",
+              "workflows",
+              "checkbox",
+              "checkboxes",
+              "TODO",
+              "TODOs",
+              "README",
+              "CONTRIBUTING",
+              "changelog",
+              "changelogs",
+              "versioning",
+              "semver",
+              "linting",
+              "linter",
+              "linters",
+              "refactor",
+              "refactoring",
+              "refactored",
+              "scalable",
+              "scalability",
+              "maintainable",
+              "maintainability",
+              "extensible",
+              "extensibility",
+              "interoperability",
+              "observability",
+              "traceability",
+              "reproducible",
+              "reproducibility"
+            ],
+            "flagWords": [],
+            "ignorePaths": [
+              "node_modules/**",
+              ".git/**",
+              "*.log",
+              "*.lock"
+            ],
+            "overrides": [
+              {
+                "filename": "**/*.md",
+                "ignoreRegExpList": [
+                  "/```[\\s\\S]*?```/g",
+                  "/`[^`]*`/g",
+                  "/\\[.*?\\]\\(.*?\\)/g",
+                  "/https?:\\/\\/[^\\s)]+/g"
+                ]
+              }
+            ]
+          }
+          EOF
+
+      - name: Run spell check
+        run: |
+          echo "Running spell check..."
+          cspell "**/*.md" --no-progress --show-context || {
+            echo "❌ Spell check found issues"
+            echo "💡 Add technical terms to .cspell.json words array"
+            exit 1
+          }
+          echo "✅ Spell check passed"
+
+  validation-summary:
+    name: Validation Summary
+    runs-on: ubuntu-latest
+    needs: [markdown-lint, link-check, template-validation, content-quality, spell-check]
+    if: always()
+    steps:
+      - name: Check validation results
+        run: |
+          echo "## Validation Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ "${{ needs.markdown-lint.result }}" == "success" ]; then
+            echo "✅ Markdown Linting: Passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ Markdown Linting: Failed" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          if [ "${{ needs.link-check.result }}" == "success" ]; then
+            echo "✅ Link Validation: Passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ Link Validation: Failed" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          if [ "${{ needs.template-validation.result }}" == "success" ]; then
+            echo "✅ Template Validation: Passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ Template Validation: Failed" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          if [ "${{ needs.content-quality.result }}" == "success" ]; then
+            echo "✅ Content Quality: Passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ Content Quality: Failed" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          if [ "${{ needs.spell-check.result }}" == "success" ]; then
+            echo "✅ Spell Check: Passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ Spell Check: Failed" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          # Fail if any critical checks failed
+          if [ "${{ needs.markdown-lint.result }}" != "success" ] || [ "${{ needs.template-validation.result }}" != "success" ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "❌ **Critical validation checks failed. Please fix the issues above.**" >> $GITHUB_STEP_SUMMARY
+            exit 1
+          fi
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "🎉 **All validation checks completed successfully!**" >> $GITHUB_STEP_SUMMARY

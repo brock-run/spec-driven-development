@@ -1,0 +1,374 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SDD Content Taxonomy",
+  "description": "Comprehensive taxonomy for organizing and categorizing SDD content",
+  "version": "1.0.0",
+  "categories": {
+    "content_types": {
+      "description": "Primary content type classification",
+      "values": {
+        "template": {
+          "description": "Reusable templates for specifications, plans, and tasks",
+          "subcategories": ["spec", "plan", "tasks", "custom"]
+        },
+        "guide": {
+          "description": "Step-by-step instructional content",
+          "subcategories": ["how-to", "tutorial", "walkthrough", "quickstart"]
+        },
+        "reference": {
+          "description": "Reference materials and documentation",
+          "subcategories": ["api-docs", "glossary", "checklists", "standards"]
+        },
+        "decision-aid": {
+          "description": "Tools for making decisions",
+          "subcategories": ["decision-tree", "flowchart", "comparison-matrix", "framework"]
+        },
+        "training": {
+          "description": "Educational and learning materials",
+          "subcategories": ["course", "exercise", "assessment", "case-study"]
+        },
+        "example": {
+          "description": "Real-world examples and samples",
+          "subcategories": ["sample-spec", "case-study", "success-story", "anti-pattern"]
+        }
+      }
+    },
+    "domains": {
+      "description": "Technical domain or specialization area",
+      "values": {
+        "base": {
+          "description": "Foundation templates and guides applicable to all domains",
+          "aliases": ["foundation", "core", "universal"]
+        },
+        "api": {
+          "description": "API design and development",
+          "aliases": ["rest", "graphql", "grpc", "web-services"]
+        },
+        "backend": {
+          "description": "Backend services and systems",
+          "aliases": ["server", "services", "microservices"]
+        },
+        "frontend": {
+          "description": "User interface and client-side development",
+          "aliases": ["ui", "client", "web-frontend", "mobile-frontend"]
+        },
+        "mobile": {
+          "description": "Mobile application development",
+          "aliases": ["ios", "android", "react-native", "flutter"]
+        },
+        "devops": {
+          "description": "DevOps, infrastructure, and deployment",
+          "aliases": ["infrastructure", "deployment", "ci-cd", "automation"]
+        },
+        "data": {
+          "description": "Data engineering and analytics",
+          "aliases": ["data-engineering", "analytics", "etl", "data-pipeline"]
+        },
+        "ml": {
+          "description": "Machine learning and AI",
+          "aliases": ["machine-learning", "ai", "data-science", "mlops"]
+        },
+        "security": {
+          "description": "Security and compliance",
+          "aliases": ["cybersecurity", "compliance", "privacy", "auth"]
+        },
+        "testing": {
+          "description": "Testing and quality assurance",
+          "aliases": ["qa", "quality-assurance", "test-automation"]
+        }
+      }
+    },
+    "audiences": {
+      "description": "Target audience for the content",
+      "values": {
+        "new-developer": {
+          "description": "Developers new to SDD or software development",
+          "characteristics": ["learning-fundamentals", "needs-guidance", "step-by-step"]
+        },
+        "experienced-developer": {
+          "description": "Experienced developers adopting SDD practices",
+          "characteristics": ["advanced-techniques", "integration-focused", "efficiency-oriented"]
+        },
+        "product-manager": {
+          "description": "Product managers working with development teams",
+          "characteristics": ["business-focused", "cross-functional", "requirement-oriented"]
+        },
+        "team-lead": {
+          "description": "Technical leads and engineering managers",
+          "characteristics": ["governance-focused", "process-oriented", "team-management"]
+        },
+        "specialist": {
+          "description": "Domain specialists (QA, DevOps, Security, etc.)",
+          "characteristics": ["domain-expertise", "integration-focused", "best-practices"]
+        },
+        "architect": {
+          "description": "Software architects and system designers",
+          "characteristics": ["system-design", "architectural-decisions", "scalability"]
+        },
+        "executive": {
+          "description": "Engineering executives and decision makers",
+          "characteristics": ["strategic-overview", "roi-focused", "organizational-impact"]
+        },
+        "all": {
+          "description": "Content suitable for all audiences",
+          "characteristics": ["universal-concepts", "foundational", "broadly-applicable"]
+        }
+      }
+    },
+    "complexity_levels": {
+      "description": "Complexity or difficulty level of the content",
+      "values": {
+        "basic": {
+          "description": "Introductory level, minimal prerequisites",
+          "characteristics": ["fundamental-concepts", "step-by-step", "well-explained"]
+        },
+        "intermediate": {
+          "description": "Moderate complexity, some experience assumed",
+          "characteristics": ["building-on-basics", "practical-application", "some-prerequisites"]
+        },
+        "advanced": {
+          "description": "High complexity, significant experience required",
+          "characteristics": ["expert-level", "complex-scenarios", "deep-knowledge"]
+        }
+      }
+    },
+    "ai_compatibility": {
+      "description": "AI agents and tools the content is optimized for",
+      "values": {
+        "github-copilot": {
+          "description": "GitHub Copilot integration and optimization",
+          "features": ["code-completion", "suggestion-context", "github-integration"]
+        },
+        "claude": {
+          "description": "Anthropic Claude AI assistant",
+          "features": ["long-context", "reasoning", "code-analysis"]
+        },
+        "chatgpt": {
+          "description": "OpenAI ChatGPT and GPT models",
+          "features": ["conversational", "code-generation", "explanation"]
+        },
+        "cursor": {
+          "description": "Cursor AI code editor",
+          "features": ["code-editing", "refactoring", "ai-pair-programming"]
+        },
+        "kiro": {
+          "description": "Kiro AI development environment",
+          "features": ["spec-driven", "workflow-automation", "integrated-development"]
+        },
+        "github-spec-kit": {
+          "description": "GitHub Spec Kit tooling",
+          "features": ["spec-commands", "workflow-integration", "github-native"]
+        },
+        "generic": {
+          "description": "Compatible with multiple AI agents",
+          "features": ["standard-format", "widely-supported", "tool-agnostic"]
+        }
+      }
+    },
+    "use_cases": {
+      "description": "Common use cases and scenarios",
+      "values": {
+        "greenfield": {
+          "description": "New projects starting from scratch",
+          "characteristics": ["clean-slate", "best-practices", "modern-approaches"]
+        },
+        "legacy-integration": {
+          "description": "Working with existing legacy systems",
+          "characteristics": ["incremental-adoption", "compatibility", "migration-focused"]
+        },
+        "feature-addition": {
+          "description": "Adding new features to existing systems",
+          "characteristics": ["iterative-development", "integration-points", "impact-analysis"]
+        },
+        "modernization": {
+          "description": "Modernizing existing systems and processes",
+          "characteristics": ["transformation", "risk-management", "phased-approach"]
+        },
+        "team-onboarding": {
+          "description": "Bringing new team members up to speed",
+          "characteristics": ["knowledge-transfer", "training-focused", "practical-examples"]
+        },
+        "process-improvement": {
+          "description": "Improving existing development processes",
+          "characteristics": ["optimization", "efficiency", "quality-improvement"]
+        },
+        "compliance": {
+          "description": "Meeting regulatory or organizational requirements",
+          "characteristics": ["documentation", "traceability", "audit-ready"]
+        },
+        "scaling": {
+          "description": "Scaling development practices across teams",
+          "characteristics": ["standardization", "governance", "consistency"]
+        }
+      }
+    },
+    "maturity_levels": {
+      "description": "Organizational maturity level for SDD adoption",
+      "values": {
+        "initial": {
+          "description": "Just starting with SDD practices",
+          "characteristics": ["basic-concepts", "pilot-projects", "learning-focused"]
+        },
+        "developing": {
+          "description": "Building SDD capabilities",
+          "characteristics": ["expanding-usage", "process-refinement", "skill-building"]
+        },
+        "defined": {
+          "description": "Established SDD processes",
+          "characteristics": ["standardized-processes", "consistent-application", "measured-outcomes"]
+        },
+        "managed": {
+          "description": "Quantitatively managed SDD practices",
+          "characteristics": ["metrics-driven", "continuous-improvement", "predictable-outcomes"]
+        },
+        "optimizing": {
+          "description": "Continuously improving SDD practices",
+          "characteristics": ["innovation", "best-practices", "industry-leading"]
+        }
+      }
+    },
+    "integration_points": {
+      "description": "How content integrates with tools and workflows",
+      "values": {
+        "ide-native": {
+          "description": "Integrated directly into development environments",
+          "tools": ["vscode", "cursor", "kiro", "jetbrains"]
+        },
+        "cli-tools": {
+          "description": "Command-line tool integration",
+          "tools": ["github-spec-kit", "custom-scripts", "automation"]
+        },
+        "web-platforms": {
+          "description": "Web-based platform integration",
+          "tools": ["github", "gitlab", "notion", "confluence"]
+        },
+        "ai-agents": {
+          "description": "AI agent and assistant integration",
+          "tools": ["copilot", "claude", "chatgpt", "custom-agents"]
+        },
+        "project-management": {
+          "description": "Project management tool integration",
+          "tools": ["jira", "linear", "asana", "trello"]
+        },
+        "documentation": {
+          "description": "Documentation platform integration",
+          "tools": ["gitbook", "notion", "confluence", "wiki"]
+        }
+      }
+    },
+    "quality_attributes": {
+      "description": "Quality characteristics of the content",
+      "values": {
+        "completeness": {
+          "description": "Content covers all necessary aspects",
+          "indicators": ["comprehensive", "thorough", "no-gaps"]
+        },
+        "clarity": {
+          "description": "Content is clear and understandable",
+          "indicators": ["well-written", "unambiguous", "easy-to-follow"]
+        },
+        "accuracy": {
+          "description": "Content is technically correct and up-to-date",
+          "indicators": ["verified", "current", "fact-checked"]
+        },
+        "usability": {
+          "description": "Content is easy to use and apply",
+          "indicators": ["practical", "actionable", "user-friendly"]
+        },
+        "maintainability": {
+          "description": "Content can be easily updated and maintained",
+          "indicators": ["modular", "version-controlled", "documented"]
+        },
+        "accessibility": {
+          "description": "Content is accessible to diverse users",
+          "indicators": ["inclusive", "barrier-free", "universal-design"]
+        }
+      }
+    }
+  },
+  "tagging_guidelines": {
+    "description": "Guidelines for applying taxonomy tags to content",
+    "rules": [
+      {
+        "rule": "Every piece of content must have at least one content_type tag",
+        "required": true
+      },
+      {
+        "rule": "Domain tags should reflect the primary technical focus",
+        "required": true
+      },
+      {
+        "rule": "Audience tags should include all relevant target users",
+        "required": true
+      },
+      {
+        "rule": "Complexity level must be specified for all content",
+        "required": true
+      },
+      {
+        "rule": "AI compatibility tags should list all tested/optimized agents",
+        "required": false
+      },
+      {
+        "rule": "Use case tags help users find relevant content for their situation",
+        "required": false
+      },
+      {
+        "rule": "Quality attribute tags help assess content fitness for purpose",
+        "required": false
+      }
+    ],
+    "best_practices": [
+      "Use specific tags rather than generic ones when possible",
+      "Include both primary and secondary audience tags",
+      "Tag content with actual tested AI compatibility, not assumptions",
+      "Update tags when content is revised or updated",
+      "Use aliases consistently across related content",
+      "Consider user search patterns when selecting tags"
+    ]
+  },
+  "search_facets": {
+    "description": "Faceted search configuration for content discovery",
+    "primary_facets": ["content_types", "domains", "audiences", "complexity_levels"],
+    "secondary_facets": ["ai_compatibility", "use_cases", "maturity_levels"],
+    "filter_combinations": [
+      {
+        "name": "New Developer Resources",
+        "filters": {
+          "audiences": ["new-developer"],
+          "complexity_levels": ["basic", "intermediate"]
+        }
+      },
+      {
+        "name": "AI-Optimized Templates",
+        "filters": {
+          "content_types": ["template"],
+          "ai_compatibility": ["github-copilot", "claude", "chatgpt", "cursor", "kiro"]
+        }
+      },
+      {
+        "name": "Legacy Integration Guides",
+        "filters": {
+          "content_types": ["guide"],
+          "use_cases": ["legacy-integration", "modernization"]
+        }
+      }
+    ]
+  },
+  "content_relationships": {
+    "description": "How different content pieces relate to each other",
+    "relationship_types": {
+      "extends": "Content that builds upon or extends other content",
+      "requires": "Content that has prerequisites or dependencies",
+      "complements": "Content that works well together",
+      "replaces": "Content that supersedes older content",
+      "references": "Content that references or links to other content"
+    },
+    "navigation_patterns": [
+      "Template → Guide → Example",
+      "Decision Tree → Template → Tasks",
+      "Training → Exercise → Assessment",
+      "Overview → Deep Dive → Reference"
+    ]
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "template": {
+    "name": "Base Specification Template",
+    "version": "1.0.0",
+    "type": "spec",
+    "domain": "base",
+    "complexity": "basic",
+    "audience": ["new-developer", "experienced-developer", "product-manager", "all"],
+    "description": "Foundation template for creating detailed specifications with user stories and acceptance criteria",
+    "ai_compatibility": ["github-copilot", "claude", "chatgpt", "cursor", "kiro", "generic"],
+    "requirements": ["1.2", "4.1"],
+    "tags": ["specification", "user-stories", "acceptance-criteria", "EARS", "base-template"]
+  },
+  "structure": {
+    "sections": [
+      {
+        "name": "Overview",
+        "required": true,
+        "description": "High-level description of the feature or functionality",
+        "subsections": ["Purpose", "Scope", "Success Criteria"]
+      },
+      {
+        "name": "User Stories",
+        "required": true,
+        "description": "User-centered descriptions of functionality",
+        "subsections": ["Primary User Stories", "Secondary User Stories"]
+      },
+      {
+        "name": "Acceptance Criteria",
+        "required": true,
+        "description": "Detailed, testable criteria using EARS format",
+        "subsections": ["Functional Requirements", "Non-Functional Requirements"]
+      },
+      {
+        "name": "Technical Constraints",
+        "required": false,
+        "description": "Technical limitations and requirements"
+      },
+      {
+        "name": "Dependencies",
+        "required": false,
+        "description": "External dependencies and integrations"
+      },
+      {
+        "name": "Assumptions",
+        "required": false,
+        "description": "Assumptions made during specification"
+      }
+    ],
+    "placeholders": [
+      {
+        "name": "feature_name",
+        "description": "Name of the feature being specified",
+        "example": "User Authentication System",
+        "required": true
+      },
+      {
+        "name": "user_role",
+        "description": "Primary user role for the feature",
+        "example": "registered user",
+        "required": true
+      },
+      {
+        "name": "functionality",
+        "description": "Core functionality being provided",
+        "example": "log into the system securely",
+        "required": true
+      },
+      {
+        "name": "benefit",
+        "description": "Business value or user benefit",
+        "example": "access personalized content and features",
+        "required": true
+      },
+      {
+        "name": "acceptance_criteria",
+        "description": "Specific, testable criteria in EARS format",
+        "example": "WHEN user enters valid credentials THEN system SHALL authenticate within 2 seconds",
+        "required": true
+      }
+    ]
+  },
+  "validation": {
+    "rules": [
+      {
+        "type": "required_section",
+        "target": "User Stories",
+        "message": "Specification must include User Stories section"
+      },
+      {
+        "type": "required_section",
+        "target": "Acceptance Criteria",
+        "message": "Specification must include Acceptance Criteria section"
+      },
+      {
+        "type": "content_check",
+        "target": "EARS format",
+        "pattern": "WHEN.*THEN.*SHALL",
+        "message": "Acceptance criteria should use EARS format (WHEN...THEN...SHALL)"
+      },
+      {
+        "type": "required_placeholder",
+        "target": "feature_name",
+        "message": "Feature name placeholder must be replaced"
+      },
+      {
+        "type": "format_check",
+        "target": "requirement_references",
+        "pattern": "_Requirements: [0-9]+(\\.[0-9]+)*_",
+        "message": "Requirements should be referenced in format '_Requirements: X.X_'"
+      }
+    ]
+  },
+  "usage": {
+    "instructions": "This template provides the foundation for all specifications. Replace placeholders with specific content, ensure all required sections are completed, and follow EARS format for acceptance criteria.",
+    "examples": [
+      {
+        "scenario": "New Feature Specification",
+        "description": "Creating a spec for a completely new feature from scratch"
+      },
+      {
+        "scenario": "Feature Enhancement",
+        "description": "Specifying improvements to an existing feature"
+      },
+      {
+        "scenario": "Bug Fix Specification",
+        "description": "Detailed specification for complex bug fixes"
+      }
+    ],
+    "prerequisites": [
+      "Understanding of user story format",
+      "Familiarity with EARS acceptance criteria syntax",
+      "Knowledge of the feature domain"
+    ],
+    "related_templates": [
+      "base/plan.md",
+      "base/tasks.md"
+    ]
+  },
+  "maintenance": {
+    "created": "2024-01-01",
+    "updated": "2024-01-01",
+    "maintainer": "SDD Community",
+    "status": "stable"
+  }
+}

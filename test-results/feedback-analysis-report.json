@@ -1,0 +1,160 @@
+{
+  "summary": {
+    "total_feedback_items": 5,
+    "positive_feedback": 2,
+    "negative_feedback": 1,
+    "sentiment_ratio": 2.0,
+    "analysis_date": "2025-10-04T17:17:06.366153"
+  },
+  "feedback_breakdown": {
+    "by_source": {
+      "issue": 2,
+      "discussion": 1,
+      "pr_comment": 1,
+      "survey": 1
+    },
+    "by_type": {
+      "documentation": 2,
+      "question": 1,
+      "bug": 1,
+      "enhancement": 1
+    }
+  },
+  "content_performance": {
+    "top_performing": [
+      {
+        "file": "resources/decision-trees/integration-strategy.md",
+        "engagement_score": 4.5,
+        "view_count": 63,
+        "positive_feedback": 1
+      },
+      {
+        "file": "README.md",
+        "engagement_score": 4.0,
+        "view_count": 1491,
+        "positive_feedback": 0
+      },
+      {
+        "file": "CONTRIBUTING.md",
+        "engagement_score": 4.0,
+        "view_count": 70,
+        "positive_feedback": 0
+      },
+      {
+        "file": "audiences/team-leads.md",
+        "engagement_score": 4.0,
+        "view_count": 147,
+        "positive_feedback": 0
+      },
+      {
+        "file": "audiences/new-developers.md",
+        "engagement_score": 4.0,
+        "view_count": 122,
+        "positive_feedback": 0
+      },
+      {
+        "file": "audiences/experienced-developers.md",
+        "engagement_score": 4.0,
+        "view_count": 141,
+        "positive_feedback": 0
+      },
+      {
+        "file": "audiences/product-managers.md",
+        "engagement_score": 4.0,
+        "view_count": 91,
+        "positive_feedback": 0
+      },
+      {
+        "file": "audiences/specialists.md",
+        "engagement_score": 4.0,
+        "view_count": 92,
+        "positive_feedback": 0
+      },
+      {
+        "file": "docs/template-migration-guide.md",
+        "engagement_score": 4.0,
+        "view_count": 60,
+        "positive_feedback": 0
+      },
+      {
+        "file": "how-to/ide-specific-sdd-integration.md",
+        "engagement_score": 4.0,
+        "view_count": 198,
+        "positive_feedback": 0
+      }
+    ],
+    "needs_attention": []
+  },
+  "recommendations": [
+    {
+      "category": "Critical Issues",
+      "priority": 5,
+      "description": "Address 2 high-priority issues",
+      "actions": [
+        "How to integrate with existing CI/CD?",
+        "Add mobile app template"
+      ],
+      "affected_files": [
+        "how-to/advanced-flows.md",
+        "resources/templates/"
+      ]
+    },
+    {
+      "category": "Documentation Enhancement",
+      "priority": 4,
+      "description": "Improve documentation based on 2 feedback items",
+      "actions": [
+        "Getting started guide needs more examples",
+        "Decision trees are very helpful"
+      ],
+      "affected_files": [
+        "how-to/getting-started.md",
+        "resources/decision-trees/integration-strategy.md"
+      ]
+    },
+    {
+      "category": "Content Gaps",
+      "priority": 4,
+      "description": "Create content for frequently asked topics: looking, guidance, integrating",
+      "actions": [
+        "Create guide for looking",
+        "Create guide for guidance",
+        "Create guide for integrating"
+      ],
+      "affected_files": [
+        "how-to/",
+        "examples/"
+      ]
+    }
+  ],
+  "action_items": [
+    {
+      "priority": 5,
+      "category": "Critical Issues",
+      "description": "Address 2 high-priority issues",
+      "next_steps": [
+        "How to integrate with existing CI/CD?",
+        "Add mobile app template"
+      ]
+    },
+    {
+      "priority": 4,
+      "category": "Documentation Enhancement",
+      "description": "Improve documentation based on 2 feedback items",
+      "next_steps": [
+        "Getting started guide needs more examples",
+        "Decision trees are very helpful"
+      ]
+    },
+    {
+      "priority": 4,
+      "category": "Content Gaps",
+      "description": "Create content for frequently asked topics: looking, guidance, integrating",
+      "next_steps": [
+        "Create guide for looking",
+        "Create guide for guidance",
+        "Create guide for integrating"
+      ]
+    }
+  ]
+}

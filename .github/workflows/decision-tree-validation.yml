@@ -1,0 +1,208 @@
+name: Decision Tree Validation
+
+on:
+  push:
+    paths:
+      - 'resources/decision-trees/**'
+  pull_request:
+    paths:
+      - 'resources/decision-trees/**'
+
+jobs:
+  validate-mermaid:
+    name: Validate Mermaid Diagrams
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Mermaid CLI
+        run: npm install -g @mermaid-js/mermaid-cli
+
+      - name: Extract and validate Mermaid diagrams
+        run: |
+          echo "Validating Mermaid diagrams in decision trees..."
+          
+          # Create temp directory for extracted diagrams
+          mkdir -p temp_diagrams
+          
+          # Find all decision tree files
+          find resources/decision-trees -name "*.md" | while read file; do
+            echo "Processing: $file"
+            
+            # Extract Mermaid code blocks
+            awk '/```mermaid/,/```/' "$file" | sed '/```/d' > "temp_diagrams/$(basename "$file" .md).mmd"
+            
+            # Check if diagram was extracted
+            if [ -s "temp_diagrams/$(basename "$file" .md).mmd" ]; then
+              echo "Validating Mermaid syntax for: $file"
+              
+              # Validate syntax by trying to generate SVG
+              if mmdc -i "temp_diagrams/$(basename "$file" .md).mmd" -o "temp_diagrams/$(basename "$file" .md).svg" --quiet; then
+                echo "✅ Valid Mermaid syntax in $file"
+              else
+                echo "❌ Invalid Mermaid syntax in $file"
+                exit 1
+              fi
+            else
+              echo "⚠️  No Mermaid diagram found in $file"
+            fi
+          done
+          
+          # Clean up
+          rm -rf temp_diagrams
+
+  validate-decision-logic:
+    name: Validate Decision Logic
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Validate decision tree logic
+        run: |
+          echo "Validating decision tree logic and structure..."
+          
+          find resources/decision-trees -name "*.md" | while read file; do
+            echo "Checking: $file"
+            
+            # Check for required sections
+            required_sections=("## Overview" "## Decision Points" "## Outcomes")
+            for section in "${required_sections[@]}"; do
+              if ! grep -q "$section" "$file"; then
+                echo "⚠️  Warning: $file missing section: $section"
+              fi
+            done
+            
+            # Check for decision criteria
+            if grep -q "IF\|WHEN\|THEN" "$file"; then
+              echo "✅ $file contains decision criteria"
+            else
+              echo "⚠️  Warning: $file may be missing decision criteria"
+            fi
+            
+            # Check for actionable outcomes
+            if grep -q "Action:\|Next Step:\|Recommendation:" "$file"; then
+              echo "✅ $file contains actionable outcomes"
+            else
+              echo "⚠️  Warning: $file may be missing actionable outcomes"
+            fi
+          done
+
+  validate-cross-references:
+    name: Validate Cross-References
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check decision tree cross-references
+        run: |
+          echo "Validating cross-references in decision trees..."
+          
+          # Check references to templates
+          find resources/decision-trees -name "*.md" -exec grep -H "template" {} \; | while IFS: read -r file match; do
+            echo "Found template reference in $file: $match"
+            
+            # Extract potential template paths
+            template_refs=$(echo "$match" | grep -o '[a-zA-Z0-9/_-]*\.md' || true)
+            for ref in $template_refs; do
+              if [ ! -f "$ref" ] && [ ! -f "resources/templates/$ref" ]; then
+                echo "⚠️  Warning: Potential broken template reference: $ref"
+              fi
+            done
+          done
+          
+          # Check references to checklists
+          find resources/decision-trees -name "*.md" -exec grep -H "checklist" {} \; | while IFS: read -r file match; do
+            echo "Found checklist reference in $file: $match"
+          done
+          
+          # Check references to guides
+          find resources/decision-trees -name "*.md" -exec grep -H "guide\|how-to" {} \; | while IFS: read -r file match; do
+            echo "Found guide reference in $file: $match"
+          done
+
+  accessibility-check:
+    name: Accessibility Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check accessibility features
+        run: |
+          echo "Checking accessibility features in decision trees..."
+          
+          find resources/decision-trees -name "*.md" | while read file; do
+            echo "Checking: $file"
+            
+            # Check for alt text in images
+            if grep -q "!\[.*\]" "$file"; then
+              if grep -q "!\[\]" "$file"; then
+                echo "⚠️  Warning: $file has images without alt text"
+              else
+                echo "✅ $file has images with alt text"
+              fi
+            fi
+            
+            # Check for descriptive link text
+            if grep -q "\[click here\]\|\[here\]\|\[link\]" "$file"; then
+              echo "⚠️  Warning: $file has non-descriptive link text"
+            fi
+            
+            # Check for proper heading hierarchy
+            prev_level=0
+            grep "^#" "$file" | while read heading; do
+              level=$(echo "$heading" | grep -o "^#*" | wc -c)
+              level=$((level - 1))
+              
+              if [ $level -gt $((prev_level + 1)) ]; then
+                echo "⚠️  Warning: $file has skipped heading level: $heading"
+              fi
+              prev_level=$level
+            done
+          done
+
+  performance-check:
+    name: Performance Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check decision tree complexity
+        run: |
+          echo "Checking decision tree complexity and performance..."
+          
+          find resources/decision-trees -name "*.md" | while read file; do
+            echo "Analyzing: $file"
+            
+            # Count decision points
+            decision_count=$(grep -c "IF\|WHEN\|ELSE" "$file" || echo "0")
+            echo "Decision points: $decision_count"
+            
+            if [ "$decision_count" -gt 20 ]; then
+              echo "⚠️  Warning: $file has high complexity ($decision_count decision points)"
+              echo "   Consider breaking into smaller decision trees"
+            fi
+            
+            # Check file size
+            file_size=$(wc -c < "$file")
+            if [ "$file_size" -gt 10000 ]; then
+              echo "⚠️  Warning: $file is large ($file_size bytes)"
+              echo "   Consider splitting into multiple files"
+            fi
+            
+            # Count Mermaid nodes (approximate)
+            mermaid_nodes=$(grep -c "-->\\|---" "$file" || echo "0")
+            if [ "$mermaid_nodes" -gt 50 ]; then
+              echo "⚠️  Warning: $file has complex Mermaid diagram ($mermaid_nodes connections)"
+              echo "   Consider simplifying or splitting the diagram"
+            fi
+          done

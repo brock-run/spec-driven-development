@@ -4,7 +4,7 @@
 
 Comprehensive specification for API service design, focusing on RESTful principles and developer experience.
 
-## API Design Requirements
+## User Story
 
 ### Primary API Goals
 
@@ -16,12 +16,23 @@ Comprehensive specification for API service design, focusing on RESTful principl
 **I want** predictable API behavior  
 **So that** I can build robust client applications
 
+## Acceptance Criteria
+
+### API Functional Requirements
+1. **WHEN** API consumer makes valid request **THEN** system **SHALL** return appropriate response
+2. **IF** request is malformed **THEN** system **SHALL** return 400 with error details
+3. **WHEN** authentication fails **THEN** system **SHALL** return 401 Unauthorized
+
+## API Design Requirements
+
 ## REST API Specification
 
 ### Resource Design
 1. **WHEN** designing endpoints **THEN** system **SHALL** follow REST conventions
 2. **IF** resource has relationships **THEN** API **SHALL** provide clear navigation
 3. **GIVEN** collection endpoints **WHEN** accessed **THEN** **SHALL** support pagination
+
+_Requirements: FR-1.1, FR-1.2_
 
 ### HTTP Methods and Status Codes
 1. **WHEN** `GET` request succeeds **THEN** system **SHALL** return 200 or 204
@@ -30,6 +41,8 @@ Comprehensive specification for API service design, focusing on RESTful principl
 4. **WHEN** `DELETE` removes resource **THEN** system **SHALL** return 204
 5. **IF** resource not found **THEN** system **SHALL** return 404
 6. **IF** validation fails **THEN** system **SHALL** return 422 with error details
+
+_Requirements: FR-2.1, FR-2.2, NFR-1.1_
 
 ## Endpoint Specifications
 

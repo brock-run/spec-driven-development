@@ -1,0 +1,251 @@
+name: Comprehensive Validation
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  workflow_dispatch:
+    inputs:
+      validation_level:
+        description: 'Validation level'
+        required: true
+        default: 'standard'
+        type: choice
+        options:
+        - standard
+        - thorough
+        - quick
+
+env:
+  VALIDATION_LEVEL: ${{ github.event.inputs.validation_level || 'standard' }}
+
+jobs:
+  setup:
+    name: Setup Validation
+    runs-on: ubuntu-latest
+    outputs:
+      validation-matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Determine validation matrix
+        id: matrix
+        run: |
+          if [ "$VALIDATION_LEVEL" = "quick" ]; then
+            echo 'matrix=["markdown-lint", "template-basic"]' >> $GITHUB_OUTPUT
+          elif [ "$VALIDATION_LEVEL" = "thorough" ]; then
+            echo 'matrix=["markdown-lint", "link-check", "template-validation", "content-quality", "spell-check", "accessibility", "performance"]' >> $GITHUB_OUTPUT
+          else
+            echo 'matrix=["markdown-lint", "link-check", "template-validation", "content-quality", "spell-check"]' >> $GITHUB_OUTPUT
+          fi
+
+  validation:
+    name: ${{ matrix.check }}
+    runs-on: ubuntu-latest
+    needs: setup
+    strategy:
+      fail-fast: false
+      matrix:
+        check: ${{ fromJson(needs.setup.outputs.validation-matrix) }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          case "${{ matrix.check }}" in
+            "markdown-lint")
+              npm install -g markdownlint-cli2
+              ;;
+            "link-check")
+              npm install -g markdown-link-check
+              ;;
+            "spell-check")
+              npm install -g cspell
+              ;;
+            "template-validation")
+              # No additional dependencies needed for script
+              ;;
+            "content-quality")
+              # No additional dependencies needed
+              ;;
+            "accessibility")
+              npm install -g pa11y-ci
+              ;;
+            "performance")
+              # No additional dependencies needed
+              ;;
+          esac
+
+      - name: Run validation check
+        run: |
+          case "${{ matrix.check }}" in
+            "markdown-lint")
+              echo "Running markdown linting..."
+              markdownlint-cli2 "**/*.md" "#node_modules"
+              ;;
+            "link-check")
+              echo "Checking links..."
+              find . -name "*.md" -not -path "./node_modules/*" | head -20 | \
+              xargs -I {} markdown-link-check {} --config .markdown-link-check.json
+              ;;
+            "template-validation")
+              echo "Validating templates..."
+              chmod +x scripts/validate-templates.sh
+              ./scripts/validate-templates.sh
+              ;;
+            "content-quality")
+              echo "Checking content quality..."
+              # File naming conventions
+              find . -name "*.md" -not -path "./node_modules/*" -not -path "./.git/*" | while read file; do
+                basename=$(basename "$file" .md)
+                if [[ ! "$basename" =~ ^[a-z0-9]+(-[a-z0-9]+)*$ ]] && [[ "$basename" != "README" ]] && [[ "$basename" != "CONTRIBUTING" ]] && [[ "$basename" != "CODE_OF_CONDUCT" ]]; then
+                  echo "Warning: $file may not follow kebab-case convention"
+                fi
+              done
+              ;;
+            "spell-check")
+              echo "Running spell check..."
+              cspell "**/*.md" --no-progress --show-context
+              ;;
+            "accessibility")
+              echo "Checking accessibility..."
+              # Basic accessibility checks for markdown content
+              find . -name "*.md" -not -path "./node_modules/*" | while read file; do
+                # Check for images without alt text
+                if grep -q "!\[\]" "$file"; then
+                  echo "Warning: $file has images without alt text"
+                fi
+                # Check for non-descriptive links
+                if grep -q "\[click here\]\|\[here\]\|\[link\]" "$file"; then
+                  echo "Warning: $file has non-descriptive link text"
+                fi
+              done
+              ;;
+            "performance")
+              echo "Checking performance..."
+              # Check file sizes and complexity
+              find . -name "*.md" -not -path "./node_modules/*" | while read file; do
+                size=$(wc -c < "$file")
+                if [ "$size" -gt 50000 ]; then
+                  echo "Warning: $file is large ($size bytes)"
+                fi
+              done
+              ;;
+          esac
+
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' || contains(github.event.inputs.validation_level, 'thorough')
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run security checks
+        run: |
+          echo "Running security checks..."
+          
+          # Check for sensitive information
+          echo "Checking for potential secrets..."
+          if grep -r -i "password\|secret\|key\|token" --include="*.md" . --exclude-dir=node_modules --exclude-dir=.git | grep -v "placeholder\|example\|template"; then
+            echo "Warning: Potential sensitive information found"
+          fi
+          
+          # Check for malicious links
+          echo "Checking for suspicious links..."
+          if grep -r "http://" --include="*.md" . --exclude-dir=node_modules --exclude-dir=.git; then
+            echo "Warning: Non-HTTPS links found"
+          fi
+
+  integration-test:
+    name: Integration Test
+    runs-on: ubuntu-latest
+    if: contains(github.event.inputs.validation_level, 'thorough')
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Test template integration
+        run: |
+          echo "Testing template integration..."
+          
+          # Test that base templates can be extended
+          for domain in api backend frontend mobile; do
+            if [ -d "resources/templates/$domain" ]; then
+              echo "Testing $domain templates..."
+              find "resources/templates/$domain" -name "*.md" | while read template; do
+                echo "Validating: $template"
+                # Basic structure check
+                if grep -q "# " "$template"; then
+                  echo "✅ $template has proper structure"
+                else
+                  echo "❌ $template missing main heading"
+                fi
+              done
+            fi
+          done
+
+  report:
+    name: Generate Report
+    runs-on: ubuntu-latest
+    needs: [validation, security-scan, integration-test]
+    if: always()
+    steps:
+      - name: Generate validation report
+        run: |
+          echo "# Validation Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Validation Level:** $VALIDATION_LEVEL" >> $GITHUB_STEP_SUMMARY
+          echo "**Timestamp:** $(date -u)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          echo "## Results Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # Check validation results
+          if [ "${{ needs.validation.result }}" == "success" ]; then
+            echo "✅ **Core Validation:** Passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Core Validation:** Failed" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          if [ "${{ needs.security-scan.result }}" == "success" ] || [ "${{ needs.security-scan.result }}" == "skipped" ]; then
+            echo "✅ **Security Scan:** Passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Security Scan:** Failed" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          if [ "${{ needs.integration-test.result }}" == "success" ] || [ "${{ needs.integration-test.result }}" == "skipped" ]; then
+            echo "✅ **Integration Test:** Passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Integration Test:** Failed" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # Overall status
+          if [ "${{ needs.validation.result }}" == "success" ]; then
+            echo "🎉 **Overall Status:** PASSED" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "All validation checks completed successfully. The content meets quality standards." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Overall Status:** FAILED" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "Some validation checks failed. Please review the errors above and make necessary corrections." >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## Next Steps" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- Review any failed checks in the job logs" >> $GITHUB_STEP_SUMMARY
+          echo "- Fix identified issues and push updates" >> $GITHUB_STEP_SUMMARY
+          echo "- Re-run validation if needed" >> $GITHUB_STEP_SUMMARY

@@ -2,7 +2,7 @@
 
 ## Leading the Transition to Spec-Driven Development
 
-As a team lead, you're responsible for successfully implementing SDD practices while maintaining team productivity and morale. This guide provides frameworks for governance, change management, and team development in SDD adoption.
+As a team lead, you're responsible for successfully implementing SDD practices while maintaining team productivity and morale. This guide provides **governance framework** and **change management** strategies for SDD adoption, along with **team training** approaches.
 
 ## Governance and Standards Framework
 

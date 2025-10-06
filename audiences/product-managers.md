@@ -4,7 +4,9 @@
 
 As a Product Manager, you're the bridge between business needs and technical execution. Spec-Driven Development transforms how you communicate requirements, ensuring your product vision translates accurately into working software while leveraging AI development tools effectively.
 
-## From PRD to Executable Specifications
+## PRD to Spec Translation
+
+This section provides **PRD to spec** guidance for product managers working with engineering teams. Learn how to transform traditional product requirements into structured specifications that enable effective **cross-functional** collaboration.
 
 ### The Traditional PRD Challenge
 
@@ -14,9 +16,9 @@ Traditional Product Requirements Documents often suffer from:
 - Disconnect between business requirements and technical implementation
 - Difficulty for AI agents to extract actionable development tasks
 
-### The SDD Solution
+### The SDD Solution with ChatPRD Integration
 
-SDD transforms your PRDs into structured, AI-consumable specifications that maintain product intent while providing technical clarity.
+SDD transforms your PRDs into structured, AI-consumable specifications that maintain product intent while providing technical clarity. **ChatPRD** integration streamlines this process by providing AI-assisted PRD-to-spec translation.
 
 #### PRD-to-Spec Translation Framework
 

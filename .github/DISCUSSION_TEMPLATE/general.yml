@@ -1,0 +1,55 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for starting a discussion! This is a place to:
+        - Ask questions about SDD implementation
+        - Share your experiences and success stories
+        - Discuss best practices and patterns
+        - Get help with specific challenges
+        
+        Please search existing discussions before creating a new one.
+
+  - type: textarea
+    id: topic
+    attributes:
+      label: Discussion Topic
+      description: What would you like to discuss?
+      placeholder: Describe your question, experience, or topic for discussion
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What category best fits your discussion?
+      options:
+        - General Questions
+        - Implementation Help
+        - Best Practices
+        - Tool Integration
+        - Success Stories
+        - Feature Ideas
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: context
+    attributes:
+      label: Context (check all that apply)
+      options:
+        - label: New to SDD
+        - label: Experienced with SDD
+        - label: Team lead/manager
+        - label: Product manager
+        - label: Using AI agents (Copilot, Claude, etc.)
+        - label: GitHub Spec Kit user
+        - label: ChatPRD user
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Any additional details that might help the community provide better responses
+      placeholder: Team size, tech stack, specific challenges, etc.

@@ -4,6 +4,8 @@
 
 High-level description of the technical approach and system architecture.
 
+_Requirements: FR-1.1, FR-1.2, NFR-1.1_
+
 ## Technical Constraints
 
 ### Technology Stack
@@ -12,16 +14,22 @@ High-level description of the technical approach and system architecture.
 - **Database**: [database technology and rationale]
 - **Infrastructure**: [hosting, deployment considerations]
 
+_Requirements: NFR-1.1, NFR-1.2_
+
 ### Performance Requirements
 - **Response Time**: [acceptable latency thresholds]
 - **Throughput**: [expected load and capacity]
 - **Scalability**: [growth projections and scaling strategy]
+
+_Requirements: NFR-1.1_
 
 ### Security Considerations
 - **Authentication**: [auth mechanism and requirements]
 - **Authorization**: [permission model and access control]
 - **Data Protection**: [encryption, privacy requirements]
 - **Compliance**: [regulatory requirements, standards]
+
+_Requirements: NFR-1.2_
 
 ## System Design
 
@@ -30,16 +38,22 @@ High-level description of the technical approach and system architecture.
 [Include architectural diagrams or component descriptions]
 ```
 
+_Requirements: FR-1.1, FR-1.3_
+
 ### Data Flow
 1. [Step-by-step data flow description]
 2. [Key integration points]
 3. [External API interactions]
+
+_Requirements: FR-1.2, FR-1.3_
 
 ### Database Schema
 ```sql
 -- Key table structures and relationships
 -- Include indexes and constraints
 ```
+
+_Requirements: FR-2.1, NFR-1.1_
 
 ## Integration Points
 
@@ -50,6 +64,8 @@ High-level description of the technical approach and system architecture.
 ### Internal Services
 - **[Service Name]**: [communication protocol, data format]
 - **[Component Name]**: [interface definition, dependencies]
+
+_Requirements: FR-1.2, FR-2.2_
 
 ## Risk Assessment
 

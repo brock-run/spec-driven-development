@@ -1,0 +1,266 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SDD Template Metadata Schema",
+  "description": "Schema for validating SDD template metadata and structure",
+  "type": "object",
+  "properties": {
+    "template": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Human-readable template name"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Semantic version of the template"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["spec", "plan", "tasks", "custom"],
+          "description": "Type of template"
+        },
+        "domain": {
+          "type": "string",
+          "enum": ["base", "api", "backend", "frontend", "mobile", "devops", "data", "ml", "custom"],
+          "description": "Domain or specialization area"
+        },
+        "complexity": {
+          "type": "string",
+          "enum": ["basic", "intermediate", "advanced"],
+          "description": "Complexity level of the template"
+        },
+        "audience": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["new-developer", "experienced-developer", "product-manager", "team-lead", "specialist", "all"]
+          },
+          "description": "Target audiences for this template"
+        },
+        "description": {
+          "type": "string",
+          "description": "Brief description of the template's purpose"
+        },
+        "extends": {
+          "type": "string",
+          "description": "Base template this extends from (relative path)"
+        },
+        "ai_compatibility": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["github-copilot", "claude", "chatgpt", "cursor", "kiro", "generic"]
+          },
+          "description": "AI agents this template is optimized for"
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Requirements this template addresses"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Tags for categorization and search"
+        }
+      },
+      "required": ["name", "version", "type", "domain", "complexity", "audience", "description"],
+      "additionalProperties": false
+    },
+    "structure": {
+      "type": "object",
+      "properties": {
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Section name"
+              },
+              "required": {
+                "type": "boolean",
+                "description": "Whether this section is required"
+              },
+              "description": {
+                "type": "string",
+                "description": "Purpose of this section"
+              },
+              "subsections": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Expected subsections"
+              }
+            },
+            "required": ["name", "required"],
+            "additionalProperties": false
+          },
+          "description": "Expected sections in the template"
+        },
+        "placeholders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Placeholder name (without brackets)"
+              },
+              "description": {
+                "type": "string",
+                "description": "What should replace this placeholder"
+              },
+              "example": {
+                "type": "string",
+                "description": "Example value for this placeholder"
+              },
+              "required": {
+                "type": "boolean",
+                "description": "Whether this placeholder must be replaced"
+              }
+            },
+            "required": ["name", "description"],
+            "additionalProperties": false
+          },
+          "description": "Placeholders used in the template"
+        }
+      },
+      "required": ["sections"],
+      "additionalProperties": false
+    },
+    "validation": {
+      "type": "object",
+      "properties": {
+        "rules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["required_section", "required_placeholder", "format_check", "content_check", "custom"]
+              },
+              "target": {
+                "type": "string",
+                "description": "What to validate (section name, placeholder, etc.)"
+              },
+              "pattern": {
+                "type": "string",
+                "description": "Regex pattern for validation (if applicable)"
+              },
+              "message": {
+                "type": "string",
+                "description": "Error message if validation fails"
+              }
+            },
+            "required": ["type", "target", "message"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "usage": {
+      "type": "object",
+      "properties": {
+        "instructions": {
+          "type": "string",
+          "description": "How to use this template"
+        },
+        "examples": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "scenario": {
+                "type": "string",
+                "description": "Use case scenario"
+              },
+              "description": {
+                "type": "string",
+                "description": "Description of the example"
+              },
+              "file": {
+                "type": "string",
+                "description": "Path to example file (optional)"
+              }
+            },
+            "required": ["scenario", "description"],
+            "additionalProperties": false
+          }
+        },
+        "prerequisites": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Prerequisites for using this template"
+        },
+        "related_templates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Related templates that work well with this one"
+        }
+      },
+      "additionalProperties": false
+    },
+    "maintenance": {
+      "type": "object",
+      "properties": {
+        "created": {
+          "type": "string",
+          "format": "date",
+          "description": "Creation date"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date",
+          "description": "Last update date"
+        },
+        "maintainer": {
+          "type": "string",
+          "description": "Primary maintainer"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["draft", "stable", "deprecated"],
+          "description": "Template status"
+        },
+        "deprecation": {
+          "type": "object",
+          "properties": {
+            "reason": {
+              "type": "string",
+              "description": "Reason for deprecation"
+            },
+            "replacement": {
+              "type": "string",
+              "description": "Replacement template"
+            },
+            "migration_guide": {
+              "type": "string",
+              "description": "How to migrate to replacement"
+            }
+          },
+          "required": ["reason"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["created", "status"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["template", "structure", "maintenance"],
+  "additionalProperties": false
+}

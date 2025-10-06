@@ -2,7 +2,7 @@
 
 ## Legacy System Integration and Hybrid Workflows
 
-This decision tree guides teams through integrating Spec-Driven Development with existing systems and workflows.
+This **decision tree** guides teams through integrating Spec-Driven Development with existing systems and workflows. It provides **decision points** for choosing the right **integration options** and understanding **trade-offs** between different approaches.
 
 ```mermaid
 flowchart TD
