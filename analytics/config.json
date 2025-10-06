@@ -1,0 +1,46 @@
+{
+  "analytics": {
+    "enabled": true,
+    "privacy_first": true,
+    "data_collection": {
+      "personal_data": false,
+      "ip_addresses": false,
+      "user_identification": false,
+      "cookies": false
+    },
+    "metrics_tracked": [
+      "page_views",
+      "template_downloads",
+      "guide_access",
+      "search_queries",
+      "feedback_submissions"
+    ],
+    "retention_policy": {
+      "raw_data": "30_days",
+      "aggregated_data": "1_year",
+      "reports": "indefinite"
+    },
+    "transparency": {
+      "public_dashboard": true,
+      "monthly_reports": true,
+      "data_export_available": true
+    }
+  },
+  "feedback_collection": {
+    "github_issues": true,
+    "github_discussions": true,
+    "community_surveys": true,
+    "usage_analytics": true
+  },
+  "reporting": {
+    "frequency": "monthly",
+    "metrics": [
+      "repository_stars",
+      "forks",
+      "issues_opened",
+      "discussions_started",
+      "template_usage",
+      "guide_popularity"
+    ]
+  }
+}

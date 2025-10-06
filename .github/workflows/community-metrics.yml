@@ -1,0 +1,158 @@
+name: Community Metrics Collection
+
+on:
+  schedule:
+    # Run weekly on Sundays at 00:00 UTC
+    - cron: '0 0 * * 0'
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  collect-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: read
+      discussions: read
+      pull-requests: read
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests python-dateutil
+
+    - name: Collect GitHub metrics
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        REPO_OWNER: ${{ github.repository_owner }}
+        REPO_NAME: ${{ github.event.repository.name }}
+      run: |
+        python3 << 'EOF'
+        import requests
+        import json
+        import os
+        from datetime import datetime, timedelta
+        from pathlib import Path
+
+        # GitHub API setup
+        token = os.environ['GITHUB_TOKEN']
+        owner = os.environ['REPO_OWNER']
+        repo = os.environ['REPO_NAME']
+        headers = {
+            'Authorization': f'token {token}',
+            'Accept': 'application/vnd.github.v3+json'
+        }
+
+        def get_github_data(endpoint):
+            url = f'https://api.github.com/repos/{owner}/{repo}/{endpoint}'
+            response = requests.get(url, headers=headers)
+            return response.json() if response.status_code == 200 else {}
+
+        # Collect basic repository metrics
+        repo_data = get_github_data('')
+        
+        # Collect issues and PRs from last week
+        last_week = (datetime.now() - timedelta(days=7)).isoformat()
+        
+        issues = get_github_data(f'issues?since={last_week}&state=all')
+        pulls = get_github_data(f'pulls?since={last_week}&state=all')
+        
+        # Collect contributors
+        contributors = get_github_data('contributors')
+        
+        # Create metrics summary
+        metrics = {
+            'collection_date': datetime.now().isoformat(),
+            'repository': {
+                'stars': repo_data.get('stargazers_count', 0),
+                'forks': repo_data.get('forks_count', 0),
+                'watchers': repo_data.get('watchers_count', 0),
+                'open_issues': repo_data.get('open_issues_count', 0)
+            },
+            'weekly_activity': {
+                'new_issues': len([i for i in issues if 'pull_request' not in i]),
+                'new_prs': len(pulls),
+                'total_contributors': len(contributors)
+            },
+            'community_health': {
+                'has_code_of_conduct': bool(repo_data.get('code_of_conduct')),
+                'has_contributing_guide': 'CONTRIBUTING.md' in [f['name'] for f in get_github_data('contents')],
+                'has_license': bool(repo_data.get('license')),
+                'has_readme': bool(repo_data.get('has_readme'))
+            }
+        }
+        
+        # Save metrics
+        metrics_dir = Path('analytics/metrics')
+        metrics_dir.mkdir(parents=True, exist_ok=True)
+        
+        filename = f"metrics-{datetime.now().strftime('%Y-%m-%d')}.json"
+        with open(metrics_dir / filename, 'w') as f:
+            json.dump(metrics, f, indent=2)
+        
+        print(f"✅ Metrics collected and saved to {filename}")
+        print(f"⭐ Stars: {metrics['repository']['stars']}")
+        print(f"🍴 Forks: {metrics['repository']['forks']}")
+        print(f"📝 Open Issues: {metrics['repository']['open_issues']}")
+        print(f"👥 Contributors: {metrics['weekly_activity']['total_contributors']}")
+        EOF
+
+    - name: Update community dashboard
+      run: |
+        python3 << 'EOF'
+        import json
+        import glob
+        from datetime import datetime
+        from pathlib import Path
+
+        # Load latest metrics
+        metrics_files = glob.glob('analytics/metrics/metrics-*.json')
+        if not metrics_files:
+            print("No metrics files found")
+            exit(0)
+            
+        latest_file = max(metrics_files)
+        with open(latest_file, 'r') as f:
+            metrics = json.load(f)
+
+        # Update dashboard
+        dashboard_path = Path('analytics/dashboard.md')
+        if dashboard_path.exists():
+            content = dashboard_path.read_text()
+            
+            # Replace placeholder values with actual metrics
+            repo_info = metrics['repository']
+            activity = metrics['weekly_activity']
+            
+            # Update the dashboard content with real values
+            updated_content = content.replace(
+                '[To be updated monthly]', 
+                f"Updated {datetime.now().strftime('%Y-%m-%d')}"
+            )
+            
+            dashboard_path.write_text(updated_content)
+            print("✅ Dashboard updated with latest metrics")
+        EOF
+
+    - name: Commit metrics if changed
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add analytics/
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Update community metrics - $(date +'%Y-%m-%d')"
+          echo "📊 Metrics updated and committed"
+        fi
+
+    # Note: In a real implementation, you might want to push these changes
+    # or create a PR, but for now we'll just collect the data

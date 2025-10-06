@@ -338,8 +338,19 @@ Contributors are recognized through:
 
 - **💬 [GitHub Discussions](https://github.com/your-org/sdd-blueprint/discussions)** - Ask questions, share experiences
 - **🐛 [Issues](https://github.com/your-org/sdd-blueprint/issues)** - Report bugs, request features
-- **📖 [Wiki](https://github.com/your-org/sdd-blueprint/wiki)** - Community knowledge base
+- **📊 [Community Dashboard](analytics/dashboard.md)** - Usage metrics and community health
+- **📝 [Feedback Process](docs/community/feedback-process.md)** - How we collect and act on community input
 - **🔔 [Releases](https://github.com/your-org/sdd-blueprint/releases)** - Stay updated with latest improvements
+
+### 🔒 **Privacy & Analytics**
+
+We collect **privacy-respecting analytics** to improve the blueprint:
+- ✅ **No personal data** - Only aggregated usage patterns
+- ✅ **Transparent metrics** - Public dashboard with all statistics  
+- ✅ **Community-driven** - You control what we measure and improve
+- ✅ **Open source** - All analytics scripts are public and auditable
+
+[View our privacy policy →](analytics/privacy-policy.md)
 
 ---
 
