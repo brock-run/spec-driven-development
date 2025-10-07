@@ -1,0 +1,321 @@
+﻿2025-10-06T13:59:16.0263160Z Current runner version: '2.328.0'
+2025-10-06T13:59:16.0297189Z ##[group]Runner Image Provisioner
+2025-10-06T13:59:16.0298388Z Hosted Compute Agent
+2025-10-06T13:59:16.0299378Z Version: 20250912.392
+2025-10-06T13:59:16.0300432Z Commit: d921fda672a98b64f4f82364647e2f10b2267d0b
+2025-10-06T13:59:16.0301527Z Build Date: 2025-09-12T15:23:14Z
+2025-10-06T13:59:16.0302692Z ##[endgroup]
+2025-10-06T13:59:16.0303641Z ##[group]Operating System
+2025-10-06T13:59:16.0304764Z Ubuntu
+2025-10-06T13:59:16.0305671Z 24.04.3
+2025-10-06T13:59:16.0306445Z LTS
+2025-10-06T13:59:16.0307170Z ##[endgroup]
+2025-10-06T13:59:16.0307910Z ##[group]Runner Image
+2025-10-06T13:59:16.0308975Z Image: ubuntu-24.04
+2025-10-06T13:59:16.0310237Z Version: 20250929.60.1
+2025-10-06T13:59:16.0312030Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250929.60/images/ubuntu/Ubuntu2404-Readme.md
+2025-10-06T13:59:16.0314938Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250929.60
+2025-10-06T13:59:16.0316710Z ##[endgroup]
+2025-10-06T13:59:16.0318501Z ##[group]GITHUB_TOKEN Permissions
+2025-10-06T13:59:16.0321179Z Contents: read
+2025-10-06T13:59:16.0322170Z Metadata: read
+2025-10-06T13:59:16.0323130Z Packages: read
+2025-10-06T13:59:16.0324265Z ##[endgroup]
+2025-10-06T13:59:16.0327371Z Secret source: Actions
+2025-10-06T13:59:16.0328650Z Prepare workflow directory
+2025-10-06T13:59:16.0779310Z Prepare all required actions
+2025-10-06T13:59:16.0834391Z Getting action download info
+2025-10-06T13:59:16.3942278Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+2025-10-06T13:59:16.4603829Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2025-10-06T13:59:16.6296529Z Complete job name: Spell Check
+2025-10-06T13:59:16.6976917Z ##[group]Run actions/checkout@v4
+2025-10-06T13:59:16.6977729Z with:
+2025-10-06T13:59:16.6978169Z   repository: brock-run/spec-driven-development
+2025-10-06T13:59:16.6978849Z   token: ***
+2025-10-06T13:59:16.6979249Z   ssh-strict: true
+2025-10-06T13:59:16.6979621Z   ssh-user: git
+2025-10-06T13:59:16.6980117Z   persist-credentials: true
+2025-10-06T13:59:16.6980562Z   clean: true
+2025-10-06T13:59:16.6980953Z   sparse-checkout-cone-mode: true
+2025-10-06T13:59:16.6981421Z   fetch-depth: 1
+2025-10-06T13:59:16.6981804Z   fetch-tags: false
+2025-10-06T13:59:16.6982189Z   show-progress: true
+2025-10-06T13:59:16.6982577Z   lfs: false
+2025-10-06T13:59:16.6982933Z   submodules: false
+2025-10-06T13:59:16.6983320Z   set-safe-directory: true
+2025-10-06T13:59:16.6983966Z ##[endgroup]
+2025-10-06T13:59:16.8036824Z Syncing repository: brock-run/spec-driven-development
+2025-10-06T13:59:16.8038621Z ##[group]Getting Git version info
+2025-10-06T13:59:16.8039540Z Working directory is '/home/runner/work/spec-driven-development/spec-driven-development'
+2025-10-06T13:59:16.8040639Z [command]/usr/bin/git version
+2025-10-06T13:59:16.8067143Z git version 2.51.0
+2025-10-06T13:59:16.8092513Z ##[endgroup]
+2025-10-06T13:59:16.8107004Z Temporarily overriding HOME='/home/runner/work/_temp/1a84b624-73af-486d-84e7-7921b2773c50' before making global git config changes
+2025-10-06T13:59:16.8109191Z Adding repository directory to the temporary git global config as a safe directory
+2025-10-06T13:59:16.8119676Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/spec-driven-development/spec-driven-development
+2025-10-06T13:59:16.8152974Z Deleting the contents of '/home/runner/work/spec-driven-development/spec-driven-development'
+2025-10-06T13:59:16.8155978Z ##[group]Initializing the repository
+2025-10-06T13:59:16.8159989Z [command]/usr/bin/git init /home/runner/work/spec-driven-development/spec-driven-development
+2025-10-06T13:59:16.8211873Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-10-06T13:59:16.8213510Z hint: is subject to change. To configure the initial branch name to use in all
+2025-10-06T13:59:16.8215272Z hint: of your new repositories, which will suppress this warning, call:
+2025-10-06T13:59:16.8216366Z hint:
+2025-10-06T13:59:16.8216841Z hint: 	git config --global init.defaultBranch <name>
+2025-10-06T13:59:16.8217429Z hint:
+2025-10-06T13:59:16.8217979Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-10-06T13:59:16.8218874Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-10-06T13:59:16.8219882Z hint:
+2025-10-06T13:59:16.8220403Z hint: 	git branch -m <name>
+2025-10-06T13:59:16.8220843Z hint:
+2025-10-06T13:59:16.8221403Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-10-06T13:59:16.8222533Z Initialized empty Git repository in /home/runner/work/spec-driven-development/spec-driven-development/.git/
+2025-10-06T13:59:16.8225176Z [command]/usr/bin/git remote add origin https://github.com/brock-run/spec-driven-development
+2025-10-06T13:59:16.8256172Z ##[endgroup]
+2025-10-06T13:59:16.8256869Z ##[group]Disabling automatic garbage collection
+2025-10-06T13:59:16.8259925Z [command]/usr/bin/git config --local gc.auto 0
+2025-10-06T13:59:16.8287312Z ##[endgroup]
+2025-10-06T13:59:16.8287952Z ##[group]Setting up auth
+2025-10-06T13:59:16.8293678Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-10-06T13:59:16.8323266Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-10-06T13:59:16.8571875Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-10-06T13:59:16.8600926Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-10-06T13:59:16.8827181Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-10-06T13:59:16.8863209Z ##[endgroup]
+2025-10-06T13:59:16.8864063Z ##[group]Fetching the repository
+2025-10-06T13:59:16.8880925Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +185c6fae08b0f27c4a0aa36125647c25c967af89:refs/remotes/origin/main
+2025-10-06T13:59:17.1500291Z From https://github.com/brock-run/spec-driven-development
+2025-10-06T13:59:17.1501350Z  * [new ref]         185c6fae08b0f27c4a0aa36125647c25c967af89 -> origin/main
+2025-10-06T13:59:17.1528476Z ##[endgroup]
+2025-10-06T13:59:17.1529552Z ##[group]Determining the checkout info
+2025-10-06T13:59:17.1530738Z ##[endgroup]
+2025-10-06T13:59:17.1535656Z [command]/usr/bin/git sparse-checkout disable
+2025-10-06T13:59:17.1572196Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-10-06T13:59:17.1599650Z ##[group]Checking out the ref
+2025-10-06T13:59:17.1603073Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-10-06T13:59:17.1851673Z Switched to a new branch 'main'
+2025-10-06T13:59:17.1853034Z branch 'main' set up to track 'origin/main'.
+2025-10-06T13:59:17.1861007Z ##[endgroup]
+2025-10-06T13:59:17.1898502Z [command]/usr/bin/git log -1 --format=%H
+2025-10-06T13:59:17.1920199Z 185c6fae08b0f27c4a0aa36125647c25c967af89
+2025-10-06T13:59:17.2154421Z ##[group]Run actions/setup-node@v4
+2025-10-06T13:59:17.2154945Z with:
+2025-10-06T13:59:17.2155282Z   node-version: 18
+2025-10-06T13:59:17.2155663Z   always-auth: false
+2025-10-06T13:59:17.2156045Z   check-latest: false
+2025-10-06T13:59:17.2156560Z   token: ***
+2025-10-06T13:59:17.2156911Z ##[endgroup]
+2025-10-06T13:59:17.3934889Z Found in cache @ /opt/hostedtoolcache/node/18.20.8/x64
+2025-10-06T13:59:17.3943438Z ##[group]Environment details
+2025-10-06T13:59:18.9953970Z node: v18.20.8
+2025-10-06T13:59:18.9954751Z npm: 10.8.2
+2025-10-06T13:59:18.9955174Z yarn: 1.22.22
+2025-10-06T13:59:18.9956280Z ##[endgroup]
+2025-10-06T13:59:19.0058957Z ##[group]Run npm install -g cspell
+2025-10-06T13:59:19.0059376Z [36;1mnpm install -g cspell[0m
+2025-10-06T13:59:19.0101419Z shell: /usr/bin/bash -e {0}
+2025-10-06T13:59:19.0101743Z ##[endgroup]
+2025-10-06T13:59:24.2516547Z 
+2025-10-06T13:59:24.2523444Z added 111 packages in 5s
+2025-10-06T13:59:24.2523862Z 
+2025-10-06T13:59:24.2524352Z 11 packages are looking for funding
+2025-10-06T13:59:24.2524793Z   run `npm fund` for details
+2025-10-06T13:59:24.2700277Z ##[group]Run cat > .cspell.json << 'EOF'
+2025-10-06T13:59:24.2700660Z [36;1mcat > .cspell.json << 'EOF'[0m
+2025-10-06T13:59:24.2700900Z [36;1m{[0m
+2025-10-06T13:59:24.2701078Z [36;1m  "version": "0.2",[0m
+2025-10-06T13:59:24.2701298Z [36;1m  "language": "en",[0m
+2025-10-06T13:59:24.2701499Z [36;1m  "words": [[0m
+2025-10-06T13:59:24.2701694Z [36;1m    "SDD",[0m
+2025-10-06T13:59:24.2701873Z [36;1m    "Spec",[0m
+2025-10-06T13:59:24.2702065Z [36;1m    "ChatPRD",[0m
+2025-10-06T13:59:24.2702273Z [36;1m    "Copilot",[0m
+2025-10-06T13:59:24.2702483Z [36;1m    "Kiro",[0m
+2025-10-06T13:59:24.2702658Z [36;1m    "Mermaid",[0m
+2025-10-06T13:59:24.2702853Z [36;1m    "kebab",[0m
+2025-10-06T13:59:24.2703051Z [36;1m    "PRD",[0m
+2025-10-06T13:59:24.2703243Z [36;1m    "PRDs",[0m
+2025-10-06T13:59:24.2703426Z [36;1m    "API",[0m
+2025-10-06T13:59:24.2703600Z [36;1m    "APIs",[0m
+2025-10-06T13:59:24.2703814Z [36;1m    "GitHub",[0m
+2025-10-06T13:59:24.2704051Z [36;1m    "GitBook",[0m
+2025-10-06T13:59:24.2704505Z [36;1m    "markdownlint",[0m
+2025-10-06T13:59:24.2704724Z [36;1m    "frontend",[0m
+2025-10-06T13:59:24.2704929Z [36;1m    "backend",[0m
+2025-10-06T13:59:24.2705119Z [36;1m    "fullstack",[0m
+2025-10-06T13:59:24.2705317Z [36;1m    "DevOps",[0m
+2025-10-06T13:59:24.2705496Z [36;1m    "CI",[0m
+2025-10-06T13:59:24.2705670Z [36;1m    "CD",[0m
+2025-10-06T13:59:24.2705836Z [36;1m    "YAML",[0m
+2025-10-06T13:59:24.2706017Z [36;1m    "JSON",[0m
+2025-10-06T13:59:24.2706203Z [36;1m    "TypeScript",[0m
+2025-10-06T13:59:24.2706418Z [36;1m    "JavaScript",[0m
+2025-10-06T13:59:24.2706613Z [36;1m    "Node.js",[0m
+2025-10-06T13:59:24.2706804Z [36;1m    "npm",[0m
+2025-10-06T13:59:24.2706983Z [36;1m    "repo",[0m
+2025-10-06T13:59:24.2707165Z [36;1m    "repos",[0m
+2025-10-06T13:59:24.2707351Z [36;1m    "codebase",[0m
+2025-10-06T13:59:24.2707543Z [36;1m    "codebases",[0m
+2025-10-06T13:59:24.2707741Z [36;1m    "workflow",[0m
+2025-10-06T13:59:24.2707941Z [36;1m    "workflows",[0m
+2025-10-06T13:59:24.2708138Z [36;1m    "checkbox",[0m
+2025-10-06T13:59:24.2708327Z [36;1m    "checkboxes",[0m
+2025-10-06T13:59:24.2708521Z [36;1m    "TODO",[0m
+2025-10-06T13:59:24.2708693Z [36;1m    "TODOs",[0m
+2025-10-06T13:59:24.2708876Z [36;1m    "README",[0m
+2025-10-06T13:59:24.2709062Z [36;1m    "CONTRIBUTING",[0m
+2025-10-06T13:59:24.2709266Z [36;1m    "changelog",[0m
+2025-10-06T13:59:24.2709462Z [36;1m    "changelogs",[0m
+2025-10-06T13:59:24.2709653Z [36;1m    "versioning",[0m
+2025-10-06T13:59:24.2709848Z [36;1m    "semver",[0m
+2025-10-06T13:59:24.2710028Z [36;1m    "linting",[0m
+2025-10-06T13:59:24.2710219Z [36;1m    "linter",[0m
+2025-10-06T13:59:24.2710408Z [36;1m    "linters",[0m
+2025-10-06T13:59:24.2710595Z [36;1m    "refactor",[0m
+2025-10-06T13:59:24.2710785Z [36;1m    "refactoring",[0m
+2025-10-06T13:59:24.2710990Z [36;1m    "refactored",[0m
+2025-10-06T13:59:24.2711182Z [36;1m    "scalable",[0m
+2025-10-06T13:59:24.2711384Z [36;1m    "scalability",[0m
+2025-10-06T13:59:24.2711592Z [36;1m    "maintainable",[0m
+2025-10-06T13:59:24.2711801Z [36;1m    "maintainability",[0m
+2025-10-06T13:59:24.2712026Z [36;1m    "extensible",[0m
+2025-10-06T13:59:24.2712225Z [36;1m    "extensibility",[0m
+2025-10-06T13:59:24.2712445Z [36;1m    "interoperability",[0m
+2025-10-06T13:59:24.2712667Z [36;1m    "observability",[0m
+2025-10-06T13:59:24.2712876Z [36;1m    "traceability",[0m
+2025-10-06T13:59:24.2713082Z [36;1m    "reproducible",[0m
+2025-10-06T13:59:24.2713298Z [36;1m    "reproducibility"[0m
+2025-10-06T13:59:24.2713526Z [36;1m  ],[0m
+2025-10-06T13:59:24.2713702Z [36;1m  "flagWords": [],[0m
+2025-10-06T13:59:24.2713909Z [36;1m  "ignorePaths": [[0m
+2025-10-06T13:59:24.2714550Z [36;1m    "node_modules/**",[0m
+2025-10-06T13:59:24.2714771Z [36;1m    ".git/**",[0m
+2025-10-06T13:59:24.2714964Z [36;1m    "*.log",[0m
+2025-10-06T13:59:24.2715142Z [36;1m    "*.lock"[0m
+2025-10-06T13:59:24.2715322Z [36;1m  ],[0m
+2025-10-06T13:59:24.2715675Z [36;1m  "overrides": [[0m
+2025-10-06T13:59:24.2715877Z [36;1m    {[0m
+2025-10-06T13:59:24.2716057Z [36;1m      "filename": "**/*.md",[0m
+2025-10-06T13:59:24.2716307Z [36;1m      "ignoreRegExpList": [[0m
+2025-10-06T13:59:24.2716544Z [36;1m        "/```[\\s\\S]*?```/g",[0m
+2025-10-06T13:59:24.2716776Z [36;1m        "/`[^`]*`/g",[0m
+2025-10-06T13:59:24.2716985Z [36;1m        "/\\[.*?\\]\\(.*?\\)/g",[0m
+2025-10-06T13:59:24.2717232Z [36;1m        "/https?:\\/\\/[^\\s)]+/g"[0m
+2025-10-06T13:59:24.2717465Z [36;1m      ][0m
+2025-10-06T13:59:24.2717627Z [36;1m    }[0m
+2025-10-06T13:59:24.2717793Z [36;1m  ][0m
+2025-10-06T13:59:24.2717949Z [36;1m}[0m
+2025-10-06T13:59:24.2718109Z [36;1mEOF[0m
+2025-10-06T13:59:24.2754053Z shell: /usr/bin/bash -e {0}
+2025-10-06T13:59:24.2754492Z ##[endgroup]
+2025-10-06T13:59:24.2851446Z ##[group]Run echo "Running spell check..."
+2025-10-06T13:59:24.2851779Z [36;1mecho "Running spell check..."[0m
+2025-10-06T13:59:24.2852113Z [36;1mcspell "**/*.md" --no-progress --show-context || {[0m
+2025-10-06T13:59:24.2852437Z [36;1m  echo "❌ Spell check found issues"[0m
+2025-10-06T13:59:24.2852780Z [36;1m  echo "💡 Add technical terms to .cspell.json words array"[0m
+2025-10-06T13:59:24.2914335Z [36;1m  exit 1[0m
+2025-10-06T13:59:24.2914607Z [36;1m}[0m
+2025-10-06T13:59:24.2914823Z [36;1mecho "✅ Spell check passed"[0m
+2025-10-06T13:59:24.2946638Z shell: /usr/bin/bash -e {0}
+2025-10-06T13:59:24.2946887Z ##[endgroup]
+2025-10-06T13:59:24.2999601Z Running spell check...
+2025-10-06T13:59:25.8694925Z audiences/experienced-developers.md:222:6     - Unknown word (Microspec)  -- #### Microspec Architecture
+2025-10-06T13:59:25.9343289Z audiences/specialists.md:564:20    - Unknown word (WCAG)       -- **Accessibility:** WCAG 2.1 AA compliant
+2025-10-06T13:59:25.9699466Z CODE_OF_CONDUCT.md:29:5      - Unknown word (Gatekeeping) -- - **Gatekeeping** or creating barriers
+2025-10-06T13:59:25.9701629Z CODE_OF_CONDUCT.md:153:5     - Unknown word (Inclusivity) -- - **Inclusivity**: We welcome contributors
+2025-10-06T13:59:26.0520037Z docs/research/github-spec-kit.md:14:132    - Unknown word (Andrej)     -- coding".3 Coined by Andrej Karpathy, this approach
+2025-10-06T13:59:26.0522793Z docs/research/github-spec-kit.md:14:139    - Unknown word (Karpathy)   -- .3 Coined by Andrej Karpathy, this approach involves
+2025-10-06T13:59:26.0526124Z docs/research/github-spec-kit.md:16:351    - Unknown word (Delimarsky) -- Product Manager Den Delimarsky notes, developers often
+2025-10-06T13:59:26.0529516Z docs/research/github-spec-kit.md:28:72     - Unknown word (operationalize) -- toolkit engineered to operationalize the principles of Spec
+2025-10-06T13:59:26.0531748Z docs/research/github-spec-kit.md:97:41     - Unknown word (toolkits)       -- Unlike the command-line toolkits, Kiro is a full-fledged
+2025-10-06T13:59:26.0533707Z docs/research/github-spec-kit.md:107:25    - Unknown word (Apideck)        -- Swagger (OpenAPI) & Apideck:** These platforms place
+2025-10-06T13:59:26.0535573Z docs/research/github-spec-kit.md:116:5     - Unknown word (Tabnine)        -- * **Tabnine:** Tabnine is an AI
+2025-10-06T13:59:26.0537937Z docs/research/github-spec-kit.md:116:16    - Unknown word (Tabnine)        -- * **Tabnine:** Tabnine is an AI code assistant
+2025-10-06T13:59:26.0539746Z docs/research/github-spec-kit.md:117:5     - Unknown word (Replit)         -- * **Replit Agent:** The Replit
+2025-10-06T13:59:26.0541640Z docs/research/github-spec-kit.md:117:25    - Unknown word (Replit)         -- Replit Agent:** The Replit Agent represents a different
+2025-10-06T13:59:26.0543283Z docs/research/github-spec-kit.md:154:5     - Unknown word (Replit)         -- | **Replit Agent** | AI Coding
+2025-10-06T13:59:26.0545487Z docs/research/github-spec-kit.md:155:5     - Unknown word (Tabnine)        -- | **Tabnine** | AI Coding Platform
+2025-10-06T13:59:26.0548311Z docs/research/github-spec-kit.md:165:90    - Unknown word (Replit)         -- using tools like **Replit Agent** or the basic
+2025-10-06T13:59:26.0550271Z docs/research/github-spec-kit.md:171:45    - Unknown word (Tabnine)        -- development in the AI era \- Tabnine, accessed September
+2025-10-06T13:59:26.0552442Z docs/research/github-spec-kit.md:173:73    - Unknown word (BEON)           -- Assisted Engineering \- BEON.tech, accessed September
+2025-10-06T13:59:26.0554563Z docs/research/github-spec-kit.md:175:52    - Unknown word (Azalio)         -- GitHub's Spec Kit \- Azalio, accessed September
+2025-10-06T13:59:26.0556456Z docs/research/github-spec-kit.md:179:70    - Unknown word (feiyun)         -- coding-mcp Tutorial | by feiyun0112 | Medium, accessed
+2025-10-06T13:59:26.0558381Z docs/research/github-spec-kit.md:184:55    - Unknown word (Apideck)        -- driven API development \- Apideck, accessed September
+2025-10-06T13:59:26.0560359Z docs/research/github-spec-kit.md:189:5     - Unknown word (Tabnine)        -- 20. Tabnine AI Code Assistant |
+2025-10-06T13:59:26.0562294Z docs/research/github-spec-kit.md:191:5     - Unknown word (Replit)         -- 22. Replit – Build apps and sites
+2025-10-06T13:59:26.0563851Z docs/research/github-spec-kit.md:194:25    - Unknown word (Glama)          -- Spec Workflow MCP | Glama, accessed September
+2025-10-06T13:59:26.0674998Z docs/research/specs-from-chore-to-core.md:23:117    - Unknown word (JTBD)       -- and "Jobs to be Done" (JTBD) frameworks. For a given
+2025-10-06T13:59:26.0682546Z docs/research/specs-from-chore-to-core.md:34:261    - Unknown word (ilities)    -- requirements (the "-ilities," e.g., scalability
+2025-10-06T13:59:26.0686413Z docs/research/specs-from-chore-to-core.md:59:67     - Unknown word (Lucidchart) -- diagramming tools (like Lucidchart, Miro, or even just
+2025-10-06T13:59:26.0688247Z docs/research/specs-from-chore-to-core.md:59:98     - Unknown word (Excalidraw) -- Miro, or even just Excalidraw). Challenge engineers
+2025-10-06T13:59:26.0928401Z examples/feature-addition/real-time-notifications/README.md:35:20     - Unknown word (rollouts)   -- - Planning feature rollouts with minimal risk to
+2025-10-06T13:59:26.1771962Z examples/workflows/complete-sdd-workflow/spec.md:12:72     - Unknown word (TOTP)       -- authentication using TOTP
+2025-10-06T13:59:26.1785599Z examples/workflows/complete-sdd-workflow/spec.md:86:35     - Unknown word (TOTP)       -- mfa/setup` - Set up TOTP MFA
+2025-10-06T13:59:26.1787352Z examples/workflows/complete-sdd-workflow/spec.md:87:36     - Unknown word (TOTP)       -- mfa/verify` - Verify TOTP code
+2025-10-06T13:59:26.2178242Z how-to/chatprd-workflow-integration.md:363:23    - Unknown word (wireframes) -- Create visual aids (wireframes, flowcharts, diagrams
+2025-10-06T13:59:26.2231779Z how-to/custom-ai-agent-integration.md:185:25    - Unknown word (Ollama)     -- 2. Local LLM Agent (Ollama Integration)
+2025-10-06T13:59:26.2428814Z how-to/github-spec-kit-integration.md:5:61      - Unknown word (operationalizes) -- command-line toolkit that operationalizes Spec-Driven Development
+2025-10-06T13:59:26.2431162Z how-to/github-spec-kit-integration.md:77:38     - Unknown word (WCAG)            -- must be accessible (WCAG 2.1 AA)"
+2025-10-06T13:59:26.2432761Z how-to/github-spec-kit-integration.md:202:12    - Unknown word (multimodal)      -- - Leverage multimodal capabilities for UI
+2025-10-06T13:59:26.2912643Z how-to/tool-integration-workflows.md:165:9     - Unknown word (VARCHAR)    -- email VARCHAR(255) UNIQUE NOT NULL
+2025-10-06T13:59:26.2915175Z how-to/tool-integration-workflows.md:166:17    - Unknown word (VARCHAR)    -- password_hash VARCHAR(255) NOT NULL,
+2025-10-06T13:59:26.2916574Z how-to/tool-integration-workflows.md:178:9     - Unknown word (VARCHAR)    -- token VARCHAR(255) UNIQUE NOT NULL
+2025-10-06T13:59:26.3234827Z README.md:96:24     - Unknown word (Quickstarts) -- 🎯 **Role-Specific Quickstarts**
+2025-10-06T13:59:26.3372650Z resources/checklists/cross-functional-review.md:74:80     - Unknown word (WCAG)       -- requirements meet standards (WCAG 2.1)
+2025-10-06T13:59:26.3375076Z resources/checklists/cross-functional-review.md:155:9     - Unknown word (Runbook)    -- - [ ] **Runbook Documentation**: Operational
+2025-10-06T13:59:26.3377286Z resources/checklists/cross-functional-review.md:155:61    - Unknown word (runbooks)   -- Operational procedures and runbooks planned
+2025-10-06T13:59:26.3379260Z resources/checklists/cross-functional-review.md:180:71    - Unknown word (CCPA)       -- subject rights (GDPR, CCPA)
+2025-10-06T13:59:26.3659866Z resources/checklists/spec-quality.md:5:98      - Unknown word (implementability) -- completeness, clarity, and implementability before moving to the
+2025-10-06T13:59:26.3837214Z resources/decision-trees/integration-strategy.md:168:20    - Unknown word (roadmaps)   -- - Create migration roadmaps with specs
+2025-10-06T13:59:26.4297862Z resources/templates/frontend/spec.md:36:48     - Unknown word (WCAG)       -- text **SHALL** meet WCAG 2.1 AA contrast ratios
+2025-10-06T13:59:26.4442494Z resources/templates/mobile/spec.md:101:10    - Unknown word (CCPA)       -- - **GDPR/CCPA**: Compliance with applicable
+2025-10-06T13:59:26.4444877Z resources/templates/mobile/spec.md:112:28    - Unknown word (WCAG)       -- Color Contrast**: Meet WCAG 2.1 AA standards
+2025-10-06T13:59:26.4446583Z resources/templates/mobile/spec.md:155:54    - Unknown word (symbolication) -- crash reporting and symbolication
+2025-10-06T13:59:26.4448470Z resources/templates/mobile/spec.md:170:55    - Unknown word (rollouts)      -- configuration for feature rollouts
+2025-10-06T13:59:26.4745699Z training/case-studies/challenges/gaming-studio-recovery.md:35:32     - Unknown word (playtesting) -- Centric**: Frequent playtesting and rapid response to
+2025-10-06T13:59:26.4748316Z training/case-studies/challenges/gaming-studio-recovery.md:89:32     - Unknown word (wireframes)  -- Interface**: Detailed wireframes and interaction specification
+2025-10-06T13:59:26.4750824Z training/case-studies/challenges/gaming-studio-recovery.md:104:73    - Unknown word (playtesting) -- rapid iteration based on playtesting feedback
+2025-10-06T13:59:26.4752496Z training/case-studies/challenges/gaming-studio-recovery.md:169:5     - Unknown word (Playtesting) -- - **Playtesting Integration**: Specifications
+2025-10-06T13:59:26.4754307Z training/case-studies/challenges/gaming-studio-recovery.md:169:64    - Unknown word (playtesting) -- ecifications updated based on playtesting feedback
+2025-10-06T13:59:26.4756050Z training/case-studies/challenges/gaming-studio-recovery.md:286:73    - Unknown word (playtesting) -- evolve rapidly based on playtesting and creative feedback
+2025-10-06T13:59:26.4887646Z training/case-studies/index.md:29:20     - Unknown word (Fintech)    -- #### Case Study 1: Fintech Startup - Payment Processing
+2025-10-06T13:59:26.4889381Z training/case-studies/index.md:30:28     - Unknown word (fintech)    -- Organization**: Series B fintech startup (150 engineers
+2025-10-06T13:59:26.4891100Z training/case-studies/index.md:283:21    - Unknown word (Roadmaps)   -- 2. **Implementation Roadmaps**: Use case studies
+2025-10-06T13:59:26.4892845Z training/case-studies/index.md:302:5     - Unknown word (Anonymization) -- - **Anonymization**: Appropriate protection
+2025-10-06T13:59:26.4895079Z training/case-studies/index.md:315:5     - Unknown word (Anonymization) -- - **Anonymization Review**: Ensure appropriate
+2025-10-06T13:59:26.5082069Z training/case-studies/success/fintech-payment-platform.md:1:15      - Unknown word (Fintech)    -- # Case Study: Fintech Payment Platform - Scaling
+2025-10-06T13:59:26.5086081Z training/case-studies/success/fintech-payment-platform.md:5:28      - Unknown word (fintech)    -- Organization**: Series B fintech startup specializing
+2025-10-06T13:59:26.5089513Z training/case-studies/success/fintech-payment-platform.md:11:52     - Unknown word (fintech)    -- how a rapidly growing fintech company successfully
+2025-10-06T13:59:26.5093094Z training/case-studies/success/fintech-payment-platform.md:21:41     - Unknown word (fintech)    -- Pressure**: Fast-moving fintech market requiring quick
+2025-10-06T13:59:26.5096355Z training/case-studies/success/fintech-payment-platform.md:160:20    - Unknown word (fintech)    -- The team developed fintech-specific templates addressing
+2025-10-06T13:59:26.5099368Z training/case-studies/success/fintech-payment-platform.md:211:14    - Unknown word (Fintech)    -- - **Usage**: Fintech compliance and regulatory
+2025-10-06T13:59:26.5102263Z training/case-studies/success/fintech-payment-platform.md:213:46    - Unknown word (fintech)    -- Fine-tuned models with fintech-specific knowledge
+2025-10-06T13:59:26.5104308Z training/case-studies/success/fintech-payment-platform.md:368:10    - Unknown word (Fintech)    -- #### For Fintech Companies
+2025-10-06T13:59:26.5268442Z training/case-studies/transformation/marketing-agency-transformation.md:28:84     - Unknown word (wireframes) -- conversations and rough wireframes
+2025-10-06T13:59:26.5271021Z training/case-studies/transformation/marketing-agency-transformation.md:237:43    - Unknown word (wireframes) -- pecifications**: Heavy use of wireframes, mockups, and interactive
+2025-10-06T13:59:26.5272737Z training/case-studies/transformation/marketing-agency-transformation.md:301:50    - Unknown word (wireframes) -- assisted creation of wireframes and mockups
+2025-10-06T13:59:26.5353064Z training/fundamentals/index.md:63:30     - Unknown word (antipatterns) -- common specification antipatterns
+2025-10-06T13:59:26.5355777Z training/fundamentals/index.md:84:13     - Unknown word (Antipatterns) -- 4. **Common Antipatterns**
+2025-10-06T13:59:26.5581168Z training/hands-on/index.md:118:15    - Unknown word (workstream) -- - Parallel workstream coordination
+2025-10-06T13:59:26.5918092Z training/hands-on/tutorial-1-first-workflow.md:176:9     - Unknown word (VARCHAR)    -- email VARCHAR(255) UNIQUE NOT NULL
+2025-10-06T13:59:26.5920441Z training/hands-on/tutorial-1-first-workflow.md:177:17    - Unknown word (VARCHAR)    -- password_hash VARCHAR(255) NOT NULL,
+2025-10-06T13:59:26.5922954Z training/hands-on/tutorial-1-first-workflow.md:179:22    - Unknown word (VARCHAR)    -- verification_token VARCHAR(255),
+2025-10-06T13:59:26.5924640Z training/hands-on/tutorial-1-first-workflow.md:181:15    - Unknown word (VARCHAR)    -- reset_token VARCHAR(255),
+2025-10-06T13:59:26.5926099Z training/hands-on/tutorial-1-first-workflow.md:195:17    - Unknown word (VARCHAR)    -- refresh_token VARCHAR(255) UNIQUE NOT NULL
+2025-10-06T13:59:26.5992343Z training/index.md:74:24     - Unknown word (antipatterns) -- Common specification antipatterns
+2025-10-06T13:59:26.5995273Z CSpell: Files checked: 65, Issues found: 84 in 25 files.
+2025-10-06T13:59:26.6198067Z ❌ Spell check found issues
+2025-10-06T13:59:26.6198629Z 💡 Add technical terms to .cspell.json words array
+2025-10-06T13:59:26.6211855Z ##[error]Process completed with exit code 1.
+2025-10-06T13:59:26.6305640Z Post job cleanup.
+2025-10-06T13:59:26.7230828Z [command]/usr/bin/git version
+2025-10-06T13:59:26.7267613Z git version 2.51.0
+2025-10-06T13:59:26.7312061Z Temporarily overriding HOME='/home/runner/work/_temp/f6c6b971-1c44-4d92-8c7f-4df0e9eb6c5b' before making global git config changes
+2025-10-06T13:59:26.7313553Z Adding repository directory to the temporary git global config as a safe directory
+2025-10-06T13:59:26.7319073Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/spec-driven-development/spec-driven-development
+2025-10-06T13:59:26.7358148Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-10-06T13:59:26.7391538Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-10-06T13:59:26.7623779Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-10-06T13:59:26.7645525Z http.https://github.com/.extraheader
+2025-10-06T13:59:26.7658637Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-10-06T13:59:26.7688899Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-10-06T13:59:26.8016895Z Cleaning up orphan processes

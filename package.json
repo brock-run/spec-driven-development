@@ -1,0 +1,21 @@
+{
+  "name": "sdd-blueprint-validation",
+  "version": "1.0.0",
+  "description": "Validation tools for Spec-Driven Development Blueprint",
+  "private": true,
+  "scripts": {
+    "lint:markdown": "markdownlint-cli2 \"**/*.md\" \"#node_modules\"",
+    "check:links": "find . -name \"*.md\" -not -path \"./node_modules/*\" | head -20 | xargs -I {} markdown-link-check {} --config .markdown-link-check.json",
+    "check:spelling": "cspell \"**/*.md\" --no-progress --show-context",
+    "validate:templates": "./scripts/validate-templates.sh",
+    "test:all": "npm run lint:markdown && npm run check:links && npm run check:spelling"
+  },
+  "devDependencies": {
+    "markdown-link-check": "^3.11.2",
+    "markdownlint-cli2": "^0.13.0",
+    "cspell": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

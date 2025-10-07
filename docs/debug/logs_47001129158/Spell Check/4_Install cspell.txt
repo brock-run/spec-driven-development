@@ -1,0 +1,9 @@
+﻿2025-10-06T13:59:19.0058933Z ##[group]Run npm install -g cspell
+2025-10-06T13:59:19.0059372Z [36;1mnpm install -g cspell[0m
+2025-10-06T13:59:19.0101386Z shell: /usr/bin/bash -e {0}
+2025-10-06T13:59:19.0101739Z ##[endgroup]
+2025-10-06T13:59:24.2516451Z 
+2025-10-06T13:59:24.2523422Z added 111 packages in 5s
+2025-10-06T13:59:24.2523856Z 
+2025-10-06T13:59:24.2524346Z 11 packages are looking for funding
+2025-10-06T13:59:24.2524780Z   run `npm fund` for details

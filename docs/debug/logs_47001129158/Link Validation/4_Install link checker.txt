@@ -1,0 +1,14 @@
+﻿2025-10-06T13:59:23.5600431Z ##[group]Run npm install -g markdown-link-check
+2025-10-06T13:59:23.5600929Z [36;1mnpm install -g markdown-link-check[0m
+2025-10-06T13:59:23.5719942Z shell: /usr/bin/bash -e {0}
+2025-10-06T13:59:23.5720376Z ##[endgroup]
+2025-10-06T13:59:29.0385115Z npm warn EBADENGINE Unsupported engine {
+2025-10-06T13:59:29.0385746Z npm warn EBADENGINE   package: 'undici@7.16.0',
+2025-10-06T13:59:29.0386213Z npm warn EBADENGINE   required: { node: '>=20.18.1' },
+2025-10-06T13:59:29.0386724Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-10-06T13:59:29.0387115Z npm warn EBADENGINE }
+2025-10-06T13:59:30.0740884Z 
+2025-10-06T13:59:30.0741527Z added 73 packages in 6s
+2025-10-06T13:59:30.0741894Z 
+2025-10-06T13:59:30.0742227Z 19 packages are looking for funding
+2025-10-06T13:59:30.0742765Z   run `npm fund` for details

@@ -1,0 +1,625 @@
+﻿2025-10-06T13:59:18.4518010Z ##[group]Run echo "Checking terminology consistency..."
+2025-10-06T13:59:18.4518747Z [36;1mecho "Checking terminology consistency..."[0m
+2025-10-06T13:59:18.4519287Z [36;1m[0m
+2025-10-06T13:59:18.4519682Z [36;1m# Check for consistent SDD terminology[0m
+2025-10-06T13:59:18.4520216Z [36;1minconsistent_terms=([0m
+2025-10-06T13:59:18.4520978Z [36;1m  "spec driven development:Spec-Driven Development"[0m
+2025-10-06T13:59:18.4521665Z [36;1m  "spec-driven-development:Spec-Driven Development"  [0m
+2025-10-06T13:59:18.4522254Z [36;1m  "AI agent:AI agent"[0m
+2025-10-06T13:59:18.4522698Z [36;1m  "Github:GitHub"[0m
+2025-10-06T13:59:18.4523122Z [36;1m  "github:GitHub"[0m
+2025-10-06T13:59:18.4523537Z [36;1m)[0m
+2025-10-06T13:59:18.4523875Z [36;1m[0m
+2025-10-06T13:59:18.4524295Z [36;1mfor term_pair in "${inconsistent_terms[@]}"; do[0m
+2025-10-06T13:59:18.4524871Z [36;1m  incorrect="${term_pair%%:*}"[0m
+2025-10-06T13:59:18.4525369Z [36;1m  correct="${term_pair##*:}"[0m
+2025-10-06T13:59:18.4525842Z [36;1m  [0m
+2025-10-06T13:59:18.4526510Z [36;1m  if grep -r -i "$incorrect" --include="*.md" . --exclude-dir=node_modules --exclude-dir=.git; then[0m
+2025-10-06T13:59:18.4527540Z [36;1m    echo "⚠️  Found potentially inconsistent term: '$incorrect' (should be '$correct')"[0m
+2025-10-06T13:59:18.4528272Z [36;1m  fi[0m
+2025-10-06T13:59:18.4528623Z [36;1mdone[0m
+2025-10-06T13:59:18.4561284Z shell: /usr/bin/bash -e {0}
+2025-10-06T13:59:18.4561756Z ##[endgroup]
+2025-10-06T13:59:18.4610895Z Checking terminology consistency...
+2025-10-06T13:59:18.4655617Z ./docs/research/github-spec-kit.md:3. Spec Driven Development (SDD) \- A initial review \- DEV Community, accessed September 30, 2025, [https://dev.to/danielsogl/spec-driven-development-sdd-a-initial-review-2llp](https://dev.to/danielsogl/spec-driven-development-sdd-a-initial-review-2llp)  
+2025-10-06T13:59:18.4658881Z ./docs/research/github-spec-kit.md:26. Spec Driven Development is Slowing You Down: Here's a Better Way \- YouTube, accessed September 30, 2025, [https://www.youtube.com/watch?v=Ij-mZcpTcVM](https://www.youtube.com/watch?v=Ij-mZcpTcVM)
+2025-10-06T13:59:18.4661198Z ⚠️  Found potentially inconsistent term: 'spec driven development' (should be 'Spec-Driven Development')
+2025-10-06T13:59:18.4689274Z ./CONTRIBUTING.md:git clone https://github.com/YOUR-USERNAME/spec-driven-development-blueprint.git
+2025-10-06T13:59:18.4690277Z ./CONTRIBUTING.md:cd spec-driven-development-blueprint
+2025-10-06T13:59:18.4691413Z ./.kiro/steering/tech.md:cd spec-driven-development-blueprint
+2025-10-06T13:59:18.4694161Z ./docs/research/github-spec-kit.md:3. Spec Driven Development (SDD) \- A initial review \- DEV Community, accessed September 30, 2025, [https://dev.to/danielsogl/spec-driven-development-sdd-a-initial-review-2llp](https://dev.to/danielsogl/spec-driven-development-sdd-a-initial-review-2llp)  
+2025-10-06T13:59:18.4697736Z ./docs/research/github-spec-kit.md:4. Spec-Driven Development: The Next Step in AI-Assisted Engineering \- BEON.tech, accessed September 30, 2025, [https://beon.tech/blog/spec-driven-development-the-next-step-in-ai-assisted-engineering](https://beon.tech/blog/spec-driven-development-the-next-step-in-ai-assisted-engineering)  
+2025-10-06T13:59:18.4701883Z ./docs/research/github-spec-kit.md:5. Spec-Driven Development: The Key to Scalable AI Agents \- The ..., accessed September 30, 2025, [https://thenewstack.io/spec-driven-development-the-key-to-scalable-ai-agents/](https://thenewstack.io/spec-driven-development-the-key-to-scalable-ai-agents/)  
+2025-10-06T13:59:18.4705809Z ./docs/research/github-spec-kit.md:7. Spec-driven development with AI: Get started with a new open source toolkit, accessed September 30, 2025, [https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/](https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/)  
+2025-10-06T13:59:18.4711832Z ./docs/research/github-spec-kit.md:10. Embrace “Spec-Driven Development”, spec-coding-mcp Tutorial | by feiyun0112 | Medium, accessed September 30, 2025, [https://medium.com/@feiyun0112/embrace-spec-driven-development-spec-coding-mcp-tutorial-060034bfc0ef](https://medium.com/@feiyun0112/embrace-spec-driven-development-spec-coding-mcp-tutorial-060034bfc0ef)  
+2025-10-06T13:59:18.4715970Z ./docs/research/github-spec-kit.md:15. An introduction to spec-driven API development \- Apideck, accessed September 30, 2025, [https://www.apideck.com/blog/spec-driven-development-part-1](https://www.apideck.com/blog/spec-driven-development-part-1)  
+2025-10-06T13:59:18.4718178Z ./analytics/dashboard.md:- **Stars**: ![GitHub stars](https://img.shields.io/github/stars/[username]/spec-driven-development-blueprint)
+2025-10-06T13:59:18.4719649Z ./analytics/dashboard.md:- **Forks**: ![GitHub forks](https://img.shields.io/github/forks/[username]/spec-driven-development-blueprint)
+2025-10-06T13:59:18.4721343Z ./analytics/dashboard.md:- **Issues**: ![GitHub issues](https://img.shields.io/github/issues/[username]/spec-driven-development-blueprint)
+2025-10-06T13:59:18.4723020Z ./analytics/dashboard.md:- **Contributors**: ![GitHub contributors](https://img.shields.io/github/contributors/[username]/spec-driven-development-blueprint)
+2025-10-06T13:59:18.4724986Z ⚠️  Found potentially inconsistent term: 'spec-driven-development' (should be 'Spec-Driven Development')
+2025-10-06T13:59:18.4726171Z ./examples/README.md:- ✅ Tested with multiple AI agents (GitHub Copilot, Claude, Gemini)
+2025-10-06T13:59:18.4727488Z ./examples/greenfield/task-management-api/README.md:- Structuring requirements for AI agent consumption
+2025-10-06T13:59:18.4728712Z ./examples/greenfield/task-management-api/README.md:- Multiple AI agents (Copilot, Claude, Cursor)
+2025-10-06T13:59:18.4729738Z ./CONTRIBUTING.md:- Test **template compatibility** with at least one AI agent
+2025-10-06T13:59:18.4731150Z ./CONTRIBUTING.md:5. **Support AI agents**: Structure optimized for AI consumption
+2025-10-06T13:59:18.4732014Z ./CONTRIBUTING.md:- [ ] Tested with at least one AI agent
+2025-10-06T13:59:18.4734383Z ./how-to/mcp-integration-guide.md:Model Context Protocol (MCP) is an open standard that enables AI applications to securely connect to external data sources and tools. In the context of Spec-Driven Development, MCP allows multiple AI agents to share context, collaborate on specifications, and maintain consistency across complex development workflows.
+2025-10-06T13:59:18.4736973Z ./how-to/mcp-integration-guide.md:- **Standardized Communication:** Common protocol for AI agents to exchange information
+2025-10-06T13:59:18.4738373Z ./how-to/mcp-integration-guide.md:- **Tool Interoperability:** Ability for different AI agents to use the same tools and data sources
+2025-10-06T13:59:18.4739837Z ./how-to/mcp-integration-guide.md:- **Workflow Orchestration:** Coordination between multiple AI agents in complex development tasks
+2025-10-06T13:59:18.4741468Z ./how-to/mcp-integration-guide.md:- Understanding of your AI agent ecosystem (Claude, Copilot, Gemini, etc.)
+2025-10-06T13:59:18.4743067Z ./how-to/mcp-integration-guide.md:This example shows how multiple AI agents can collaborate on creating and refining specifications using MCP.
+2025-10-06T13:59:18.4744198Z ./how-to/ai-integration.md:### Custom AI Agent Integration
+2025-10-06T13:59:18.4744988Z ./how-to/custom-ai-agent-integration.md:# Custom AI Agent Integration Templates
+2025-10-06T13:59:18.4747178Z ./how-to/custom-ai-agent-integration.md:This guide provides templates and patterns for integrating custom AI agents with Spec-Driven Development workflows. Whether you're building internal AI tools or integrating with specialized AI services, these templates will help you maintain SDD consistency and quality.
+2025-10-06T13:59:18.4749609Z ./how-to/custom-ai-agent-integration.md:## Custom AI Agent Architecture
+2025-10-06T13:59:18.4750783Z ./how-to/custom-ai-agent-integration.md:    B --> C[Custom AI Agent]
+2025-10-06T13:59:18.4751848Z ./how-to/custom-ai-agent-integration.md:    """Parse SDD specifications into structured data for AI agents"""
+2025-10-06T13:59:18.4753179Z ./how-to/custom-ai-agent-integration.md:    """Custom AI agent using OpenAI API for SDD workflows"""
+2025-10-06T13:59:18.4754625Z ./how-to/custom-ai-agent-integration.md:    """Custom AI agent using local Ollama models for SDD workflows"""
+2025-10-06T13:59:18.4755677Z ./how-to/tool-integration-workflows.md:#### 3. AI Agent Configuration
+2025-10-06T13:59:18.4756639Z ./how-to/tool-integration-workflows.md:   - AI Agent: Claude (recommended for reasoning)
+2025-10-06T13:59:18.4757675Z ./how-to/tool-integration-workflows.md:- AI agents don't understand project history
+2025-10-06T13:59:18.4758912Z ./how-to/tool-integration-workflows.md:1. **Multi-Agent Orchestration:** Coordinate multiple AI agents for complex projects
+2025-10-06T13:59:18.4762603Z ./how-to/ai-troubleshooting-refinement.md:This guide provides comprehensive strategies for debugging AI output issues, refining prompts for better results, and coordinating multiple AI agents in Spec-Driven Development workflows. As AI becomes central to the development process, understanding how to troubleshoot and optimize AI interactions becomes critical for successful SDD implementation.
+2025-10-06T13:59:18.4765787Z ./how-to/ai-troubleshooting-refinement.md:- **Problem:** AI agents lose context with large specifications
+2025-10-06T13:59:18.4766863Z ./how-to/ai-troubleshooting-refinement.md:### Debugging Techniques by AI Agent
+2025-10-06T13:59:18.4768962Z ./how-to/github-spec-kit-integration.md:Spec Kit operates through a series of slash commands that guide you through the SDD workflow. These commands are issued to your AI agent within the project terminal.
+2025-10-06T13:59:18.4771174Z ./how-to/github-spec-kit-integration.md:#### Issue: AI agent not recognizing slash commands
+2025-10-06T13:59:18.4772143Z ./how-to/github-spec-kit-integration.md:2. Restart AI agent session
+2025-10-06T13:59:18.4773078Z ./how-to/github-spec-kit-integration.md:#### Issue: AI agent produces inconsistent results
+2025-10-06T13:59:18.4774136Z ./how-to/github-spec-kit-integration.md:- Use multiple AI agents for cross-validation
+2025-10-06T13:59:18.4775168Z ./how-to/advanced-flows.md:2. **Tool Integration**: Explore advanced AI agent coordination
+2025-10-06T13:59:18.4776263Z ./how-to/ide-specific-sdd-integration.md:   - Configure AI agent integration (Claude, Copilot, etc.)
+2025-10-06T13:59:18.4777366Z ./how-to/ide-specific-sdd-integration.md:- Check AI agent configuration and connectivity
+2025-10-06T13:59:18.4778728Z ./training/case-studies/challenges/gaming-studio-recovery.md:- **AI Tool Mismatch**: AI agents not optimized for game development workflows
+2025-10-06T13:59:18.4780389Z ./training/case-studies/challenges/gaming-studio-recovery.md:- **AI Tool Adaptation**: Configured AI agents for game development specific tasks
+2025-10-06T13:59:18.4782284Z ./training/case-studies/challenges/gaming-studio-recovery.md:- **Tool Mastery**: Effective use of AI agents and specification tools for appropriate tasks
+2025-10-06T13:59:18.4784449Z ./training/case-studies/challenges/gaming-studio-recovery.md:- **AI Agent Training**: Training AI agents specifically for game development tasks
+2025-10-06T13:59:18.4786395Z ./training/case-studies/transformation/marketing-agency-transformation.md:- **Template Generation**: AI agents generated initial specification drafts from client conversations
+2025-10-06T13:59:18.4788418Z ./training/case-studies/success/fintech-payment-platform.md:- **AI Integration**: Ability to leverage AI agents for faster development
+2025-10-06T13:59:18.4790063Z ./training/case-studies/success/fintech-payment-platform.md:- **Tool Setup**: GitHub Spec Kit integration, template development, AI agent configuration
+2025-10-06T13:59:18.4791665Z ./training/case-studies/success/fintech-payment-platform.md:#### AI Agent Integration
+2025-10-06T13:59:18.4792949Z ./training/case-studies/success/fintech-payment-platform.md:The team standardized on specific AI agents for different tasks:
+2025-10-06T13:59:18.4794755Z ./training/case-studies/success/fintech-payment-platform.md:**Tool Selection**: Choosing appropriate AI agents for specific tasks was crucial
+2025-10-06T13:59:18.4797137Z ./training/case-studies/success/fintech-payment-platform.md:- **Complementary Tools**: Different AI agents served different purposes effectively
+2025-10-06T13:59:18.4798695Z ./training/case-studies/index.md:- AI agents significantly accelerated service development once specs were clear
+2025-10-06T13:59:18.4800097Z ./training/case-studies/index.md:- AI agents helped maintain compliance consistency across features
+2025-10-06T13:59:18.4801723Z ./training/case-studies/index.md:- AI agents work best with appropriately detailed (not over-detailed) specifications
+2025-10-06T13:59:18.4803032Z ./training/case-studies/index.md:- AI agents helped maintain consistency across complex system interactions
+2025-10-06T13:59:18.4805044Z ./training/case-studies/index.md:- AI agents accelerated development of adaptive learning algorithms
+2025-10-06T13:59:18.4806268Z ./training/case-studies/index.md:- **Tool Selection**: AI agents, specification platforms, integration choices
+2025-10-06T13:59:18.4807479Z ./training/case-studies/index.md:- **Tool Effectiveness**: Which AI agents and platforms provided the most value
+2025-10-06T13:59:18.4808704Z ./training/case-studies/index.md:- **Tool Selection Guidance**: Recommendations for AI agents and platforms
+2025-10-06T13:59:18.4809677Z ./training/advanced/index.md:### Module 1: AI Agent Optimization
+2025-10-06T13:59:18.4810752Z ./training/advanced/index.md:- Understand the capabilities and limitations of different AI agents
+2025-10-06T13:59:18.4811693Z ./training/advanced/index.md:1. **AI Agent Landscape Analysis**
+2025-10-06T13:59:18.4812660Z ./training/advanced/index.md:   - Comparative analysis of major AI agents (GPT-4, Claude, Gemini, Copilot)
+2025-10-06T13:59:18.4813705Z ./training/advanced/index.md:   - Workflow design for complementary AI agents
+2025-10-06T13:59:18.4814601Z ./training/advanced/index.md:   - Measuring AI agent effectiveness and accuracy
+2025-10-06T13:59:18.4815665Z ./training/advanced/index.md:- **Agent Comparison Lab**: Test the same specification across multiple AI agents
+2025-10-06T13:59:18.4816831Z ./training/advanced/index.md:- **Multi-Agent Design**: Create workflows using 2-3 different AI agents
+2025-10-06T13:59:18.4817814Z ./training/advanced/index.md:   - Fallback strategies when AI agents fail
+2025-10-06T13:59:18.4818710Z ./training/advanced/index.md:- Experimental AI agent evaluation and integration
+2025-10-06T13:59:18.4819668Z ./training/advanced/index.md:- **Complexity**: Integration of multiple AI agents and tools
+2025-10-06T13:59:18.4820884Z ./training/advanced/index.md:- **Technical Excellence**: Sophisticated use of AI agents and SDD principles
+2025-10-06T13:59:18.4822023Z ./training/advanced/index.md:- Master multiple AI agent platforms and integration strategies
+2025-10-06T13:59:18.4823925Z ./training/advanced/index.md:*Ready for advanced mastery? Begin with [Module 1: AI Agent Optimization](module-1-ai-optimization.md) or explore the [Specialization Tracks](specializations/index.md) that align with your interests and career goals.*
+2025-10-06T13:59:18.4826250Z ./training/hands-on/tutorial-1-first-workflow.md:**Tools Needed**: GitHub account, AI agent access (Copilot, Claude, or similar), text editor
+2025-10-06T13:59:18.4827734Z ./training/hands-on/tutorial-1-first-workflow.md:- Use AI agents effectively for implementation
+2025-10-06T13:59:18.4828875Z ./training/hands-on/tutorial-1-first-workflow.md:### Step 11: AI Agent Prompt Engineering (20 minutes)
+2025-10-06T13:59:18.4829928Z ./training/hands-on/tutorial-1-first-workflow.md:Use your AI agent to implement:
+2025-10-06T13:59:18.4831294Z ./training/hands-on/tutorial-1-first-workflow.md:- AI agents produced higher quality code with detailed prompts
+2025-10-06T13:59:18.4832594Z ./training/hands-on/tutorial-1-first-workflow.md:- AI agent outputs needed human review and refinement
+2025-10-06T13:59:18.4833817Z ./training/hands-on/tutorial-1-first-workflow.md:- AI agents work best with specific, contextual prompts
+2025-10-06T13:59:18.4836635Z ./training/hands-on/tutorial-1-first-workflow.md:**Congratulations!** You've completed your first comprehensive SDD workflow. You now have hands-on experience with the complete process from requirements to implementation, and you understand how AI agents can accelerate development while maintaining quality and alignment with specifications.
+2025-10-06T13:59:18.4839405Z ./training/hands-on/sample-projects/index.md:- Using AI agents for straightforward implementation
+2025-10-06T13:59:18.4840781Z ./training/hands-on/sample-projects/index.md:- AI agent prompts and optimization techniques
+2025-10-06T13:59:18.4842017Z ./training/hands-on/index.md:   - AI agent prompt engineering and refinement
+2025-10-06T13:59:18.4842771Z ./training/hands-on/index.md:### AI Agent Playground
+2025-10-06T13:59:18.4843641Z ./training/hands-on/index.md:- **Tool Comparison**: Experience different AI agents and their capabilities
+2025-10-06T13:59:18.4844905Z ./training/hands-on/index.md:- [AI Agent Setup](../../how-to/ai-troubleshooting-refinement.md) - Configure development tools
+2025-10-06T13:59:18.4846074Z ./training/fundamentals/index.md:- Understand the role of AI agents in SDD workflows
+2025-10-06T13:59:18.4847019Z ./training/fundamentals/index.md:   - How AI agents consume specifications
+2025-10-06T13:59:18.4847934Z ./training/fundamentals/index.md:   - Structuring plans for AI agent consumption
+2025-10-06T13:59:18.4849024Z ./training/fundamentals/index.md:- **AI Optimization**: Structure the plan for optimal AI agent interpretation
+2025-10-06T13:59:18.4850252Z ./training/fundamentals/index.md:- [AI Agent Integration](../../how-to/ai-troubleshooting-refinement.md)
+2025-10-06T13:59:18.4851339Z ./training/index.md:#### Module 1: AI Agent Optimization (3 hours)
+2025-10-06T13:59:18.4852132Z ./training/index.md:- Understanding AI agent capabilities and limitations
+2025-10-06T13:59:18.4852890Z ./training/index.md:- Common AI agent issues and solutions
+2025-10-06T13:59:18.4853667Z ./.github/pull_request_template.md:- [ ] Tested with at least one AI agent
+2025-10-06T13:59:18.4854593Z ./.github/pull_request_template/template_contribution.md:### AI Agent Compatibility:
+2025-10-06T13:59:18.4855708Z ./.github/pull_request_template/template_contribution.md:- [ ] Structure is clear and parseable by AI agents
+2025-10-06T13:59:18.4856941Z ./.github/pull_request_template/template_contribution.md:- [ ] Tested with at least one AI agent successfully
+2025-10-06T13:59:18.4858007Z ./.github/pull_request_template/template_contribution.md:### AI Agent Testing:
+2025-10-06T13:59:18.4859008Z ./.github/ISSUE_TEMPLATE/bug_report.md:- **Tool/Agent:** <!-- if using AI agents or specific tools -->
+2025-10-06T13:59:18.4860109Z ./.github/ISSUE_TEMPLATE/feedback.md:- **Tools Used**: (GitHub Spec Kit, ChatPRD, AI agents, etc.)
+2025-10-06T13:59:18.4861418Z ./resources/checklists/onboarding.md:  - [ ] Overview: Available AI agents and their capabilities
+2025-10-06T13:59:18.4862734Z ./resources/checklists/onboarding.md:  - [ ] Practice: AI agent interaction and prompt engineering
+2025-10-06T13:59:18.4863781Z ./resources/decision-trees/escalation-framework.md:    participant AI as AI Agent
+2025-10-06T13:59:18.4864750Z ./resources/decision-trees/project-initiation.md:    E --> K[Choose AI Agent]
+2025-10-06T13:59:18.4865698Z ./resources/decision-trees/project-initiation.md:### AI Agent Selection Criteria
+2025-10-06T13:59:18.4866684Z ./resources/decision-trees/project-initiation.md:### Path 1: Full SDD with AI Agent
+2025-10-06T13:59:18.4867785Z ./resources/decision-trees/integration-strategy.md:- Integrate AI agents into development workflow
+2025-10-06T13:59:18.4868991Z ./resources/decision-trees/integration-strategy.md:- **Tool Usage**: AI agent utilization and effectiveness
+2025-10-06T13:59:18.4870393Z ./.kiro/specs/sdd-repository-blueprint/tasks.md:    - Create project initiation decision tree (SDD vs traditional, AI agent selection)
+2025-10-06T13:59:18.4872038Z ./.kiro/specs/sdd-repository-blueprint/tasks.md:    - Create example configurations for multiple AI agents
+2025-10-06T13:59:18.4873372Z ./.kiro/specs/sdd-repository-blueprint/tasks.md:    - Build custom AI agent integration templates
+2025-10-06T13:59:18.4874670Z ./.kiro/specs/sdd-repository-blueprint/tasks.md:    - Build integration testing with major AI agents (Copilot, Claude, Gemini)
+2025-10-06T13:59:18.4876320Z ./.kiro/specs/sdd-repository-blueprint/design.md:3. **Tool Agnostic**: While featuring GitHub Spec Kit and ChatPRD, the blueprint supports multiple AI agents and tools
+2025-10-06T13:59:18.4877976Z ./.kiro/specs/sdd-repository-blueprint/design.md:- **Project Initiation Tree**: SDD vs. traditional approaches, AI agent selection
+2025-10-06T13:59:18.4879440Z ./.kiro/specs/sdd-repository-blueprint/design.md:- **Version Compatibility**: Automated testing against major AI agent versions
+2025-10-06T13:59:18.4881096Z ./.kiro/specs/sdd-repository-blueprint/design.md:   - Compatibility testing with major AI agents (Copilot, Claude, Gemini)
+2025-10-06T13:59:18.4883128Z ./.kiro/specs/sdd-repository-blueprint/requirements.md:1. WHEN an experienced practitioner needs guidance THEN the system SHALL provide decision trees for critical SDD routes (new projects, existing systems, AI agent selection)
+2025-10-06T13:59:18.4885950Z ./.kiro/specs/sdd-repository-blueprint/requirements.md:**User Story:** As a developer working with AI agents, I want practical integration guides and troubleshooting resources, so that I can effectively use tools like GitHub Spec Kit, Copilot, and other AI coding assistants.
+2025-10-06T13:59:18.4888578Z ./.kiro/specs/sdd-repository-blueprint/requirements.md:1. WHEN setting up AI integration THEN the system SHALL provide step-by-step setup guides for GitHub Spec Kit, ChatPRD, and major AI agents
+2025-10-06T13:59:18.4890676Z ./.kiro/specs/sdd-repository-blueprint/requirements.md:4. IF working with multiple AI agents THEN the system SHALL provide multi-agent compatibility guidance
+2025-10-06T13:59:18.4892046Z ./.kiro/steering/tech.md:- Ensure templates work across different AI agents and tools
+2025-10-06T13:59:18.4892980Z ./.kiro/steering/tech.md:- All templates must be tested with at least one AI agent
+2025-10-06T13:59:18.4894337Z ./.kiro/steering/product.md:- **Cross-functional Alignment**: Enables effective collaboration between AI agents, developers, product managers, and stakeholders
+2025-10-06T13:59:18.4895861Z ./.kiro/steering/product.md:- **Tool Agnostic**: Works with GitHub Spec Kit, Kiro, Claude, Copilot, and other AI agents
+2025-10-06T13:59:18.4896974Z ./.kiro/steering/structure.md:- Test templates with multiple AI agents when possible
+2025-10-06T13:59:18.4899201Z ./README.md:In the AI-native development era, the teams that thrive are those who can effectively collaborate with AI agents through clear, structured specifications. SDD bridges the gap between human intent and AI execution by providing a systematic approach for **new developers** to learn structured development practices:
+2025-10-06T13:59:18.4901939Z ./README.md:✅ **Enabling AI Collaboration**: Structured specs that AI agents can consume and act upon effectively  
+2025-10-06T13:59:18.4903089Z ./README.md:*All templates are GitHub Spec Kit compatible and tested with major AI agents.*
+2025-10-06T13:59:18.4903882Z ./README.md:**🤖 AI Agents**
+2025-10-06T13:59:18.4904829Z ./README.md:> *"SDD reduced our bug rate by 45% and cut our sprint planning time in half. The AI agents now understand exactly what we want to build."*  
+2025-10-06T13:59:18.4906205Z ./docs/community/feedback-process.md:- **Tool Integration Feedback**: Effectiveness of AI agent integrations
+2025-10-06T13:59:18.4907410Z ./docs/community/feedback-process.md:- **Integration Issues**: Problems with AI agent compatibility
+2025-10-06T13:59:18.4914319Z ./docs/research/github-spec-kit.md:However, while "vibe coding" excels at speed for prototyping, its unstructured nature reveals significant weaknesses when applied to the construction of robust, scalable, and maintainable production systems.4 The core issue stems from the nature of the Large Language Models (LLMs) that power these AI agents. As GitHub Principal Product Manager Den Delimarsky notes, developers often treat these agents like search engines, expecting them to infer context and intent, when they should be treated as "literal-minded pair programmers".6 A vague prompt forces the LLM to guess at thousands of unstated requirements, from architectural patterns and security constraints to specific business rules and user experience nuances.7 These implicit assumptions are often incorrect and can remain hidden until late in the implementation phase, leading to unpredictable results and costly rework cycles. This establishes the central challenge of the AI-native development era: how to leverage the immense generative capacity of AI without falling victim to its fundamental lack of true comprehension.
+2025-10-06T13:59:18.4928319Z ./docs/research/github-spec-kit.md:In an SDD workflow, the specification is not a static document that is created and then set aside. Instead, it becomes the definitive contract for how the code should behave, serving as the single source of truth that directly drives the AI agent's generation, testing, and validation of the implementation.7 This approach is not merely about writing documentation first; it is about creating a formal, structured layer of intent that guides the AI through a multi-step process of refinement. The primary economic driver for this shift is the high cost of ambiguity in AI-driven development. An incorrect assumption made by an AI agent due to a vague prompt can propagate throughout the generated codebase. Correcting this error late in the development cycle is exponentially more expensive and time-consuming than clarifying the intent at the outset. The deliberate, phased approach of SDD, with its built-in checkpoints for human review, is designed to front-load this clarification work, thereby acting as a powerful form of risk mitigation against the costly debugging and rework cycles that plague unstructured, prompt-driven workflows.3 SDD, therefore, represents a necessary formalization layer for AI, imposing engineering discipline to transform a creative "vibe" into a reliably buildable product.
+2025-10-06T13:59:18.4937178Z ./docs/research/github-spec-kit.md:The practical application of Spec-Kit follows a clear, six-step workflow, orchestrated through a series of slash commands issued to the AI agent within the project's terminal environment.
+2025-10-06T13:59:18.4944642Z ./docs/research/github-spec-kit.md:The final command, /implement, triggers the AI agent to begin executing the generated task list and building the feature.8 This is not a "fire-and-forget" process. It is an iterative cycle that often requires multiple passes and active "human-in-the-loop" supervision.6 The agent may pause to ask for clarification, request the installation of dependencies, or seek approval for executing shell commands.6 This interactive nature reinforces a fundamental shift in the developer's role. Instead of being the primary author of the code, the developer acts as an architect, orchestrator, and reviewer. Their expertise is applied strategically—defining the high-level structure, making critical architectural decisions, and validating the AI's output at each stage. This workflow elevates the importance of senior-level thinking, as proficiency with the system demands strong skills in systems design, requirements analysis, and the critical review of AI-generated artifacts.
+2025-10-06T13:59:18.4953857Z ./docs/research/github-spec-kit.md:3. **Legacy Modernization:** Many organizations maintain critical legacy systems where the original business logic is poorly documented and the technical debt is significant. Spec-Kit offers a structured process for modernization. Developers can work with domain experts to capture the essential business logic in a modern, comprehensive spec. They can then design a fresh, clean architecture in the plan. Finally, the AI agent can be tasked with rebuilding the system from the ground up based on these artifacts, free from the constraints and technical debt of the original implementation.
+2025-10-06T13:59:18.4960056Z ./docs/research/github-spec-kit.md:This landscape reveals a clear fragmentation in the market for SDD tools. Kiro represents an **Integrated** approach, offering a seamless, all-in-one experience at the cost of being tied to a specific development environment. Spec-Kit embodies an **Agnostic** philosophy; as a CLI toolkit, it orchestrates other independent AI agents, offering maximum flexibility and interoperability at the cost of a slightly more complex setup.7 Finally, SpecPilot champions a
+2025-10-06T13:59:18.4963492Z ./docs/research/github-spec-kit.md:### **Underlying Platforms & AI Agents: The Building Blocks**
+2025-10-06T13:59:18.4966904Z ./docs/research/github-spec-kit.md:* **GitHub Copilot CLI:** While designed to work seamlessly with Spec-Kit, the Copilot CLI is also a powerful standalone tool.17 It allows developers to interact with an AI agent directly from the terminal to perform local file modifications, execute Git operations, and query information from GitHub.com, such as listing open pull requests or creating issues.18 A disciplined developer could manually create their own spec and plan documents and then use the Copilot CLI to execute the implementation tasks.  
+2025-10-06T13:59:18.4973699Z ./docs/research/github-spec-kit.md:The parallel evolution of these different tools is leading to the emergence of a de facto standard for how to communicate complex software intent to an AI. The common structure seen across Spec-Kit (specify, plan, tasks), Kiro ("user stories," "technical design," "tasks"), and other SDD tutorials (requirements.md, design.md, tasks.md) points to an industry-wide discovery of the optimal "data packet" for instructing an AI agent.8 This suggests that the future of this tool category may involve less competition on the fundamental structure of the specification itself, and more on the intelligence of the AI that interprets it and the seamlessness of the workflow that surrounds its creation and execution.
+2025-10-06T13:59:18.4979542Z ./docs/research/github-spec-kit.md:* **Reduced Guesswork & Rework:** The core value proposition of the multi-stage workflow is the reduction of ambiguity. By front-loading the clarification of intent, Spec-Kit minimizes the chances of an AI agent making incorrect assumptions, thereby preventing costly course corrections and extensive rework late in the development cycle.7  
+2025-10-06T13:59:18.4983410Z ./docs/research/github-spec-kit.md:* **Token Consumption:** The process relies on generating extensive prose for the constitution, specification, plan, and task list. This can lead to significant token consumption, which may be a non-trivial cost factor depending on the pricing model of the underlying AI agent being used.26  
+2025-10-06T13:59:18.4986594Z ./docs/research/github-spec-kit.md:| **Spec-Kit** | AI-SDD Toolkit | Intent-First, Executable Spec | Formal Multi-Stage CLI | Orchestration of multiple AI agents | Complex features in existing enterprise systems; Greenfield projects requiring high rigor | Emerging |
+2025-10-06T13:59:18.4991993Z ./docs/research/github-spec-kit.md:The trajectory of the industry is clear: AI is evolving from a passive assistant (code completion) into an active agent in the software development lifecycle. Spec-Driven Development is currently the most promising methodology for managing this transition in a disciplined, professional manner. In the near future, one can anticipate the maturation of this space, with more SDD features becoming standard in major IDEs, a convergence on a standardized format for the "spec" itself, and the emergence of even more specialized AI agents tailored for specific tasks within the workflow, such as security analysis or performance optimization.
+2025-10-06T13:59:18.4997649Z ./docs/research/github-spec-kit.md:* **For Existing Enterprise Systems:** **Spec-Kit** is highly recommended for adding new, complex features to mature codebases. Its structured process, particularly the /plan phase, is invaluable for ensuring that the AI agent respects and adheres to existing architectural constraints, minimizing the risk of introducing technical debt.  
+2025-10-06T13:59:18.5001684Z ./docs/research/github-spec-kit.md:5. Spec-Driven Development: The Key to Scalable AI Agents \- The ..., accessed September 30, 2025, [https://thenewstack.io/spec-driven-development-the-key-to-scalable-ai-agents/](https://thenewstack.io/spec-driven-development-the-key-to-scalable-ai-agents/)  
+2025-10-06T13:59:18.5003775Z ./docs/template-migration-guide.md:- AI agent compatibility changes
+2025-10-06T13:59:18.5004678Z ./docs/template-migration-guide.md:4. **Test**: Verify with AI agents and team workflows
+2025-10-06T13:59:18.5005702Z ./docs/template-migration-guide.md:- [ ] **Test AI Compatibility**: Verify with target AI agents
+2025-10-06T13:59:18.5006635Z ./docs/template-migration-guide.md:- Updated AI agent compatibility
+2025-10-06T13:59:18.5007647Z ./docs/template-migration-guide.md:- **AI-Native Templates**: Templates designed specifically for AI agents
+2025-10-06T13:59:18.5008793Z ./docs/template-migration-guide.md:- **New AI Agents**: Adapting templates for emerging AI tools
+2025-10-06T13:59:18.5009803Z ./audiences/specialists.md:- Experiment with AI agents specialized for your domain
+2025-10-06T13:59:18.5010885Z ./audiences/new-developers.md:- Difficult for AI agents to provide meaningful assistance
+2025-10-06T13:59:18.5011890Z ./audiences/new-developers.md:- AI agents can understand and implement from clear specs
+2025-10-06T13:59:18.5012955Z ./audiences/product-managers.md:- Difficulty for AI agents to extract actionable development tasks
+2025-10-06T13:59:18.5013935Z ./audiences/team-leads.md:- Common tooling and AI agent configurations
+2025-10-06T13:59:18.5014798Z ./audiences/team-leads.md:- Primary AI agent: [GitHub Copilot/Claude/Kiro/etc.]
+2025-10-06T13:59:18.5015666Z ./audiences/team-leads.md:- Show how SDD improves AI agent effectiveness
+2025-10-06T13:59:18.5016523Z ./audiences/team-leads.md:**Root Cause:** Fear of job displacement by AI agents
+2025-10-06T13:59:18.5017489Z ./audiences/team-leads.md:**Tool Training:** Hands-on experience with AI agents and SDD tooling
+2025-10-06T13:59:18.5018460Z ./audiences/team-leads.md:- Effectively use AI agents with SDD specifications
+2025-10-06T13:59:18.5019306Z ./audiences/team-leads.md:- Hands-on AI agent interaction workshop
+2025-10-06T13:59:18.5020212Z ./audiences/team-leads.md:**Tool Standardization:** Common AI agents and tooling across teams
+2025-10-06T13:59:18.5021436Z ./audiences/team-leads.md:**Tool Evaluation:** Assess and recommend SDD tools and AI agents
+2025-10-06T13:59:18.5022438Z ./audiences/team-leads.md:**Tool Access:** Access to cutting-edge SDD tools and AI agents
+2025-10-06T13:59:18.5024257Z ./audiences/experienced-developers.md:Move beyond basic requirements to create specifications that capture domain knowledge, architectural constraints, and business context that AI agents need for intelligent implementation.
+2025-10-06T13:59:18.5026370Z ./audiences/experienced-developers.md:Design workflows that leverage different AI agents for their strengths:
+2025-10-06T13:59:18.5027552Z ./audiences/experienced-developers.md:Use AI agents to validate specification quality:
+2025-10-06T13:59:18.5028629Z ./audiences/experienced-developers.md:- Stay updated with AI agent capabilities and limitations
+2025-10-06T13:59:18.5029700Z ⚠️  Found potentially inconsistent term: 'AI agent' (should be 'AI agent')
+2025-10-06T13:59:18.5031170Z ./examples/workflows/complete-sdd-workflow/spec.md:- **FR-1.2**: System SHALL support OAuth 2.0 authentication with Google and GitHub
+2025-10-06T13:59:18.5032596Z ./examples/workflows/complete-sdd-workflow/spec.md:- `GET /auth/oauth/github` - Initiate GitHub OAuth flow
+2025-10-06T13:59:18.5033917Z ./examples/workflows/complete-sdd-workflow/spec.md:- `GET /auth/oauth/github/callback` - Handle GitHub OAuth callback
+2025-10-06T13:59:18.5035167Z ./examples/workflows/complete-sdd-workflow/spec.md:  type: 'password' | 'google' | 'github';
+2025-10-06T13:59:18.5036298Z ./examples/README.md:- ✅ Tested with multiple AI agents (GitHub Copilot, Claude, Gemini)
+2025-10-06T13:59:18.5037538Z ./CONTRIBUTING.md:git clone https://github.com/YOUR-USERNAME/spec-driven-development-blueprint.git
+2025-10-06T13:59:18.5038485Z ./CONTRIBUTING.md:- GitHub Actions workflows for validation
+2025-10-06T13:59:18.5039225Z ./CONTRIBUTING.md:- Use **GitHub Flavored Markdown** for all content
+2025-10-06T13:59:18.5040123Z ./CONTRIBUTING.md:- Use the appropriate PR template (see `.github/pull_request_template/`)
+2025-10-06T13:59:18.5041349Z ./CONTRIBUTING.md:- **GitHub Discussions**: Ask questions and share ideas
+2025-10-06T13:59:18.5042175Z ./CONTRIBUTING.md:- Open a GitHub Discussion for general questions
+2025-10-06T13:59:18.5042986Z ./how-to/troubleshooting.md:   # GitHub Action to check spec-code alignment
+2025-10-06T13:59:18.5043851Z ./how-to/troubleshooting.md:### Problem: GitHub Spec Kit Integration Issues
+2025-10-06T13:59:18.5044727Z ./how-to/troubleshooting.md:   - Primary: GitHub Copilot for code completion
+2025-10-06T13:59:18.5045686Z ./how-to/troubleshooting.md:- **Community Forums**: GitHub Discussions for this repository
+2025-10-06T13:59:18.5046561Z ./how-to/mcp-integration-guide.md:    "github-integration": {
+2025-10-06T13:59:18.5047357Z ./how-to/mcp-integration-guide.md:      "args": ["github-mcp-server@latest"],
+2025-10-06T13:59:18.5048221Z ./how-to/mcp-integration-guide.md:        "GITHUB_TOKEN": "${GITHUB_TOKEN}",
+2025-10-06T13:59:18.5049080Z ./how-to/mcp-integration-guide.md:        "GITHUB_REPO": "your-org/your-repo"
+2025-10-06T13:59:18.5049951Z ./how-to/mcp-integration-guide.md:export GITHUB_TOKEN="your-github-token"
+2025-10-06T13:59:18.5050897Z ./how-to/mcp-integration-guide.md:uvx install github-mcp-server
+2025-10-06T13:59:18.5051779Z ./how-to/mcp-integration-guide.md:- **DevOps Team:** Using GitHub Actions and deployment tools
+2025-10-06T13:59:18.5052910Z ./how-to/mcp-integration-guide.md:- [MCP Server Registry](https://github.com/modelcontextprotocol/servers)
+2025-10-06T13:59:18.5054130Z ./how-to/mcp-integration-guide.md:- [Community Examples](https://github.com/modelcontextprotocol/examples)
+2025-10-06T13:59:18.5055504Z ./how-to/ai-integration.md:| **GitHub Copilot** | Code completion, context awareness | Real-time coding, autocomplete | Native with Spec Kit |
+2025-10-06T13:59:18.5056711Z ./how-to/ai-integration.md:- **GitHub Spec Kit**: CLI tool for spec-driven workflows
+2025-10-06T13:59:18.5057561Z ./how-to/ai-integration.md:### GitHub Copilot + Spec Kit Integration
+2025-10-06T13:59:18.5058272Z ./how-to/ai-integration.md:# Install GitHub Spec Kit CLI
+2025-10-06T13:59:18.5058943Z ./how-to/ai-integration.md:npm install -g @github/spec-kit
+2025-10-06T13:59:18.5059605Z ./how-to/ai-integration.md:  "github.copilot.enable": {
+2025-10-06T13:59:18.5060249Z ./how-to/ai-integration.md:  "github.copilot.advanced": {
+2025-10-06T13:59:18.5061157Z ./how-to/ai-integration.md:  "github.copilot.editor.enableAutoCompletions": true,
+2025-10-06T13:59:18.5062003Z ./how-to/ai-integration.md:     "specFormat": "github-spec-kit",
+2025-10-06T13:59:18.5062949Z ./how-to/ai-integration.md:    A[Spec Creation] --> B[GitHub Spec Kit / Kiro]
+2025-10-06T13:59:18.5063755Z ./how-to/ai-integration.md:# .github/workflows/sdd-pipeline.yml
+2025-10-06T13:59:18.5064750Z ./how-to/ai-integration.md:        run: python scripts/claude-spec-review.py ${{ github.event.head_commit.modified }}
+2025-10-06T13:59:18.5065917Z ./how-to/ai-integration.md:- [GitHub Spec Kit Documentation](https://github.com/github/spec-kit)
+2025-10-06T13:59:18.5067043Z ./how-to/custom-ai-agent-integration.md:- **GitHub Repository**: Share your custom agent implementations
+2025-10-06T13:59:18.5068176Z ./how-to/getting-started.md:- Access to an AI coding assistant (GitHub Copilot, Claude, Cursor, etc.)
+2025-10-06T13:59:18.5069264Z ./how-to/getting-started.md:4. **Integrate Tools**: Set up GitHub Spec Kit or other AI integrations
+2025-10-06T13:59:18.5070243Z ./how-to/tool-integration-workflows.md:## GitHub Spec Kit Complete Workflow
+2025-10-06T13:59:18.5071393Z ./how-to/tool-integration-workflows.md:# Should show: .github/, CLAUDE.md, constitution.md (if created)
+2025-10-06T13:59:18.5072490Z ./how-to/tool-integration-workflows.md:**For GitHub Copilot:**
+2025-10-06T13:59:18.5073318Z ./how-to/tool-integration-workflows.md:gh extension install github/gh-copilot
+2025-10-06T13:59:18.5074303Z ./how-to/tool-integration-workflows.md:gh copilot suggest "How do I use GitHub Spec Kit?"
+2025-10-06T13:59:18.5075222Z ./how-to/tool-integration-workflows.md:  "github.copilot.enable": {
+2025-10-06T13:59:18.5076037Z ./how-to/tool-integration-workflows.md:  "github.copilot.advanced": {
+2025-10-06T13:59:18.5076969Z ./how-to/tool-integration-workflows.md:## Requirements Section (GitHub Spec Kit compatible)
+2025-10-06T13:59:18.5077924Z ./how-to/tool-integration-workflows.md:# Validate GitHub Spec Kit format
+2025-10-06T13:59:18.5078977Z ./how-to/tool-integration-workflows.md:- [GitHub Spec Kit Integration Guide](github-spec-kit-integration.md)
+2025-10-06T13:59:18.5080029Z ./how-to/ai-troubleshooting-refinement.md:#### GitHub Copilot Debugging
+2025-10-06T13:59:18.5081205Z ./how-to/ai-troubleshooting-refinement.md:# .github/workflows/sdd-quality-check.yml
+2025-10-06T13:59:18.5082405Z ./how-to/ai-troubleshooting-refinement.md:- [GitHub Discussions](https://github.com/sdd-community/troubleshooting)
+2025-10-06T13:59:18.5083810Z ./how-to/chatprd-workflow-integration.md:- Understanding of your target development workflow (GitHub Spec Kit, Kiro, etc.)
+2025-10-06T13:59:18.5084997Z ./how-to/chatprd-workflow-integration.md:**For GitHub Spec Kit Integration:**
+2025-10-06T13:59:18.5086018Z ./how-to/chatprd-workflow-integration.md:### ChatPRD → GitHub Spec Kit Workflow
+2025-10-06T13:59:18.5086935Z ./how-to/github-spec-kit-integration.md:# GitHub Spec Kit Integration Guide
+2025-10-06T13:59:18.5089044Z ./how-to/github-spec-kit-integration.md:GitHub Spec Kit is an open-source command-line toolkit that operationalizes Spec-Driven Development (SDD) principles. This guide provides comprehensive setup, usage, and troubleshooting information for integrating Spec Kit into your development workflow.
+2025-10-06T13:59:18.5091464Z ./how-to/github-spec-kit-integration.md:- Access to an AI coding agent (GitHub Copilot, Claude, Gemini CLI, etc.)
+2025-10-06T13:59:18.5092651Z ./how-to/github-spec-kit-integration.md:   - `.github/copilot-instructions.md` (for GitHub Copilot)
+2025-10-06T13:59:18.5093549Z ./how-to/github-spec-kit-integration.md:### GitHub Copilot
+2025-10-06T13:59:18.5094355Z ./how-to/github-spec-kit-integration.md:1. Ensure GitHub Copilot CLI is installed
+2025-10-06T13:59:18.5095435Z ./how-to/github-spec-kit-integration.md:2. Spec Kit automatically creates `.github/copilot-instructions.md`
+2025-10-06T13:59:18.5096740Z ./how-to/github-spec-kit-integration.md:1. Verify instruction files exist (`.github/copilot-instructions.md`, `CLAUDE.md`)
+2025-10-06T13:59:18.5097819Z ./how-to/github-spec-kit-integration.md:- CI/CD with GitHub Actions
+2025-10-06T13:59:18.5098676Z ./how-to/github-spec-kit-integration.md:# .github/workflows/sdd-quality-check.yml
+2025-10-06T13:59:18.5099760Z ./how-to/github-spec-kit-integration.md:        uses: actions/github-script@v6
+2025-10-06T13:59:18.5100838Z ./how-to/github-spec-kit-integration.md:            github.rest.issues.createComment({
+2025-10-06T13:59:18.5101835Z ./how-to/github-spec-kit-integration.md:After mastering GitHub Spec Kit integration:
+2025-10-06T13:59:18.5103063Z ./how-to/github-spec-kit-integration.md:- [GitHub Spec Kit Repository](https://github.com/github/spec-kit)
+2025-10-06T13:59:18.5105364Z ./how-to/github-spec-kit-integration.md:- [Official Documentation](https://github.com/github/spec-kit/blob/main/README.md)
+2025-10-06T13:59:18.5107636Z ./how-to/github-spec-kit-integration.md:- [Community Examples](https://github.com/github/spec-kit/tree/main/examples)
+2025-10-06T13:59:18.5109773Z ./how-to/github-spec-kit-integration.md:- [Issue Tracker](https://github.com/github/spec-kit/issues)
+2025-10-06T13:59:18.5111937Z ./how-to/ide-specific-sdd-integration.md:VS Code with GitHub Copilot can be optimized for effective SDD workflows.
+2025-10-06T13:59:18.5114049Z ./how-to/ide-specific-sdd-integration.md:code --install-extension GitHub.copilot
+2025-10-06T13:59:18.5115156Z ./how-to/ide-specific-sdd-integration.md:code --install-extension GitHub.copilot-chat
+2025-10-06T13:59:18.5116085Z ./how-to/ide-specific-sdd-integration.md:  "github.copilot.enable": {
+2025-10-06T13:59:18.5116925Z ./how-to/ide-specific-sdd-integration.md:  "github.copilot.advanced": {
+2025-10-06T13:59:18.5117913Z ./how-to/ide-specific-sdd-integration.md:- [Community Examples](https://github.com/kiro-ai/examples)
+2025-10-06T13:59:18.5119122Z ./how-to/ide-specific-sdd-integration.md:- [Community Patterns](https://github.com/getcursor/cursor-examples)
+2025-10-06T13:59:18.5120626Z ./how-to/ide-specific-sdd-integration.md:- [Integration Examples](https://github.com/anthropics/anthropic-cookbook)
+2025-10-06T13:59:18.5121972Z ./how-to/ide-specific-sdd-integration.md:- [GitHub Copilot Documentation](https://docs.github.com/copilot)
+2025-10-06T13:59:18.5123511Z ./training/case-studies/challenges/gaming-studio-recovery.md:- **Tool Integration**: Implemented GitHub Spec Kit and AI-assisted development tools
+2025-10-06T13:59:18.5125158Z ./training/case-studies/success/fintech-payment-platform.md:- **Development Tools**: GitHub, CircleCI, DataDog, PagerDuty
+2025-10-06T13:59:18.5126793Z ./training/case-studies/success/fintech-payment-platform.md:- **Tool Setup**: GitHub Spec Kit integration, template development, AI agent configuration
+2025-10-06T13:59:18.5128404Z ./training/case-studies/success/fintech-payment-platform.md:**GitHub Copilot**: Primary code generation and completion
+2025-10-06T13:59:18.5129932Z ./training/hands-on/tutorial-1-first-workflow.md:**Tools Needed**: GitHub account, AI agent access (Copilot, Claude, or similar), text editor
+2025-10-06T13:59:18.5131480Z ./training/hands-on/tutorial-1-first-workflow.md:### Step 10: GitHub Spec Kit Workflow Setup (15 minutes)
+2025-10-06T13:59:18.5132658Z ./training/hands-on/tutorial-1-first-workflow.md:If using GitHub Spec Kit, initialize with:
+2025-10-06T13:59:18.5133723Z ./training/hands-on/tutorial-1-first-workflow.md:npm install -g @github/spec-kit
+2025-10-06T13:59:18.5135816Z ./training/hands-on/peer-review-system.md:**Questions about the process?** Check out our [FAQ](peer-review-faq.md) or join our [community discussions](https://github.com/discussions/categories/peer-review) for support and guidance from experienced reviewers and community members.
+2025-10-06T13:59:18.5138056Z ./training/hands-on/sample-projects/index.md:- Access to AI development assistants (GitHub Copilot, Claude, etc.)
+2025-10-06T13:59:18.5139946Z ./training/hands-on/sample-projects/index.md:**Need help choosing?** Join our [community discussions](https://github.com/discussions) or attend [office hours](../community/office-hours.md) for personalized guidance.
+2025-10-06T13:59:18.5141735Z ./training/hands-on/index.md:   - GitHub Spec Kit workflow execution
+2025-10-06T13:59:18.5143030Z ./training/hands-on/index.md:- [Discussion Forums](https://github.com/discussions) - Ask questions and share experiences
+2025-10-06T13:59:18.5144386Z ./training/hands-on/index.md:- [GitHub Spec Kit](../../how-to/github-spec-kit-integration.md) - Primary SDD tooling
+2025-10-06T13:59:18.5145779Z ./training/fundamentals/index.md:- Join the [New Developer Community](https://github.com/discussions/categories/new-developers)
+2025-10-06T13:59:18.5147048Z ./training/fundamentals/index.md:- [Discussion Forums](https://github.com/discussions)
+2025-10-06T13:59:18.5148183Z ./training/fundamentals/index.md:- [GitHub Spec Kit Setup](../../how-to/github-spec-kit-integration.md)
+2025-10-06T13:59:18.5149169Z ./training/index.md:- Using GitHub Spec Kit or similar tools
+2025-10-06T13:59:18.5150030Z ./training/index.md:- Access to AI development tools (GitHub Copilot, Claude, etc.)
+2025-10-06T13:59:18.5151009Z ./training/index.md:- GitHub account for Spec Kit integration
+2025-10-06T13:59:18.5151820Z ./training/index.md:- **GitHub Spec Kit**: Primary specification tooling
+2025-10-06T13:59:18.5152943Z ./training/index.md:- Join our [Community Forum](https://github.com/discussions) for support
+2025-10-06T13:59:18.5154196Z ./.github/pull_request_template.md:- [ ] 🔧 **Tooling**: GitHub Actions, scripts, or automation improvements
+2025-10-06T13:59:18.5155317Z ./.github/pull_request_template/template_contribution.md:- [ ] Tested with GitHub Copilot
+2025-10-06T13:59:18.5156641Z ./.github/pull_request_template/tooling_contribution.md:- [ ] 🔄 **GitHub Actions Workflow**: CI/CD automation and validation
+2025-10-06T13:59:18.5157868Z ./.github/pull_request_template/tooling_contribution.md:### GitHub Actions Integration:
+2025-10-06T13:59:18.5158992Z ./.github/pull_request_template/tooling_contribution.md:- [ ] Follows GitHub Actions best practices
+2025-10-06T13:59:18.5160036Z ./.github/ISSUE_TEMPLATE/feature_request.md:- [ ] GitHub Actions workflow
+2025-10-06T13:59:18.5161151Z ./.github/ISSUE_TEMPLATE/feedback.md:- **Tools Used**: (GitHub Spec Kit, ChatPRD, AI agents, etc.)
+2025-10-06T13:59:18.5162330Z ./resources/decision-trees/project-initiation.md:    O -->|GitHub| P[GitHub Spec Kit + Copilot]
+2025-10-06T13:59:18.5163471Z ./resources/decision-trees/project-initiation.md:    P --> W[Setup GitHub Spec Kit CLI]
+2025-10-06T13:59:18.5164525Z ./resources/decision-trees/project-initiation.md:**GitHub Spec Kit + Copilot:**
+2025-10-06T13:59:18.5165563Z ./resources/decision-trees/project-initiation.md:- Best for: GitHub-native workflows
+2025-10-06T13:59:18.5166748Z ./resources/decision-trees/project-initiation.md:- Requirements: GitHub repository, Copilot subscription
+2025-10-06T13:59:18.5168008Z ./.kiro/specs/sdd-repository-blueprint/tasks.md:  - [x] 2.1 Create GitHub Spec Kit compatible templates
+2025-10-06T13:59:18.5169229Z ./.kiro/specs/sdd-repository-blueprint/tasks.md:  - [x] 4.1 Create GitHub Spec Kit integration documentation
+2025-10-06T13:59:18.5170671Z ./.kiro/specs/sdd-repository-blueprint/tasks.md:    - Create GitHub Actions workflow for markdown linting and validation
+2025-10-06T13:59:18.5172169Z ./.kiro/specs/sdd-repository-blueprint/tasks.md:    - Create detailed GitHub Spec Kit workflow documentation
+2025-10-06T13:59:18.5173353Z ./.kiro/specs/sdd-repository-blueprint/tasks.md:    - Set up GitHub Discussions for community engagement
+2025-10-06T13:59:18.5174367Z ./.kiro/specs/sdd-repository-blueprint/design.md:├── .github/
+2025-10-06T13:59:18.5175656Z ./.kiro/specs/sdd-repository-blueprint/design.md:3. **Tool Agnostic**: While featuring GitHub Spec Kit and ChatPRD, the blueprint supports multiple AI agents and tools
+2025-10-06T13:59:18.5177303Z ./.kiro/specs/sdd-repository-blueprint/design.md:GitHub Spec Kit compatible templates with extensions for different domains:
+2025-10-06T13:59:18.5178727Z ./.kiro/specs/sdd-repository-blueprint/design.md:  preferred_tools: [github-spec-kit, chatprd, copilot, claude, custom]
+2025-10-06T13:59:18.5180023Z ./.kiro/specs/sdd-repository-blueprint/design.md:   - Template validation with GitHub Spec Kit workflows
+2025-10-06T13:59:18.5181665Z ./.kiro/specs/sdd-repository-blueprint/design.md:- **Repository Platform**: GitHub for maximum compatibility and community engagement
+2025-10-06T13:59:18.5183100Z ./.kiro/specs/sdd-repository-blueprint/design.md:- **CI/CD**: GitHub Actions for automated validation and quality checks
+2025-10-06T13:59:18.5184542Z ./.kiro/specs/sdd-repository-blueprint/design.md:- **Community Features**: GitHub Discussions, Issues, and Pull Requests for collaboration
+2025-10-06T13:59:18.5188694Z ./.kiro/specs/sdd-repository-blueprint/requirements.md:This feature aims to create a comprehensive, future-ready repository blueprint that serves as the definitive resource for Spec-Driven Development (SDD) in 2025. The repository will provide structured guidance, tools, templates, and training materials for teams adopting SDD methodologies with AI-assisted development. Drawing from the latest industry research and best practices from tools like GitHub Spec Kit and ChatPRD, this blueprint will serve multiple audiences from new developers to experienced practitioners, product managers, and team leads.
+2025-10-06T13:59:18.5193429Z ./.kiro/specs/sdd-repository-blueprint/requirements.md:2. WHEN a developer needs templates THEN the system SHALL provide ready-to-use spec, plan, and task templates based on GitHub Spec Kit patterns
+2025-10-06T13:59:18.5196068Z ./.kiro/specs/sdd-repository-blueprint/requirements.md:**User Story:** As a developer working with AI agents, I want practical integration guides and troubleshooting resources, so that I can effectively use tools like GitHub Spec Kit, Copilot, and other AI coding assistants.
+2025-10-06T13:59:18.5198671Z ./.kiro/specs/sdd-repository-blueprint/requirements.md:1. WHEN setting up AI integration THEN the system SHALL provide step-by-step setup guides for GitHub Spec Kit, ChatPRD, and major AI agents
+2025-10-06T13:59:18.5200170Z ./.kiro/steering/tech.md:- Use standard GitHub Flavored Markdown (GFM)
+2025-10-06T13:59:18.5259530Z ./.kiro/steering/product.md:- **Tool Agnostic**: Works with GitHub Spec Kit, Kiro, Claude, Copilot, and other AI agents
+2025-10-06T13:59:18.5261265Z ./.kiro/steering/structure.md:│   ├── templates/       # GitHub Spec Kit compatible templates
+2025-10-06T13:59:18.5262418Z ./README.md:1. **Clone this repository**: `git clone https://github.com/your-org/sdd-blueprint.git`
+2025-10-06T13:59:18.5263806Z ./README.md:4. **Get AI assistance**: Integrate with [GitHub Spec Kit](how-to/github-spec-kit-integration.md) or [ChatPRD](how-to/chatprd-workflow-integration.md)
+2025-10-06T13:59:18.5265148Z ./README.md:│   ├── 📄 templates/          # GitHub Spec Kit compatible templates
+2025-10-06T13:59:18.5266029Z ./README.md:*All templates are GitHub Spec Kit compatible and tested with major AI agents.*
+2025-10-06T13:59:18.5266816Z ./README.md:**🔧 GitHub Spec Kit**
+2025-10-06T13:59:18.5267461Z ./README.md:[Setup Guide →](how-to/github-spec-kit-integration.md)
+2025-10-06T13:59:18.5268085Z ./README.md:- GitHub Copilot
+2025-10-06T13:59:18.5268830Z ./README.md:[Report Issues →](https://github.com/your-org/sdd-blueprint/issues/new/choose)
+2025-10-06T13:59:18.5269928Z ./README.md:[Join Discussions →](https://github.com/your-org/sdd-blueprint/discussions)
+2025-10-06T13:59:18.5271340Z ./README.md:- **💬 [GitHub Discussions](https://github.com/your-org/sdd-blueprint/discussions)** - Ask questions, share experiences
+2025-10-06T13:59:18.5272762Z ./README.md:- **🐛 [Issues](https://github.com/your-org/sdd-blueprint/issues)** - Report bugs, request features
+2025-10-06T13:59:18.5274090Z ./README.md:- **🔔 [Releases](https://github.com/your-org/sdd-blueprint/releases)** - Stay updated with latest improvements
+2025-10-06T13:59:18.5275137Z ./README.md:- **GitHub Spec Kit** - Pioneering SDD tooling and workflows
+2025-10-06T13:59:18.5276610Z ./README.md:**[Get Started Now](how-to/getting-started.md)** • **[Choose Your Path](#-choose-your-adventure)** • **[Join the Community](https://github.com/your-org/sdd-blueprint/discussions)**
+2025-10-06T13:59:18.5278485Z ./README.md:[![Contributors](https://img.shields.io/github/contributors/your-org/sdd-blueprint)](https://github.com/your-org/sdd-blueprint/graphs/contributors)
+2025-10-06T13:59:18.5280363Z ./README.md:[![Stars](https://img.shields.io/github/stars/your-org/sdd-blueprint)](https://github.com/your-org/sdd-blueprint/stargazers)
+2025-10-06T13:59:18.5281986Z ./README.md:[![Forks](https://img.shields.io/github/forks/your-org/sdd-blueprint)](https://github.com/your-org/sdd-blueprint/network/members)
+2025-10-06T13:59:18.5283292Z ./README.md:[![License](https://img.shields.io/github/license/your-org/sdd-blueprint)](LICENSE)
+2025-10-06T13:59:18.5284153Z ./docs/community/feedback-process.md:### 1. GitHub Issues
+2025-10-06T13:59:18.5284860Z ./docs/community/feedback-process.md:### 2. GitHub Discussions
+2025-10-06T13:59:18.5285581Z ./docs/community/survey-templates.md:   - [ ] GitHub Copilot
+2025-10-06T13:59:18.5286306Z ./docs/community/survey-templates.md:   - [ ] GitHub Spec Kit
+2025-10-06T13:59:18.5287242Z ./docs/community/survey-templates.md:   - GitHub Copilot: Excellent / Good / Fair / Poor / Don't use
+2025-10-06T13:59:18.5288525Z ./docs/community/survey-templates.md:   - GitHub Spec Kit: Excellent / Good / Fair / Poor / Don't use
+2025-10-06T13:59:18.5289762Z ./docs/community/survey-templates.md:- **Distribution**: GitHub Discussions, community newsletters, social media
+2025-10-06T13:59:18.5291002Z ./docs/community/launch-checklist.md:- [x] GitHub Discussions enabled
+2025-10-06T13:59:18.5291821Z ./docs/community/launch-checklist.md:- [ ] Enable GitHub Discussions
+2025-10-06T13:59:18.5292698Z ./docs/community/launch-checklist.md:- **Target**: 50+ GitHub stars in first month
+2025-10-06T13:59:18.5293962Z ./docs/research/github-spec-kit.md:# **The Executable Intent: An In-Depth Analysis of GitHub's Spec-Kit and the Rise of Spec-Driven Development**
+2025-10-06T13:59:18.5300944Z ./docs/research/github-spec-kit.md:However, while "vibe coding" excels at speed for prototyping, its unstructured nature reveals significant weaknesses when applied to the construction of robust, scalable, and maintainable production systems.4 The core issue stems from the nature of the Large Language Models (LLMs) that power these AI agents. As GitHub Principal Product Manager Den Delimarsky notes, developers often treat these agents like search engines, expecting them to infer context and intent, when they should be treated as "literal-minded pair programmers".6 A vague prompt forces the LLM to guess at thousands of unstated requirements, from architectural patterns and security constraints to specific business rules and user experience nuances.7 These implicit assumptions are often incorrect and can remain hidden until late in the implementation phase, leading to unpredictable results and costly rework cycles. This establishes the central challenge of the AI-native development era: how to leverage the immense generative capacity of AI without falling victim to its fundamental lack of true comprehension.
+2025-10-06T13:59:18.5307817Z ./docs/research/github-spec-kit.md:## **A Deep Dive into GitHub's Spec-Kit**
+2025-10-06T13:59:18.5311349Z ./docs/research/github-spec-kit.md:GitHub's Spec-Kit is an open-source command-line toolkit engineered to operationalize the principles of Spec-Driven Development.4 It provides a structured framework and a series of commands that guide a developer and their chosen AI coding agent through a methodical process, transforming a high-level concept into a fully implemented feature. By formalizing the interaction between human and AI, Spec-Kit aims to produce higher-quality, more consistent, and more predictable results than unstructured approaches.
+2025-10-06T13:59:18.5317124Z ./docs/research/github-spec-kit.md:Spec-Kit is designed to be agent-agnostic, capable of working with a variety of modern AI coding agents, including GitHub Copilot, Claude Code, and Gemini CLI.7 Its architecture is not that of a monolithic application but rather a lightweight orchestrator. It establishes a standardized project structure and a set of version-controlled, text-based artifacts that serve as the inputs and outputs for each stage of the development process. The core principles guiding its design are 8:
+2025-10-06T13:59:18.5321922Z ./docs/research/github-spec-kit.md:specify init \<PROJECT\_NAME\> command is crucial as it sets up the necessary directory structure and creates the agent-specific instruction files (e.g., .github/copilot-instructions.md for GitHub Copilot, CLAUDE.md for Claude) that enable the AI to understand and use the Spec-Kit slash commands.3
+2025-10-06T13:59:18.5326637Z ./docs/research/github-spec-kit.md:GitHub's Spec-Kit does not exist in a vacuum. It is part of a broader industry-wide movement towards more structured and intentional methods of leveraging AI in software development. Understanding its position requires examining not only direct competitors that share its philosophy but also adjacent paradigms that preceded it and the underlying AI platforms that power it. This analysis reveals an emerging market segmentation based on different approaches to developer workflow and tool integration.
+2025-10-06T13:59:18.5332679Z ./docs/research/github-spec-kit.md:* **SpecPilot:** This tool positions itself as a "no-bloat GitHub Specs alternative".12 Its philosophy is minimalist and developer-centric, emphasizing a "markdown-first" approach that is lightweight and avoids "fancy UI distractions." SpecPilot is for teams who want the discipline of SDD—clear, version-controlled specification documents—without the automation overhead of a more complex toolkit like Spec-Kit.12  
+2025-10-06T13:59:18.5338047Z ./docs/research/github-spec-kit.md:* **GitHub Copilot CLI:** While designed to work seamlessly with Spec-Kit, the Copilot CLI is also a powerful standalone tool.17 It allows developers to interact with an AI agent directly from the terminal to perform local file modifications, execute Git operations, and query information from GitHub.com, such as listing open pull requests or creating issues.18 A disciplined developer could manually create their own spec and plan documents and then use the Copilot CLI to execute the implementation tasks.  
+2025-10-06T13:59:18.5343392Z ./docs/research/github-spec-kit.md:The decision to adopt a new development paradigm like Spec-Driven Development and a new tool like GitHub's Spec-Kit requires a careful evaluation of its benefits, drawbacks, and position within the broader technological landscape. While the potential for increased quality and alignment is significant, teams must also consider the initial overhead and the required shift in developer skills.
+2025-10-06T13:59:18.5347295Z ./docs/research/github-spec-kit.md:* **Agent Agnostic:** Spec-Kit's design as an orchestration layer provides significant flexibility. It is not tied to a single AI provider, allowing teams to choose the best-in-class coding agent for their needs, whether it be GitHub Copilot, Claude Code, or Gemini.7
+2025-10-06T13:59:18.5351202Z ./docs/research/github-spec-kit.md:* **For Rapid Prototyping:** The unstructured "vibe coding" approach, using tools like **Replit Agent** or the basic chat interfaces of **GitHub Copilot** and its peers, remains the fastest method for exploring ideas and building proofs-of-concept. However, it is critical that teams treat the output as a starting point for a more rigorous process, not as a production-ready product.  
+2025-10-06T13:59:18.5354509Z ./docs/research/github-spec-kit.md:1. Documentation-Driven Development (DDD) \- GitHub Gist, accessed September 30, 2025, [https://gist.github.com/zsup/9434452](https://gist.github.com/zsup/9434452)  
+2025-10-06T13:59:18.5357044Z ./docs/research/github-spec-kit.md:6. Spec-driven AI coding with GitHub's Spec Kit \- Azalio, accessed September 30, 2025, [https://www.azalio.io/spec-driven-ai-coding-with-githubs-spec-kit/](https://www.azalio.io/spec-driven-ai-coding-with-githubs-spec-kit/)  
+2025-10-06T13:59:18.5360823Z ./docs/research/github-spec-kit.md:7. Spec-driven development with AI: Get started with a new open source toolkit, accessed September 30, 2025, [https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/](https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/)  
+2025-10-06T13:59:18.5364463Z ./docs/research/github-spec-kit.md:8. github/spec-kit: Toolkit to help you get started with Spec-Driven Development, accessed September 30, 2025, [https://github.com/github/spec-kit](https://github.com/github/spec-kit)  
+2025-10-06T13:59:18.5367944Z ./docs/research/github-spec-kit.md:12. SpecPilot – A No-Bloat GitHub Specs Alternative You'll Actually Use ..., accessed September 30, 2025, [https://dev.to/deviprasadshetty/specpilot-a-no-bloat-github-specs-alternative-youll-actually-use-4baf](https://dev.to/deviprasadshetty/specpilot-a-no-bloat-github-specs-alternative-youll-actually-use-4baf)  
+2025-10-06T13:59:18.5371245Z ./docs/research/github-spec-kit.md:17. GitHub Spec Kit GitHub Copilot CLI \- YouTube, accessed September 30, 2025, [https://www.youtube.com/watch?v=7tjmA\_0pl2c](https://www.youtube.com/watch?v=7tjmA_0pl2c)  
+2025-10-06T13:59:18.5373849Z ./docs/research/github-spec-kit.md:18. About GitHub Copilot CLI, accessed September 30, 2025, [https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli](https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli)  
+2025-10-06T13:59:18.5376363Z ./docs/research/github-spec-kit.md:19. GitHub Copilot features, accessed September 30, 2025, [https://docs.github.com/en/copilot/get-started/features](https://docs.github.com/en/copilot/get-started/features)  
+2025-10-06T13:59:18.5378129Z ./docs/template-migration-guide.md:- **GitHub Discussions**: Ask questions about specific migrations
+2025-10-06T13:59:18.5379231Z ./docs/template-migration-guide.md:- **Issue Tracking**: GitHub issues for migration problems
+2025-10-06T13:59:18.5380253Z ./docs/template-migration-guide.md:# GitHub Actions workflow for migration checking
+2025-10-06T13:59:18.5381428Z ./docs/template-migration-guide.md:- **Community**: Ask in GitHub Discussions
+2025-10-06T13:59:18.5382376Z ./docs/template-migration-guide.md:- **Issues**: Report problems via GitHub Issues
+2025-10-06T13:59:18.5383380Z ./CODE_OF_CONDUCT.md:- **GitHub Issues**: For public violations that can be addressed transparently
+2025-10-06T13:59:18.5384443Z ./CODE_OF_CONDUCT.md:- **GitHub's Report Feature**: Use GitHub's built-in reporting for serious violations
+2025-10-06T13:59:18.5385401Z ./CODE_OF_CONDUCT.md:[Mozilla CoC]: https://github.com/mozilla/diversity
+2025-10-06T13:59:18.5386370Z ./CODE_OF_CONDUCT.md:- **Ask in discussions**: Use GitHub Discussions for community support
+2025-10-06T13:59:18.5387603Z ./analytics/dashboard.md:- **Stars**: ![GitHub stars](https://img.shields.io/github/stars/[username]/spec-driven-development-blueprint)
+2025-10-06T13:59:18.5389078Z ./analytics/dashboard.md:- **Forks**: ![GitHub forks](https://img.shields.io/github/forks/[username]/spec-driven-development-blueprint)
+2025-10-06T13:59:18.5390655Z ./analytics/dashboard.md:- **Issues**: ![GitHub issues](https://img.shields.io/github/issues/[username]/spec-driven-development-blueprint)
+2025-10-06T13:59:18.5392308Z ./analytics/dashboard.md:- **Contributors**: ![GitHub contributors](https://img.shields.io/github/contributors/[username]/spec-driven-development-blueprint)
+2025-10-06T13:59:18.5393627Z ./analytics/privacy-policy.md:### Repository Metrics (Public GitHub Data)
+2025-10-06T13:59:18.5394444Z ./audiences/new-developers.md:### Working with GitHub Spec Kit
+2025-10-06T13:59:18.5395274Z ./audiences/new-developers.md:- GitHub Discussions for questions and examples
+2025-10-06T13:59:18.5396177Z ./audiences/team-leads.md:- Primary AI agent: [GitHub Copilot/Claude/Kiro/etc.]
+2025-10-06T13:59:18.5397078Z ./audiences/team-leads.md:- Specification format: [GitHub Spec Kit compatible]
+2025-10-06T13:59:18.5397962Z ./audiences/team-leads.md:- Documentation platform: [GitHub/Confluence/etc.]
+2025-10-06T13:59:18.5398893Z ./audiences/team-leads.md:**Tools:** GitHub Analytics, Jira, SonarQube, custom dashboards
+2025-10-06T13:59:18.5400188Z ./audiences/experienced-developers.md:| Architecture Design | GitHub Copilot | Code structure understanding |
+2025-10-06T13:59:18.5401429Z ./audiences/experienced-developers.md:## Phase 3: Task Planning (GitHub Copilot)
+2025-10-06T13:59:18.5402382Z ./audiences/experienced-developers.md:## Technical Review (GitHub Copilot)  
+2025-10-06T13:59:18.5403329Z ⚠️  Found potentially inconsistent term: 'Github' (should be 'GitHub')
+2025-10-06T13:59:18.5404490Z ./examples/workflows/complete-sdd-workflow/spec.md:- **FR-1.2**: System SHALL support OAuth 2.0 authentication with Google and GitHub
+2025-10-06T13:59:18.5405859Z ./examples/workflows/complete-sdd-workflow/spec.md:- `GET /auth/oauth/github` - Initiate GitHub OAuth flow
+2025-10-06T13:59:18.5407169Z ./examples/workflows/complete-sdd-workflow/spec.md:- `GET /auth/oauth/github/callback` - Handle GitHub OAuth callback
+2025-10-06T13:59:18.5408404Z ./examples/workflows/complete-sdd-workflow/spec.md:  type: 'password' | 'google' | 'github';
+2025-10-06T13:59:18.5409511Z ./examples/README.md:- ✅ Tested with multiple AI agents (GitHub Copilot, Claude, Gemini)
+2025-10-06T13:59:18.5410853Z ./CONTRIBUTING.md:git clone https://github.com/YOUR-USERNAME/spec-driven-development-blueprint.git
+2025-10-06T13:59:18.5411786Z ./CONTRIBUTING.md:- GitHub Actions workflows for validation
+2025-10-06T13:59:18.5412527Z ./CONTRIBUTING.md:- Use **GitHub Flavored Markdown** for all content
+2025-10-06T13:59:18.5413414Z ./CONTRIBUTING.md:- Use the appropriate PR template (see `.github/pull_request_template/`)
+2025-10-06T13:59:18.5414330Z ./CONTRIBUTING.md:- **GitHub Discussions**: Ask questions and share ideas
+2025-10-06T13:59:18.5415121Z ./CONTRIBUTING.md:- Open a GitHub Discussion for general questions
+2025-10-06T13:59:18.5415943Z ./how-to/troubleshooting.md:   # GitHub Action to check spec-code alignment
+2025-10-06T13:59:18.5416808Z ./how-to/troubleshooting.md:### Problem: GitHub Spec Kit Integration Issues
+2025-10-06T13:59:18.5417674Z ./how-to/troubleshooting.md:   - Primary: GitHub Copilot for code completion
+2025-10-06T13:59:18.5418603Z ./how-to/troubleshooting.md:- **Community Forums**: GitHub Discussions for this repository
+2025-10-06T13:59:18.5419482Z ./how-to/mcp-integration-guide.md:    "github-integration": {
+2025-10-06T13:59:18.5420270Z ./how-to/mcp-integration-guide.md:      "args": ["github-mcp-server@latest"],
+2025-10-06T13:59:18.5421253Z ./how-to/mcp-integration-guide.md:        "GITHUB_TOKEN": "${GITHUB_TOKEN}",
+2025-10-06T13:59:18.5422113Z ./how-to/mcp-integration-guide.md:        "GITHUB_REPO": "your-org/your-repo"
+2025-10-06T13:59:18.5422983Z ./how-to/mcp-integration-guide.md:export GITHUB_TOKEN="your-github-token"
+2025-10-06T13:59:18.5423788Z ./how-to/mcp-integration-guide.md:uvx install github-mcp-server
+2025-10-06T13:59:18.5424670Z ./how-to/mcp-integration-guide.md:- **DevOps Team:** Using GitHub Actions and deployment tools
+2025-10-06T13:59:18.5425787Z ./how-to/mcp-integration-guide.md:- [MCP Server Registry](https://github.com/modelcontextprotocol/servers)
+2025-10-06T13:59:18.5426994Z ./how-to/mcp-integration-guide.md:- [Community Examples](https://github.com/modelcontextprotocol/examples)
+2025-10-06T13:59:18.5428362Z ./how-to/ai-integration.md:| **GitHub Copilot** | Code completion, context awareness | Real-time coding, autocomplete | Native with Spec Kit |
+2025-10-06T13:59:18.5429563Z ./how-to/ai-integration.md:- **GitHub Spec Kit**: CLI tool for spec-driven workflows
+2025-10-06T13:59:18.5430523Z ./how-to/ai-integration.md:### GitHub Copilot + Spec Kit Integration
+2025-10-06T13:59:18.5431240Z ./how-to/ai-integration.md:# Install GitHub Spec Kit CLI
+2025-10-06T13:59:18.5431892Z ./how-to/ai-integration.md:npm install -g @github/spec-kit
+2025-10-06T13:59:18.5432546Z ./how-to/ai-integration.md:  "github.copilot.enable": {
+2025-10-06T13:59:18.5433183Z ./how-to/ai-integration.md:  "github.copilot.advanced": {
+2025-10-06T13:59:18.5433968Z ./how-to/ai-integration.md:  "github.copilot.editor.enableAutoCompletions": true,
+2025-10-06T13:59:18.5434804Z ./how-to/ai-integration.md:     "specFormat": "github-spec-kit",
+2025-10-06T13:59:18.5435722Z ./how-to/ai-integration.md:    A[Spec Creation] --> B[GitHub Spec Kit / Kiro]
+2025-10-06T13:59:18.5436512Z ./how-to/ai-integration.md:# .github/workflows/sdd-pipeline.yml
+2025-10-06T13:59:18.5437496Z ./how-to/ai-integration.md:        run: python scripts/claude-spec-review.py ${{ github.event.head_commit.modified }}
+2025-10-06T13:59:18.5438646Z ./how-to/ai-integration.md:- [GitHub Spec Kit Documentation](https://github.com/github/spec-kit)
+2025-10-06T13:59:18.5439761Z ./how-to/custom-ai-agent-integration.md:- **GitHub Repository**: Share your custom agent implementations
+2025-10-06T13:59:18.5440994Z ./how-to/getting-started.md:- Access to an AI coding assistant (GitHub Copilot, Claude, Cursor, etc.)
+2025-10-06T13:59:18.5442077Z ./how-to/getting-started.md:4. **Integrate Tools**: Set up GitHub Spec Kit or other AI integrations
+2025-10-06T13:59:18.5443050Z ./how-to/tool-integration-workflows.md:## GitHub Spec Kit Complete Workflow
+2025-10-06T13:59:18.5444086Z ./how-to/tool-integration-workflows.md:# Should show: .github/, CLAUDE.md, constitution.md (if created)
+2025-10-06T13:59:18.5445158Z ./how-to/tool-integration-workflows.md:**For GitHub Copilot:**
+2025-10-06T13:59:18.5445976Z ./how-to/tool-integration-workflows.md:gh extension install github/gh-copilot
+2025-10-06T13:59:18.5446945Z ./how-to/tool-integration-workflows.md:gh copilot suggest "How do I use GitHub Spec Kit?"
+2025-10-06T13:59:18.5447857Z ./how-to/tool-integration-workflows.md:  "github.copilot.enable": {
+2025-10-06T13:59:18.5448664Z ./how-to/tool-integration-workflows.md:  "github.copilot.advanced": {
+2025-10-06T13:59:18.5449595Z ./how-to/tool-integration-workflows.md:## Requirements Section (GitHub Spec Kit compatible)
+2025-10-06T13:59:18.5450698Z ./how-to/tool-integration-workflows.md:# Validate GitHub Spec Kit format
+2025-10-06T13:59:18.5451743Z ./how-to/tool-integration-workflows.md:- [GitHub Spec Kit Integration Guide](github-spec-kit-integration.md)
+2025-10-06T13:59:18.5452783Z ./how-to/ai-troubleshooting-refinement.md:#### GitHub Copilot Debugging
+2025-10-06T13:59:18.5453715Z ./how-to/ai-troubleshooting-refinement.md:# .github/workflows/sdd-quality-check.yml
+2025-10-06T13:59:18.5454876Z ./how-to/ai-troubleshooting-refinement.md:- [GitHub Discussions](https://github.com/sdd-community/troubleshooting)
+2025-10-06T13:59:18.5456254Z ./how-to/chatprd-workflow-integration.md:- Understanding of your target development workflow (GitHub Spec Kit, Kiro, etc.)
+2025-10-06T13:59:18.5457423Z ./how-to/chatprd-workflow-integration.md:**For GitHub Spec Kit Integration:**
+2025-10-06T13:59:18.5458435Z ./how-to/chatprd-workflow-integration.md:### ChatPRD → GitHub Spec Kit Workflow
+2025-10-06T13:59:18.5459340Z ./how-to/github-spec-kit-integration.md:# GitHub Spec Kit Integration Guide
+2025-10-06T13:59:18.5461739Z ./how-to/github-spec-kit-integration.md:GitHub Spec Kit is an open-source command-line toolkit that operationalizes Spec-Driven Development (SDD) principles. This guide provides comprehensive setup, usage, and troubleshooting information for integrating Spec Kit into your development workflow.
+2025-10-06T13:59:18.5464035Z ./how-to/github-spec-kit-integration.md:- Access to an AI coding agent (GitHub Copilot, Claude, Gemini CLI, etc.)
+2025-10-06T13:59:18.5465223Z ./how-to/github-spec-kit-integration.md:   - `.github/copilot-instructions.md` (for GitHub Copilot)
+2025-10-06T13:59:18.5466111Z ./how-to/github-spec-kit-integration.md:### GitHub Copilot
+2025-10-06T13:59:18.5466912Z ./how-to/github-spec-kit-integration.md:1. Ensure GitHub Copilot CLI is installed
+2025-10-06T13:59:18.5467996Z ./how-to/github-spec-kit-integration.md:2. Spec Kit automatically creates `.github/copilot-instructions.md`
+2025-10-06T13:59:18.5469300Z ./how-to/github-spec-kit-integration.md:1. Verify instruction files exist (`.github/copilot-instructions.md`, `CLAUDE.md`)
+2025-10-06T13:59:18.5470374Z ./how-to/github-spec-kit-integration.md:- CI/CD with GitHub Actions
+2025-10-06T13:59:18.5471357Z ./how-to/github-spec-kit-integration.md:# .github/workflows/sdd-quality-check.yml
+2025-10-06T13:59:18.5472432Z ./how-to/github-spec-kit-integration.md:        uses: actions/github-script@v6
+2025-10-06T13:59:18.5473367Z ./how-to/github-spec-kit-integration.md:            github.rest.issues.createComment({
+2025-10-06T13:59:18.5474352Z ./how-to/github-spec-kit-integration.md:After mastering GitHub Spec Kit integration:
+2025-10-06T13:59:18.5475438Z ./how-to/github-spec-kit-integration.md:- [GitHub Spec Kit Repository](https://github.com/github/spec-kit)
+2025-10-06T13:59:18.5476745Z ./how-to/github-spec-kit-integration.md:- [Official Documentation](https://github.com/github/spec-kit/blob/main/README.md)
+2025-10-06T13:59:18.5478127Z ./how-to/github-spec-kit-integration.md:- [Community Examples](https://github.com/github/spec-kit/tree/main/examples)
+2025-10-06T13:59:18.5479356Z ./how-to/github-spec-kit-integration.md:- [Issue Tracker](https://github.com/github/spec-kit/issues)
+2025-10-06T13:59:18.5480677Z ./how-to/ide-specific-sdd-integration.md:VS Code with GitHub Copilot can be optimized for effective SDD workflows.
+2025-10-06T13:59:18.5481955Z ./how-to/ide-specific-sdd-integration.md:code --install-extension GitHub.copilot
+2025-10-06T13:59:18.5482935Z ./how-to/ide-specific-sdd-integration.md:code --install-extension GitHub.copilot-chat
+2025-10-06T13:59:18.5483853Z ./how-to/ide-specific-sdd-integration.md:  "github.copilot.enable": {
+2025-10-06T13:59:18.5484680Z ./how-to/ide-specific-sdd-integration.md:  "github.copilot.advanced": {
+2025-10-06T13:59:18.5485683Z ./how-to/ide-specific-sdd-integration.md:- [Community Examples](https://github.com/kiro-ai/examples)
+2025-10-06T13:59:18.5486881Z ./how-to/ide-specific-sdd-integration.md:- [Community Patterns](https://github.com/getcursor/cursor-examples)
+2025-10-06T13:59:18.5488180Z ./how-to/ide-specific-sdd-integration.md:- [Integration Examples](https://github.com/anthropics/anthropic-cookbook)
+2025-10-06T13:59:18.5489455Z ./how-to/ide-specific-sdd-integration.md:- [GitHub Copilot Documentation](https://docs.github.com/copilot)
+2025-10-06T13:59:18.5491032Z ./training/case-studies/challenges/gaming-studio-recovery.md:- **Tool Integration**: Implemented GitHub Spec Kit and AI-assisted development tools
+2025-10-06T13:59:18.5492620Z ./training/case-studies/success/fintech-payment-platform.md:- **Development Tools**: GitHub, CircleCI, DataDog, PagerDuty
+2025-10-06T13:59:18.5494205Z ./training/case-studies/success/fintech-payment-platform.md:- **Tool Setup**: GitHub Spec Kit integration, template development, AI agent configuration
+2025-10-06T13:59:18.5495770Z ./training/case-studies/success/fintech-payment-platform.md:**GitHub Copilot**: Primary code generation and completion
+2025-10-06T13:59:18.5497254Z ./training/hands-on/tutorial-1-first-workflow.md:**Tools Needed**: GitHub account, AI agent access (Copilot, Claude, or similar), text editor
+2025-10-06T13:59:18.5498622Z ./training/hands-on/tutorial-1-first-workflow.md:### Step 10: GitHub Spec Kit Workflow Setup (15 minutes)
+2025-10-06T13:59:18.5499740Z ./training/hands-on/tutorial-1-first-workflow.md:If using GitHub Spec Kit, initialize with:
+2025-10-06T13:59:18.5500852Z ./training/hands-on/tutorial-1-first-workflow.md:npm install -g @github/spec-kit
+2025-10-06T13:59:18.5502874Z ./training/hands-on/peer-review-system.md:**Questions about the process?** Check out our [FAQ](peer-review-faq.md) or join our [community discussions](https://github.com/discussions/categories/peer-review) for support and guidance from experienced reviewers and community members.
+2025-10-06T13:59:18.5505054Z ./training/hands-on/sample-projects/index.md:- Access to AI development assistants (GitHub Copilot, Claude, etc.)
+2025-10-06T13:59:18.5506891Z ./training/hands-on/sample-projects/index.md:**Need help choosing?** Join our [community discussions](https://github.com/discussions) or attend [office hours](../community/office-hours.md) for personalized guidance.
+2025-10-06T13:59:18.5508483Z ./training/hands-on/index.md:   - GitHub Spec Kit workflow execution
+2025-10-06T13:59:18.5509540Z ./training/hands-on/index.md:- [Discussion Forums](https://github.com/discussions) - Ask questions and share experiences
+2025-10-06T13:59:18.5511056Z ./training/hands-on/index.md:- [GitHub Spec Kit](../../how-to/github-spec-kit-integration.md) - Primary SDD tooling
+2025-10-06T13:59:18.5512393Z ./training/fundamentals/index.md:- Join the [New Developer Community](https://github.com/discussions/categories/new-developers)
+2025-10-06T13:59:18.5513610Z ./training/fundamentals/index.md:- [Discussion Forums](https://github.com/discussions)
+2025-10-06T13:59:18.5514700Z ./training/fundamentals/index.md:- [GitHub Spec Kit Setup](../../how-to/github-spec-kit-integration.md)
+2025-10-06T13:59:18.5515633Z ./training/index.md:- Using GitHub Spec Kit or similar tools
+2025-10-06T13:59:18.5516430Z ./training/index.md:- Access to AI development tools (GitHub Copilot, Claude, etc.)
+2025-10-06T13:59:18.5517241Z ./training/index.md:- GitHub account for Spec Kit integration
+2025-10-06T13:59:18.5517993Z ./training/index.md:- **GitHub Spec Kit**: Primary specification tooling
+2025-10-06T13:59:18.5518896Z ./training/index.md:- Join our [Community Forum](https://github.com/discussions) for support
+2025-10-06T13:59:18.5520223Z ./.github/pull_request_template.md:- [ ] 🔧 **Tooling**: GitHub Actions, scripts, or automation improvements
+2025-10-06T13:59:18.5521405Z ./.github/pull_request_template/template_contribution.md:- [ ] Tested with GitHub Copilot
+2025-10-06T13:59:18.5522695Z ./.github/pull_request_template/tooling_contribution.md:- [ ] 🔄 **GitHub Actions Workflow**: CI/CD automation and validation
+2025-10-06T13:59:18.5523879Z ./.github/pull_request_template/tooling_contribution.md:### GitHub Actions Integration:
+2025-10-06T13:59:18.5524961Z ./.github/pull_request_template/tooling_contribution.md:- [ ] Follows GitHub Actions best practices
+2025-10-06T13:59:18.5525952Z ./.github/ISSUE_TEMPLATE/feature_request.md:- [ ] GitHub Actions workflow
+2025-10-06T13:59:18.5526908Z ./.github/ISSUE_TEMPLATE/feedback.md:- **Tools Used**: (GitHub Spec Kit, ChatPRD, AI agents, etc.)
+2025-10-06T13:59:18.5528016Z ./resources/decision-trees/project-initiation.md:    O -->|GitHub| P[GitHub Spec Kit + Copilot]
+2025-10-06T13:59:18.5529115Z ./resources/decision-trees/project-initiation.md:    P --> W[Setup GitHub Spec Kit CLI]
+2025-10-06T13:59:18.5530122Z ./resources/decision-trees/project-initiation.md:**GitHub Spec Kit + Copilot:**
+2025-10-06T13:59:18.5531234Z ./resources/decision-trees/project-initiation.md:- Best for: GitHub-native workflows
+2025-10-06T13:59:18.5532381Z ./resources/decision-trees/project-initiation.md:- Requirements: GitHub repository, Copilot subscription
+2025-10-06T13:59:18.5533587Z ./.kiro/specs/sdd-repository-blueprint/tasks.md:  - [x] 2.1 Create GitHub Spec Kit compatible templates
+2025-10-06T13:59:18.5534751Z ./.kiro/specs/sdd-repository-blueprint/tasks.md:  - [x] 4.1 Create GitHub Spec Kit integration documentation
+2025-10-06T13:59:18.5536039Z ./.kiro/specs/sdd-repository-blueprint/tasks.md:    - Create GitHub Actions workflow for markdown linting and validation
+2025-10-06T13:59:18.5537317Z ./.kiro/specs/sdd-repository-blueprint/tasks.md:    - Create detailed GitHub Spec Kit workflow documentation
+2025-10-06T13:59:18.5538526Z ./.kiro/specs/sdd-repository-blueprint/tasks.md:    - Set up GitHub Discussions for community engagement
+2025-10-06T13:59:18.5539525Z ./.kiro/specs/sdd-repository-blueprint/design.md:├── .github/
+2025-10-06T13:59:18.5540878Z ./.kiro/specs/sdd-repository-blueprint/design.md:3. **Tool Agnostic**: While featuring GitHub Spec Kit and ChatPRD, the blueprint supports multiple AI agents and tools
+2025-10-06T13:59:18.5542530Z ./.kiro/specs/sdd-repository-blueprint/design.md:GitHub Spec Kit compatible templates with extensions for different domains:
+2025-10-06T13:59:18.5543955Z ./.kiro/specs/sdd-repository-blueprint/design.md:  preferred_tools: [github-spec-kit, chatprd, copilot, claude, custom]
+2025-10-06T13:59:18.5545245Z ./.kiro/specs/sdd-repository-blueprint/design.md:   - Template validation with GitHub Spec Kit workflows
+2025-10-06T13:59:18.5546756Z ./.kiro/specs/sdd-repository-blueprint/design.md:- **Repository Platform**: GitHub for maximum compatibility and community engagement
+2025-10-06T13:59:18.5548225Z ./.kiro/specs/sdd-repository-blueprint/design.md:- **CI/CD**: GitHub Actions for automated validation and quality checks
+2025-10-06T13:59:18.5549663Z ./.kiro/specs/sdd-repository-blueprint/design.md:- **Community Features**: GitHub Discussions, Issues, and Pull Requests for collaboration
+2025-10-06T13:59:18.5553936Z ./.kiro/specs/sdd-repository-blueprint/requirements.md:This feature aims to create a comprehensive, future-ready repository blueprint that serves as the definitive resource for Spec-Driven Development (SDD) in 2025. The repository will provide structured guidance, tools, templates, and training materials for teams adopting SDD methodologies with AI-assisted development. Drawing from the latest industry research and best practices from tools like GitHub Spec Kit and ChatPRD, this blueprint will serve multiple audiences from new developers to experienced practitioners, product managers, and team leads.
+2025-10-06T13:59:18.5558583Z ./.kiro/specs/sdd-repository-blueprint/requirements.md:2. WHEN a developer needs templates THEN the system SHALL provide ready-to-use spec, plan, and task templates based on GitHub Spec Kit patterns
+2025-10-06T13:59:18.5561294Z ./.kiro/specs/sdd-repository-blueprint/requirements.md:**User Story:** As a developer working with AI agents, I want practical integration guides and troubleshooting resources, so that I can effectively use tools like GitHub Spec Kit, Copilot, and other AI coding assistants.
+2025-10-06T13:59:18.5563892Z ./.kiro/specs/sdd-repository-blueprint/requirements.md:1. WHEN setting up AI integration THEN the system SHALL provide step-by-step setup guides for GitHub Spec Kit, ChatPRD, and major AI agents
+2025-10-06T13:59:18.5565382Z ./.kiro/steering/tech.md:- Use standard GitHub Flavored Markdown (GFM)
+2025-10-06T13:59:18.5566407Z ./.kiro/steering/product.md:- **Tool Agnostic**: Works with GitHub Spec Kit, Kiro, Claude, Copilot, and other AI agents
+2025-10-06T13:59:18.5567619Z ./.kiro/steering/structure.md:│   ├── templates/       # GitHub Spec Kit compatible templates
+2025-10-06T13:59:18.5568633Z ./README.md:1. **Clone this repository**: `git clone https://github.com/your-org/sdd-blueprint.git`
+2025-10-06T13:59:18.5570022Z ./README.md:4. **Get AI assistance**: Integrate with [GitHub Spec Kit](how-to/github-spec-kit-integration.md) or [ChatPRD](how-to/chatprd-workflow-integration.md)
+2025-10-06T13:59:18.5571426Z ./README.md:│   ├── 📄 templates/          # GitHub Spec Kit compatible templates
+2025-10-06T13:59:18.5572311Z ./README.md:*All templates are GitHub Spec Kit compatible and tested with major AI agents.*
+2025-10-06T13:59:18.5573093Z ./README.md:**🔧 GitHub Spec Kit**
+2025-10-06T13:59:18.5573736Z ./README.md:[Setup Guide →](how-to/github-spec-kit-integration.md)
+2025-10-06T13:59:18.5574357Z ./README.md:- GitHub Copilot
+2025-10-06T13:59:18.5575118Z ./README.md:[Report Issues →](https://github.com/your-org/sdd-blueprint/issues/new/choose)
+2025-10-06T13:59:18.5576212Z ./README.md:[Join Discussions →](https://github.com/your-org/sdd-blueprint/discussions)
+2025-10-06T13:59:18.5577504Z ./README.md:- **💬 [GitHub Discussions](https://github.com/your-org/sdd-blueprint/discussions)** - Ask questions, share experiences
+2025-10-06T13:59:18.5578877Z ./README.md:- **🐛 [Issues](https://github.com/your-org/sdd-blueprint/issues)** - Report bugs, request features
+2025-10-06T13:59:18.5580191Z ./README.md:- **🔔 [Releases](https://github.com/your-org/sdd-blueprint/releases)** - Stay updated with latest improvements
+2025-10-06T13:59:18.5581342Z ./README.md:- **GitHub Spec Kit** - Pioneering SDD tooling and workflows
+2025-10-06T13:59:18.5582820Z ./README.md:**[Get Started Now](how-to/getting-started.md)** • **[Choose Your Path](#-choose-your-adventure)** • **[Join the Community](https://github.com/your-org/sdd-blueprint/discussions)**
+2025-10-06T13:59:18.5584696Z ./README.md:[![Contributors](https://img.shields.io/github/contributors/your-org/sdd-blueprint)](https://github.com/your-org/sdd-blueprint/graphs/contributors)
+2025-10-06T13:59:18.5586509Z ./README.md:[![Stars](https://img.shields.io/github/stars/your-org/sdd-blueprint)](https://github.com/your-org/sdd-blueprint/stargazers)
+2025-10-06T13:59:18.5588043Z ./README.md:[![Forks](https://img.shields.io/github/forks/your-org/sdd-blueprint)](https://github.com/your-org/sdd-blueprint/network/members)
+2025-10-06T13:59:18.5589338Z ./README.md:[![License](https://img.shields.io/github/license/your-org/sdd-blueprint)](LICENSE)
+2025-10-06T13:59:18.5590200Z ./docs/community/feedback-process.md:### 1. GitHub Issues
+2025-10-06T13:59:18.5591012Z ./docs/community/feedback-process.md:### 2. GitHub Discussions
+2025-10-06T13:59:18.5591732Z ./docs/community/survey-templates.md:   - [ ] GitHub Copilot
+2025-10-06T13:59:18.5592443Z ./docs/community/survey-templates.md:   - [ ] GitHub Spec Kit
+2025-10-06T13:59:18.5593364Z ./docs/community/survey-templates.md:   - GitHub Copilot: Excellent / Good / Fair / Poor / Don't use
+2025-10-06T13:59:18.5594618Z ./docs/community/survey-templates.md:   - GitHub Spec Kit: Excellent / Good / Fair / Poor / Don't use
+2025-10-06T13:59:18.5595828Z ./docs/community/survey-templates.md:- **Distribution**: GitHub Discussions, community newsletters, social media
+2025-10-06T13:59:18.5596883Z ./docs/community/launch-checklist.md:- [x] GitHub Discussions enabled
+2025-10-06T13:59:18.5597701Z ./docs/community/launch-checklist.md:- [ ] Enable GitHub Discussions
+2025-10-06T13:59:18.5598561Z ./docs/community/launch-checklist.md:- **Target**: 50+ GitHub stars in first month
+2025-10-06T13:59:18.5599833Z ./docs/research/github-spec-kit.md:# **The Executable Intent: An In-Depth Analysis of GitHub's Spec-Kit and the Rise of Spec-Driven Development**
+2025-10-06T13:59:18.5606814Z ./docs/research/github-spec-kit.md:However, while "vibe coding" excels at speed for prototyping, its unstructured nature reveals significant weaknesses when applied to the construction of robust, scalable, and maintainable production systems.4 The core issue stems from the nature of the Large Language Models (LLMs) that power these AI agents. As GitHub Principal Product Manager Den Delimarsky notes, developers often treat these agents like search engines, expecting them to infer context and intent, when they should be treated as "literal-minded pair programmers".6 A vague prompt forces the LLM to guess at thousands of unstated requirements, from architectural patterns and security constraints to specific business rules and user experience nuances.7 These implicit assumptions are often incorrect and can remain hidden until late in the implementation phase, leading to unpredictable results and costly rework cycles. This establishes the central challenge of the AI-native development era: how to leverage the immense generative capacity of AI without falling victim to its fundamental lack of true comprehension.
+2025-10-06T13:59:18.5613754Z ./docs/research/github-spec-kit.md:## **A Deep Dive into GitHub's Spec-Kit**
+2025-10-06T13:59:18.5617191Z ./docs/research/github-spec-kit.md:GitHub's Spec-Kit is an open-source command-line toolkit engineered to operationalize the principles of Spec-Driven Development.4 It provides a structured framework and a series of commands that guide a developer and their chosen AI coding agent through a methodical process, transforming a high-level concept into a fully implemented feature. By formalizing the interaction between human and AI, Spec-Kit aims to produce higher-quality, more consistent, and more predictable results than unstructured approaches.
+2025-10-06T13:59:18.5623058Z ./docs/research/github-spec-kit.md:Spec-Kit is designed to be agent-agnostic, capable of working with a variety of modern AI coding agents, including GitHub Copilot, Claude Code, and Gemini CLI.7 Its architecture is not that of a monolithic application but rather a lightweight orchestrator. It establishes a standardized project structure and a set of version-controlled, text-based artifacts that serve as the inputs and outputs for each stage of the development process. The core principles guiding its design are 8:
+2025-10-06T13:59:18.5627759Z ./docs/research/github-spec-kit.md:specify init \<PROJECT\_NAME\> command is crucial as it sets up the necessary directory structure and creates the agent-specific instruction files (e.g., .github/copilot-instructions.md for GitHub Copilot, CLAUDE.md for Claude) that enable the AI to understand and use the Spec-Kit slash commands.3
+2025-10-06T13:59:18.5632589Z ./docs/research/github-spec-kit.md:GitHub's Spec-Kit does not exist in a vacuum. It is part of a broader industry-wide movement towards more structured and intentional methods of leveraging AI in software development. Understanding its position requires examining not only direct competitors that share its philosophy but also adjacent paradigms that preceded it and the underlying AI platforms that power it. This analysis reveals an emerging market segmentation based on different approaches to developer workflow and tool integration.
+2025-10-06T13:59:18.5638317Z ./docs/research/github-spec-kit.md:* **SpecPilot:** This tool positions itself as a "no-bloat GitHub Specs alternative".12 Its philosophy is minimalist and developer-centric, emphasizing a "markdown-first" approach that is lightweight and avoids "fancy UI distractions." SpecPilot is for teams who want the discipline of SDD—clear, version-controlled specification documents—without the automation overhead of a more complex toolkit like Spec-Kit.12  
+2025-10-06T13:59:18.5643924Z ./docs/research/github-spec-kit.md:* **GitHub Copilot CLI:** While designed to work seamlessly with Spec-Kit, the Copilot CLI is also a powerful standalone tool.17 It allows developers to interact with an AI agent directly from the terminal to perform local file modifications, execute Git operations, and query information from GitHub.com, such as listing open pull requests or creating issues.18 A disciplined developer could manually create their own spec and plan documents and then use the Copilot CLI to execute the implementation tasks.  
+2025-10-06T13:59:18.5649166Z ./docs/research/github-spec-kit.md:The decision to adopt a new development paradigm like Spec-Driven Development and a new tool like GitHub's Spec-Kit requires a careful evaluation of its benefits, drawbacks, and position within the broader technological landscape. While the potential for increased quality and alignment is significant, teams must also consider the initial overhead and the required shift in developer skills.
+2025-10-06T13:59:18.5653166Z ./docs/research/github-spec-kit.md:* **Agent Agnostic:** Spec-Kit's design as an orchestration layer provides significant flexibility. It is not tied to a single AI provider, allowing teams to choose the best-in-class coding agent for their needs, whether it be GitHub Copilot, Claude Code, or Gemini.7
+2025-10-06T13:59:18.5656938Z ./docs/research/github-spec-kit.md:* **For Rapid Prototyping:** The unstructured "vibe coding" approach, using tools like **Replit Agent** or the basic chat interfaces of **GitHub Copilot** and its peers, remains the fastest method for exploring ideas and building proofs-of-concept. However, it is critical that teams treat the output as a starting point for a more rigorous process, not as a production-ready product.  
+2025-10-06T13:59:18.5660246Z ./docs/research/github-spec-kit.md:1. Documentation-Driven Development (DDD) \- GitHub Gist, accessed September 30, 2025, [https://gist.github.com/zsup/9434452](https://gist.github.com/zsup/9434452)  
+2025-10-06T13:59:18.5662859Z ./docs/research/github-spec-kit.md:6. Spec-driven AI coding with GitHub's Spec Kit \- Azalio, accessed September 30, 2025, [https://www.azalio.io/spec-driven-ai-coding-with-githubs-spec-kit/](https://www.azalio.io/spec-driven-ai-coding-with-githubs-spec-kit/)  
+2025-10-06T13:59:18.5666525Z ./docs/research/github-spec-kit.md:7. Spec-driven development with AI: Get started with a new open source toolkit, accessed September 30, 2025, [https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/](https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/)  
+2025-10-06T13:59:18.5670114Z ./docs/research/github-spec-kit.md:8. github/spec-kit: Toolkit to help you get started with Spec-Driven Development, accessed September 30, 2025, [https://github.com/github/spec-kit](https://github.com/github/spec-kit)  
+2025-10-06T13:59:18.5673686Z ./docs/research/github-spec-kit.md:12. SpecPilot – A No-Bloat GitHub Specs Alternative You'll Actually Use ..., accessed September 30, 2025, [https://dev.to/deviprasadshetty/specpilot-a-no-bloat-github-specs-alternative-youll-actually-use-4baf](https://dev.to/deviprasadshetty/specpilot-a-no-bloat-github-specs-alternative-youll-actually-use-4baf)  
+2025-10-06T13:59:18.5676835Z ./docs/research/github-spec-kit.md:17. GitHub Spec Kit GitHub Copilot CLI \- YouTube, accessed September 30, 2025, [https://www.youtube.com/watch?v=7tjmA\_0pl2c](https://www.youtube.com/watch?v=7tjmA_0pl2c)  
+2025-10-06T13:59:18.5679279Z ./docs/research/github-spec-kit.md:18. About GitHub Copilot CLI, accessed September 30, 2025, [https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli](https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli)  
+2025-10-06T13:59:18.5682029Z ./docs/research/github-spec-kit.md:19. GitHub Copilot features, accessed September 30, 2025, [https://docs.github.com/en/copilot/get-started/features](https://docs.github.com/en/copilot/get-started/features)  
+2025-10-06T13:59:18.5683768Z ./docs/template-migration-guide.md:- **GitHub Discussions**: Ask questions about specific migrations
+2025-10-06T13:59:18.5684867Z ./docs/template-migration-guide.md:- **Issue Tracking**: GitHub issues for migration problems
+2025-10-06T13:59:18.5685876Z ./docs/template-migration-guide.md:# GitHub Actions workflow for migration checking
+2025-10-06T13:59:18.5686812Z ./docs/template-migration-guide.md:- **Community**: Ask in GitHub Discussions
+2025-10-06T13:59:18.5687753Z ./docs/template-migration-guide.md:- **Issues**: Report problems via GitHub Issues
+2025-10-06T13:59:18.5688760Z ./CODE_OF_CONDUCT.md:- **GitHub Issues**: For public violations that can be addressed transparently
+2025-10-06T13:59:18.5689816Z ./CODE_OF_CONDUCT.md:- **GitHub's Report Feature**: Use GitHub's built-in reporting for serious violations
+2025-10-06T13:59:18.5690869Z ./CODE_OF_CONDUCT.md:[Mozilla CoC]: https://github.com/mozilla/diversity
+2025-10-06T13:59:18.5691739Z ./CODE_OF_CONDUCT.md:- **Ask in discussions**: Use GitHub Discussions for community support
+2025-10-06T13:59:18.5692966Z ./analytics/dashboard.md:- **Stars**: ![GitHub stars](https://img.shields.io/github/stars/[username]/spec-driven-development-blueprint)
+2025-10-06T13:59:18.5694438Z ./analytics/dashboard.md:- **Forks**: ![GitHub forks](https://img.shields.io/github/forks/[username]/spec-driven-development-blueprint)
+2025-10-06T13:59:18.5695916Z ./analytics/dashboard.md:- **Issues**: ![GitHub issues](https://img.shields.io/github/issues/[username]/spec-driven-development-blueprint)
+2025-10-06T13:59:18.5697568Z ./analytics/dashboard.md:- **Contributors**: ![GitHub contributors](https://img.shields.io/github/contributors/[username]/spec-driven-development-blueprint)
+2025-10-06T13:59:18.5698897Z ./analytics/privacy-policy.md:### Repository Metrics (Public GitHub Data)
+2025-10-06T13:59:18.5699707Z ./audiences/new-developers.md:### Working with GitHub Spec Kit
+2025-10-06T13:59:18.5700615Z ./audiences/new-developers.md:- GitHub Discussions for questions and examples
+2025-10-06T13:59:18.5701507Z ./audiences/team-leads.md:- Primary AI agent: [GitHub Copilot/Claude/Kiro/etc.]
+2025-10-06T13:59:18.5702402Z ./audiences/team-leads.md:- Specification format: [GitHub Spec Kit compatible]
+2025-10-06T13:59:18.5703279Z ./audiences/team-leads.md:- Documentation platform: [GitHub/Confluence/etc.]
+2025-10-06T13:59:18.5704203Z ./audiences/team-leads.md:**Tools:** GitHub Analytics, Jira, SonarQube, custom dashboards
+2025-10-06T13:59:18.5705337Z ./audiences/experienced-developers.md:| Architecture Design | GitHub Copilot | Code structure understanding |
+2025-10-06T13:59:18.5706611Z ./audiences/experienced-developers.md:## Phase 3: Task Planning (GitHub Copilot)
+2025-10-06T13:59:18.5707558Z ./audiences/experienced-developers.md:## Technical Review (GitHub Copilot)  
+2025-10-06T13:59:18.5708510Z ⚠️  Found potentially inconsistent term: 'github' (should be 'GitHub')

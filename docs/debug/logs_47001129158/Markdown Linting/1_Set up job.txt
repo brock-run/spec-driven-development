@@ -1,0 +1,30 @@
+﻿2025-10-06T13:59:18.4034457Z Current runner version: '2.328.0'
+2025-10-06T13:59:18.4059490Z ##[group]Runner Image Provisioner
+2025-10-06T13:59:18.4060266Z Hosted Compute Agent
+2025-10-06T13:59:18.4060814Z Version: 20250912.392
+2025-10-06T13:59:18.4061500Z Commit: d921fda672a98b64f4f82364647e2f10b2267d0b
+2025-10-06T13:59:18.4062218Z Build Date: 2025-09-12T15:23:14Z
+2025-10-06T13:59:18.4062796Z ##[endgroup]
+2025-10-06T13:59:18.4063468Z ##[group]Operating System
+2025-10-06T13:59:18.4064359Z Ubuntu
+2025-10-06T13:59:18.4065060Z 24.04.3
+2025-10-06T13:59:18.4065890Z LTS
+2025-10-06T13:59:18.4066712Z ##[endgroup]
+2025-10-06T13:59:18.4067546Z ##[group]Runner Image
+2025-10-06T13:59:18.4068167Z Image: ubuntu-24.04
+2025-10-06T13:59:18.4068700Z Version: 20250929.60.1
+2025-10-06T13:59:18.4069722Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250929.60/images/ubuntu/Ubuntu2404-Readme.md
+2025-10-06T13:59:18.4071192Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250929.60
+2025-10-06T13:59:18.4072404Z ##[endgroup]
+2025-10-06T13:59:18.4073479Z ##[group]GITHUB_TOKEN Permissions
+2025-10-06T13:59:18.4075529Z Contents: read
+2025-10-06T13:59:18.4076516Z Metadata: read
+2025-10-06T13:59:18.4077048Z Packages: read
+2025-10-06T13:59:18.4077594Z ##[endgroup]
+2025-10-06T13:59:18.4079996Z Secret source: Actions
+2025-10-06T13:59:18.4080948Z Prepare workflow directory
+2025-10-06T13:59:18.4393873Z Prepare all required actions
+2025-10-06T13:59:18.4432348Z Getting action download info
+2025-10-06T13:59:18.7969087Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+2025-10-06T13:59:18.8655160Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2025-10-06T13:59:19.0403838Z Complete job name: Markdown Linting

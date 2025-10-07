@@ -1,0 +1,69 @@
+﻿2025-10-06T13:59:19.1091825Z ##[group]Run actions/checkout@v4
+2025-10-06T13:59:19.1092739Z with:
+2025-10-06T13:59:19.1093241Z   repository: brock-run/spec-driven-development
+2025-10-06T13:59:19.1094051Z   token: ***
+2025-10-06T13:59:19.1094630Z   ssh-strict: true
+2025-10-06T13:59:19.1095075Z   ssh-user: git
+2025-10-06T13:59:19.1095511Z   persist-credentials: true
+2025-10-06T13:59:19.1096014Z   clean: true
+2025-10-06T13:59:19.1096659Z   sparse-checkout-cone-mode: true
+2025-10-06T13:59:19.1097202Z   fetch-depth: 1
+2025-10-06T13:59:19.1097632Z   fetch-tags: false
+2025-10-06T13:59:19.1098066Z   show-progress: true
+2025-10-06T13:59:19.1098509Z   lfs: false
+2025-10-06T13:59:19.1098906Z   submodules: false
+2025-10-06T13:59:19.1099348Z   set-safe-directory: true
+2025-10-06T13:59:19.1100095Z ##[endgroup]
+2025-10-06T13:59:19.2186452Z Syncing repository: brock-run/spec-driven-development
+2025-10-06T13:59:19.2189329Z ##[group]Getting Git version info
+2025-10-06T13:59:19.2190824Z Working directory is '/home/runner/work/spec-driven-development/spec-driven-development'
+2025-10-06T13:59:19.2192660Z [command]/usr/bin/git version
+2025-10-06T13:59:19.2211673Z git version 2.51.0
+2025-10-06T13:59:19.2237716Z ##[endgroup]
+2025-10-06T13:59:19.2258541Z Temporarily overriding HOME='/home/runner/work/_temp/17bcf79a-70a2-435e-a2bb-9537edc34f06' before making global git config changes
+2025-10-06T13:59:19.2260906Z Adding repository directory to the temporary git global config as a safe directory
+2025-10-06T13:59:19.2265095Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/spec-driven-development/spec-driven-development
+2025-10-06T13:59:19.2298501Z Deleting the contents of '/home/runner/work/spec-driven-development/spec-driven-development'
+2025-10-06T13:59:19.2301668Z ##[group]Initializing the repository
+2025-10-06T13:59:19.2306724Z [command]/usr/bin/git init /home/runner/work/spec-driven-development/spec-driven-development
+2025-10-06T13:59:19.2362738Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-10-06T13:59:19.2364499Z hint: is subject to change. To configure the initial branch name to use in all
+2025-10-06T13:59:19.2365532Z hint: of your new repositories, which will suppress this warning, call:
+2025-10-06T13:59:19.2367171Z hint:
+2025-10-06T13:59:19.2368033Z hint: 	git config --global init.defaultBranch <name>
+2025-10-06T13:59:19.2369074Z hint:
+2025-10-06T13:59:19.2370063Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-10-06T13:59:19.2371682Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-10-06T13:59:19.2373020Z hint:
+2025-10-06T13:59:19.2373678Z hint: 	git branch -m <name>
+2025-10-06T13:59:19.2374452Z hint:
+2025-10-06T13:59:19.2375466Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-10-06T13:59:19.2377834Z Initialized empty Git repository in /home/runner/work/spec-driven-development/spec-driven-development/.git/
+2025-10-06T13:59:19.2381088Z [command]/usr/bin/git remote add origin https://github.com/brock-run/spec-driven-development
+2025-10-06T13:59:19.2411006Z ##[endgroup]
+2025-10-06T13:59:19.2412215Z ##[group]Disabling automatic garbage collection
+2025-10-06T13:59:19.2415677Z [command]/usr/bin/git config --local gc.auto 0
+2025-10-06T13:59:19.2444239Z ##[endgroup]
+2025-10-06T13:59:19.2445452Z ##[group]Setting up auth
+2025-10-06T13:59:19.2451619Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-10-06T13:59:19.2480908Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-10-06T13:59:19.2739812Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-10-06T13:59:19.2770368Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-10-06T13:59:19.2993894Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-10-06T13:59:19.3029976Z ##[endgroup]
+2025-10-06T13:59:19.3030901Z ##[group]Fetching the repository
+2025-10-06T13:59:19.3039491Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +185c6fae08b0f27c4a0aa36125647c25c967af89:refs/remotes/origin/main
+2025-10-06T13:59:19.5784906Z From https://github.com/brock-run/spec-driven-development
+2025-10-06T13:59:19.5786601Z  * [new ref]         185c6fae08b0f27c4a0aa36125647c25c967af89 -> origin/main
+2025-10-06T13:59:19.5815298Z ##[endgroup]
+2025-10-06T13:59:19.5818803Z ##[group]Determining the checkout info
+2025-10-06T13:59:19.5820423Z ##[endgroup]
+2025-10-06T13:59:19.5823958Z [command]/usr/bin/git sparse-checkout disable
+2025-10-06T13:59:19.5861297Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-10-06T13:59:19.5889803Z ##[group]Checking out the ref
+2025-10-06T13:59:19.5893096Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-10-06T13:59:19.6136672Z Switched to a new branch 'main'
+2025-10-06T13:59:19.6138750Z branch 'main' set up to track 'origin/main'.
+2025-10-06T13:59:19.6146466Z ##[endgroup]
+2025-10-06T13:59:19.6181181Z [command]/usr/bin/git log -1 --format=%H
+2025-10-06T13:59:19.6202932Z 185c6fae08b0f27c4a0aa36125647c25c967af89

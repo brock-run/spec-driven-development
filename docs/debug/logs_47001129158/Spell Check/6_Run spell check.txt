@@ -1,0 +1,99 @@
+﻿2025-10-06T13:59:24.2851429Z ##[group]Run echo "Running spell check..."
+2025-10-06T13:59:24.2851775Z [36;1mecho "Running spell check..."[0m
+2025-10-06T13:59:24.2852110Z [36;1mcspell "**/*.md" --no-progress --show-context || {[0m
+2025-10-06T13:59:24.2852432Z [36;1m  echo "❌ Spell check found issues"[0m
+2025-10-06T13:59:24.2852775Z [36;1m  echo "💡 Add technical terms to .cspell.json words array"[0m
+2025-10-06T13:59:24.2914303Z [36;1m  exit 1[0m
+2025-10-06T13:59:24.2914602Z [36;1m}[0m
+2025-10-06T13:59:24.2914819Z [36;1mecho "✅ Spell check passed"[0m
+2025-10-06T13:59:24.2946625Z shell: /usr/bin/bash -e {0}
+2025-10-06T13:59:24.2946883Z ##[endgroup]
+2025-10-06T13:59:24.2999581Z Running spell check...
+2025-10-06T13:59:25.8694859Z audiences/experienced-developers.md:222:6     - Unknown word (Microspec)  -- #### Microspec Architecture
+2025-10-06T13:59:25.9343223Z audiences/specialists.md:564:20    - Unknown word (WCAG)       -- **Accessibility:** WCAG 2.1 AA compliant
+2025-10-06T13:59:25.9699329Z CODE_OF_CONDUCT.md:29:5      - Unknown word (Gatekeeping) -- - **Gatekeeping** or creating barriers
+2025-10-06T13:59:25.9701614Z CODE_OF_CONDUCT.md:153:5     - Unknown word (Inclusivity) -- - **Inclusivity**: We welcome contributors
+2025-10-06T13:59:26.0519973Z docs/research/github-spec-kit.md:14:132    - Unknown word (Andrej)     -- coding".3 Coined by Andrej Karpathy, this approach
+2025-10-06T13:59:26.0522767Z docs/research/github-spec-kit.md:14:139    - Unknown word (Karpathy)   -- .3 Coined by Andrej Karpathy, this approach involves
+2025-10-06T13:59:26.0526098Z docs/research/github-spec-kit.md:16:351    - Unknown word (Delimarsky) -- Product Manager Den Delimarsky notes, developers often
+2025-10-06T13:59:26.0529495Z docs/research/github-spec-kit.md:28:72     - Unknown word (operationalize) -- toolkit engineered to operationalize the principles of Spec
+2025-10-06T13:59:26.0531692Z docs/research/github-spec-kit.md:97:41     - Unknown word (toolkits)       -- Unlike the command-line toolkits, Kiro is a full-fledged
+2025-10-06T13:59:26.0533688Z docs/research/github-spec-kit.md:107:25    - Unknown word (Apideck)        -- Swagger (OpenAPI) & Apideck:** These platforms place
+2025-10-06T13:59:26.0535558Z docs/research/github-spec-kit.md:116:5     - Unknown word (Tabnine)        -- * **Tabnine:** Tabnine is an AI
+2025-10-06T13:59:26.0537907Z docs/research/github-spec-kit.md:116:16    - Unknown word (Tabnine)        -- * **Tabnine:** Tabnine is an AI code assistant
+2025-10-06T13:59:26.0539732Z docs/research/github-spec-kit.md:117:5     - Unknown word (Replit)         -- * **Replit Agent:** The Replit
+2025-10-06T13:59:26.0541626Z docs/research/github-spec-kit.md:117:25    - Unknown word (Replit)         -- Replit Agent:** The Replit Agent represents a different
+2025-10-06T13:59:26.0543257Z docs/research/github-spec-kit.md:154:5     - Unknown word (Replit)         -- | **Replit Agent** | AI Coding
+2025-10-06T13:59:26.0545456Z docs/research/github-spec-kit.md:155:5     - Unknown word (Tabnine)        -- | **Tabnine** | AI Coding Platform
+2025-10-06T13:59:26.0548293Z docs/research/github-spec-kit.md:165:90    - Unknown word (Replit)         -- using tools like **Replit Agent** or the basic
+2025-10-06T13:59:26.0550255Z docs/research/github-spec-kit.md:171:45    - Unknown word (Tabnine)        -- development in the AI era \- Tabnine, accessed September
+2025-10-06T13:59:26.0552425Z docs/research/github-spec-kit.md:173:73    - Unknown word (BEON)           -- Assisted Engineering \- BEON.tech, accessed September
+2025-10-06T13:59:26.0554547Z docs/research/github-spec-kit.md:175:52    - Unknown word (Azalio)         -- GitHub's Spec Kit \- Azalio, accessed September
+2025-10-06T13:59:26.0556438Z docs/research/github-spec-kit.md:179:70    - Unknown word (feiyun)         -- coding-mcp Tutorial | by feiyun0112 | Medium, accessed
+2025-10-06T13:59:26.0558367Z docs/research/github-spec-kit.md:184:55    - Unknown word (Apideck)        -- driven API development \- Apideck, accessed September
+2025-10-06T13:59:26.0559950Z docs/research/github-spec-kit.md:189:5     - Unknown word (Tabnine)        -- 20. Tabnine AI Code Assistant |
+2025-10-06T13:59:26.0562276Z docs/research/github-spec-kit.md:191:5     - Unknown word (Replit)         -- 22. Replit – Build apps and sites
+2025-10-06T13:59:26.0563835Z docs/research/github-spec-kit.md:194:25    - Unknown word (Glama)          -- Spec Workflow MCP | Glama, accessed September
+2025-10-06T13:59:26.0674959Z docs/research/specs-from-chore-to-core.md:23:117    - Unknown word (JTBD)       -- and "Jobs to be Done" (JTBD) frameworks. For a given
+2025-10-06T13:59:26.0682525Z docs/research/specs-from-chore-to-core.md:34:261    - Unknown word (ilities)    -- requirements (the "-ilities," e.g., scalability
+2025-10-06T13:59:26.0686396Z docs/research/specs-from-chore-to-core.md:59:67     - Unknown word (Lucidchart) -- diagramming tools (like Lucidchart, Miro, or even just
+2025-10-06T13:59:26.0688208Z docs/research/specs-from-chore-to-core.md:59:98     - Unknown word (Excalidraw) -- Miro, or even just Excalidraw). Challenge engineers
+2025-10-06T13:59:26.0928350Z examples/feature-addition/real-time-notifications/README.md:35:20     - Unknown word (rollouts)   -- - Planning feature rollouts with minimal risk to
+2025-10-06T13:59:26.1771914Z examples/workflows/complete-sdd-workflow/spec.md:12:72     - Unknown word (TOTP)       -- authentication using TOTP
+2025-10-06T13:59:26.1785582Z examples/workflows/complete-sdd-workflow/spec.md:86:35     - Unknown word (TOTP)       -- mfa/setup` - Set up TOTP MFA
+2025-10-06T13:59:26.1787347Z examples/workflows/complete-sdd-workflow/spec.md:87:36     - Unknown word (TOTP)       -- mfa/verify` - Verify TOTP code
+2025-10-06T13:59:26.2178201Z how-to/chatprd-workflow-integration.md:363:23    - Unknown word (wireframes) -- Create visual aids (wireframes, flowcharts, diagrams
+2025-10-06T13:59:26.2231746Z how-to/custom-ai-agent-integration.md:185:25    - Unknown word (Ollama)     -- 2. Local LLM Agent (Ollama Integration)
+2025-10-06T13:59:26.2428746Z how-to/github-spec-kit-integration.md:5:61      - Unknown word (operationalizes) -- command-line toolkit that operationalizes Spec-Driven Development
+2025-10-06T13:59:26.2431154Z how-to/github-spec-kit-integration.md:77:38     - Unknown word (WCAG)            -- must be accessible (WCAG 2.1 AA)"
+2025-10-06T13:59:26.2432754Z how-to/github-spec-kit-integration.md:202:12    - Unknown word (multimodal)      -- - Leverage multimodal capabilities for UI
+2025-10-06T13:59:26.2912593Z how-to/tool-integration-workflows.md:165:9     - Unknown word (VARCHAR)    -- email VARCHAR(255) UNIQUE NOT NULL
+2025-10-06T13:59:26.2915160Z how-to/tool-integration-workflows.md:166:17    - Unknown word (VARCHAR)    -- password_hash VARCHAR(255) NOT NULL,
+2025-10-06T13:59:26.2916554Z how-to/tool-integration-workflows.md:178:9     - Unknown word (VARCHAR)    -- token VARCHAR(255) UNIQUE NOT NULL
+2025-10-06T13:59:26.3234777Z README.md:96:24     - Unknown word (Quickstarts) -- 🎯 **Role-Specific Quickstarts**
+2025-10-06T13:59:26.3372575Z resources/checklists/cross-functional-review.md:74:80     - Unknown word (WCAG)       -- requirements meet standards (WCAG 2.1)
+2025-10-06T13:59:26.3375064Z resources/checklists/cross-functional-review.md:155:9     - Unknown word (Runbook)    -- - [ ] **Runbook Documentation**: Operational
+2025-10-06T13:59:26.3377276Z resources/checklists/cross-functional-review.md:155:61    - Unknown word (runbooks)   -- Operational procedures and runbooks planned
+2025-10-06T13:59:26.3379251Z resources/checklists/cross-functional-review.md:180:71    - Unknown word (CCPA)       -- subject rights (GDPR, CCPA)
+2025-10-06T13:59:26.3659809Z resources/checklists/spec-quality.md:5:98      - Unknown word (implementability) -- completeness, clarity, and implementability before moving to the
+2025-10-06T13:59:26.3837165Z resources/decision-trees/integration-strategy.md:168:20    - Unknown word (roadmaps)   -- - Create migration roadmaps with specs
+2025-10-06T13:59:26.4296956Z resources/templates/frontend/spec.md:36:48     - Unknown word (WCAG)       -- text **SHALL** meet WCAG 2.1 AA contrast ratios
+2025-10-06T13:59:26.4442449Z resources/templates/mobile/spec.md:101:10    - Unknown word (CCPA)       -- - **GDPR/CCPA**: Compliance with applicable
+2025-10-06T13:59:26.4444860Z resources/templates/mobile/spec.md:112:28    - Unknown word (WCAG)       -- Color Contrast**: Meet WCAG 2.1 AA standards
+2025-10-06T13:59:26.4446568Z resources/templates/mobile/spec.md:155:54    - Unknown word (symbolication) -- crash reporting and symbolication
+2025-10-06T13:59:26.4448453Z resources/templates/mobile/spec.md:170:55    - Unknown word (rollouts)      -- configuration for feature rollouts
+2025-10-06T13:59:26.4745666Z training/case-studies/challenges/gaming-studio-recovery.md:35:32     - Unknown word (playtesting) -- Centric**: Frequent playtesting and rapid response to
+2025-10-06T13:59:26.4748308Z training/case-studies/challenges/gaming-studio-recovery.md:89:32     - Unknown word (wireframes)  -- Interface**: Detailed wireframes and interaction specification
+2025-10-06T13:59:26.4750804Z training/case-studies/challenges/gaming-studio-recovery.md:104:73    - Unknown word (playtesting) -- rapid iteration based on playtesting feedback
+2025-10-06T13:59:26.4752493Z training/case-studies/challenges/gaming-studio-recovery.md:169:5     - Unknown word (Playtesting) -- - **Playtesting Integration**: Specifications
+2025-10-06T13:59:26.4754303Z training/case-studies/challenges/gaming-studio-recovery.md:169:64    - Unknown word (playtesting) -- ecifications updated based on playtesting feedback
+2025-10-06T13:59:26.4756047Z training/case-studies/challenges/gaming-studio-recovery.md:286:73    - Unknown word (playtesting) -- evolve rapidly based on playtesting and creative feedback
+2025-10-06T13:59:26.4887622Z training/case-studies/index.md:29:20     - Unknown word (Fintech)    -- #### Case Study 1: Fintech Startup - Payment Processing
+2025-10-06T13:59:26.4889374Z training/case-studies/index.md:30:28     - Unknown word (fintech)    -- Organization**: Series B fintech startup (150 engineers
+2025-10-06T13:59:26.4891076Z training/case-studies/index.md:283:21    - Unknown word (Roadmaps)   -- 2. **Implementation Roadmaps**: Use case studies
+2025-10-06T13:59:26.4892836Z training/case-studies/index.md:302:5     - Unknown word (Anonymization) -- - **Anonymization**: Appropriate protection
+2025-10-06T13:59:26.4895073Z training/case-studies/index.md:315:5     - Unknown word (Anonymization) -- - **Anonymization Review**: Ensure appropriate
+2025-10-06T13:59:26.5082035Z training/case-studies/success/fintech-payment-platform.md:1:15      - Unknown word (Fintech)    -- # Case Study: Fintech Payment Platform - Scaling
+2025-10-06T13:59:26.5086054Z training/case-studies/success/fintech-payment-platform.md:5:28      - Unknown word (fintech)    -- Organization**: Series B fintech startup specializing
+2025-10-06T13:59:26.5089501Z training/case-studies/success/fintech-payment-platform.md:11:52     - Unknown word (fintech)    -- how a rapidly growing fintech company successfully
+2025-10-06T13:59:26.5093066Z training/case-studies/success/fintech-payment-platform.md:21:41     - Unknown word (fintech)    -- Pressure**: Fast-moving fintech market requiring quick
+2025-10-06T13:59:26.5096342Z training/case-studies/success/fintech-payment-platform.md:160:20    - Unknown word (fintech)    -- The team developed fintech-specific templates addressing
+2025-10-06T13:59:26.5099358Z training/case-studies/success/fintech-payment-platform.md:211:14    - Unknown word (Fintech)    -- - **Usage**: Fintech compliance and regulatory
+2025-10-06T13:59:26.5102254Z training/case-studies/success/fintech-payment-platform.md:213:46    - Unknown word (fintech)    -- Fine-tuned models with fintech-specific knowledge
+2025-10-06T13:59:26.5104300Z training/case-studies/success/fintech-payment-platform.md:368:10    - Unknown word (Fintech)    -- #### For Fintech Companies
+2025-10-06T13:59:26.5268385Z training/case-studies/transformation/marketing-agency-transformation.md:28:84     - Unknown word (wireframes) -- conversations and rough wireframes
+2025-10-06T13:59:26.5270654Z training/case-studies/transformation/marketing-agency-transformation.md:237:43    - Unknown word (wireframes) -- pecifications**: Heavy use of wireframes, mockups, and interactive
+2025-10-06T13:59:26.5272734Z training/case-studies/transformation/marketing-agency-transformation.md:301:50    - Unknown word (wireframes) -- assisted creation of wireframes and mockups
+2025-10-06T13:59:26.5353033Z training/fundamentals/index.md:63:30     - Unknown word (antipatterns) -- common specification antipatterns
+2025-10-06T13:59:26.5355764Z training/fundamentals/index.md:84:13     - Unknown word (Antipatterns) -- 4. **Common Antipatterns**
+2025-10-06T13:59:26.5581139Z training/hands-on/index.md:118:15    - Unknown word (workstream) -- - Parallel workstream coordination
+2025-10-06T13:59:26.5918041Z training/hands-on/tutorial-1-first-workflow.md:176:9     - Unknown word (VARCHAR)    -- email VARCHAR(255) UNIQUE NOT NULL
+2025-10-06T13:59:26.5920402Z training/hands-on/tutorial-1-first-workflow.md:177:17    - Unknown word (VARCHAR)    -- password_hash VARCHAR(255) NOT NULL,
+2025-10-06T13:59:26.5922947Z training/hands-on/tutorial-1-first-workflow.md:179:22    - Unknown word (VARCHAR)    -- verification_token VARCHAR(255),
+2025-10-06T13:59:26.5924633Z training/hands-on/tutorial-1-first-workflow.md:181:15    - Unknown word (VARCHAR)    -- reset_token VARCHAR(255),
+2025-10-06T13:59:26.5926095Z training/hands-on/tutorial-1-first-workflow.md:195:17    - Unknown word (VARCHAR)    -- refresh_token VARCHAR(255) UNIQUE NOT NULL
+2025-10-06T13:59:26.5992332Z training/index.md:74:24     - Unknown word (antipatterns) -- Common specification antipatterns
+2025-10-06T13:59:26.5995263Z CSpell: Files checked: 65, Issues found: 84 in 25 files.
+2025-10-06T13:59:26.6198045Z ❌ Spell check found issues
+2025-10-06T13:59:26.6198624Z 💡 Add technical terms to .cspell.json words array
+2025-10-06T13:59:26.6211843Z ##[error]Process completed with exit code 1.

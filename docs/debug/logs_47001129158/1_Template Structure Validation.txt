@@ -1,0 +1,185 @@
+﻿2025-10-06T13:59:15.9812493Z Current runner version: '2.328.0'
+2025-10-06T13:59:15.9845578Z ##[group]Runner Image Provisioner
+2025-10-06T13:59:15.9846719Z Hosted Compute Agent
+2025-10-06T13:59:15.9847662Z Version: 20250912.392
+2025-10-06T13:59:15.9848624Z Commit: d921fda672a98b64f4f82364647e2f10b2267d0b
+2025-10-06T13:59:15.9849778Z Build Date: 2025-09-12T15:23:14Z
+2025-10-06T13:59:15.9850724Z ##[endgroup]
+2025-10-06T13:59:15.9851845Z ##[group]Operating System
+2025-10-06T13:59:15.9852666Z Ubuntu
+2025-10-06T13:59:15.9853494Z 24.04.3
+2025-10-06T13:59:15.9854191Z LTS
+2025-10-06T13:59:15.9854904Z ##[endgroup]
+2025-10-06T13:59:15.9855728Z ##[group]Runner Image
+2025-10-06T13:59:15.9856602Z Image: ubuntu-24.04
+2025-10-06T13:59:15.9857496Z Version: 20250929.60.1
+2025-10-06T13:59:15.9859170Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250929.60/images/ubuntu/Ubuntu2404-Readme.md
+2025-10-06T13:59:15.9862017Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250929.60
+2025-10-06T13:59:15.9863726Z ##[endgroup]
+2025-10-06T13:59:15.9865639Z ##[group]GITHUB_TOKEN Permissions
+2025-10-06T13:59:15.9868195Z Contents: read
+2025-10-06T13:59:15.9868970Z Metadata: read
+2025-10-06T13:59:15.9869808Z Packages: read
+2025-10-06T13:59:15.9870593Z ##[endgroup]
+2025-10-06T13:59:15.9874139Z Secret source: Actions
+2025-10-06T13:59:15.9875742Z Prepare workflow directory
+2025-10-06T13:59:16.0342483Z Prepare all required actions
+2025-10-06T13:59:16.0399601Z Getting action download info
+2025-10-06T13:59:16.2947811Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+2025-10-06T13:59:16.5272917Z Complete job name: Template Structure Validation
+2025-10-06T13:59:16.6059892Z ##[group]Run actions/checkout@v4
+2025-10-06T13:59:16.6060744Z with:
+2025-10-06T13:59:16.6061365Z   repository: brock-run/spec-driven-development
+2025-10-06T13:59:16.6062106Z   token: ***
+2025-10-06T13:59:16.6062489Z   ssh-strict: true
+2025-10-06T13:59:16.6062870Z   ssh-user: git
+2025-10-06T13:59:16.6063293Z   persist-credentials: true
+2025-10-06T13:59:16.6063737Z   clean: true
+2025-10-06T13:59:16.6064135Z   sparse-checkout-cone-mode: true
+2025-10-06T13:59:16.6064611Z   fetch-depth: 1
+2025-10-06T13:59:16.6064995Z   fetch-tags: false
+2025-10-06T13:59:16.6065609Z   show-progress: true
+2025-10-06T13:59:16.6066055Z   lfs: false
+2025-10-06T13:59:16.6066418Z   submodules: false
+2025-10-06T13:59:16.6066821Z   set-safe-directory: true
+2025-10-06T13:59:16.6067570Z ##[endgroup]
+2025-10-06T13:59:16.7145004Z Syncing repository: brock-run/spec-driven-development
+2025-10-06T13:59:16.7146794Z ##[group]Getting Git version info
+2025-10-06T13:59:16.7147742Z Working directory is '/home/runner/work/spec-driven-development/spec-driven-development'
+2025-10-06T13:59:16.7148926Z [command]/usr/bin/git version
+2025-10-06T13:59:16.7229165Z git version 2.51.0
+2025-10-06T13:59:16.7255501Z ##[endgroup]
+2025-10-06T13:59:16.7269920Z Temporarily overriding HOME='/home/runner/work/_temp/ec320785-601a-43b3-85a0-eefd57b05e2b' before making global git config changes
+2025-10-06T13:59:16.7271785Z Adding repository directory to the temporary git global config as a safe directory
+2025-10-06T13:59:16.7283792Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/spec-driven-development/spec-driven-development
+2025-10-06T13:59:16.7320712Z Deleting the contents of '/home/runner/work/spec-driven-development/spec-driven-development'
+2025-10-06T13:59:16.7324230Z ##[group]Initializing the repository
+2025-10-06T13:59:16.7328509Z [command]/usr/bin/git init /home/runner/work/spec-driven-development/spec-driven-development
+2025-10-06T13:59:16.7460075Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-10-06T13:59:16.7461369Z hint: is subject to change. To configure the initial branch name to use in all
+2025-10-06T13:59:16.7462488Z hint: of your new repositories, which will suppress this warning, call:
+2025-10-06T13:59:16.7463233Z hint:
+2025-10-06T13:59:16.7463759Z hint: 	git config --global init.defaultBranch <name>
+2025-10-06T13:59:16.7465142Z hint:
+2025-10-06T13:59:16.7466106Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-10-06T13:59:16.7467169Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-10-06T13:59:16.7467995Z hint:
+2025-10-06T13:59:16.7468431Z hint: 	git branch -m <name>
+2025-10-06T13:59:16.7468949Z hint:
+2025-10-06T13:59:16.7469632Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-10-06T13:59:16.7471629Z Initialized empty Git repository in /home/runner/work/spec-driven-development/spec-driven-development/.git/
+2025-10-06T13:59:16.7477866Z [command]/usr/bin/git remote add origin https://github.com/brock-run/spec-driven-development
+2025-10-06T13:59:16.7517639Z ##[endgroup]
+2025-10-06T13:59:16.7518745Z ##[group]Disabling automatic garbage collection
+2025-10-06T13:59:16.7521219Z [command]/usr/bin/git config --local gc.auto 0
+2025-10-06T13:59:16.7549592Z ##[endgroup]
+2025-10-06T13:59:16.7550653Z ##[group]Setting up auth
+2025-10-06T13:59:16.7556270Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-10-06T13:59:16.7586161Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-10-06T13:59:16.7943512Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-10-06T13:59:16.7974527Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-10-06T13:59:16.8191736Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-10-06T13:59:16.8235500Z ##[endgroup]
+2025-10-06T13:59:16.8236274Z ##[group]Fetching the repository
+2025-10-06T13:59:16.8244130Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +185c6fae08b0f27c4a0aa36125647c25c967af89:refs/remotes/origin/main
+2025-10-06T13:59:17.0865097Z From https://github.com/brock-run/spec-driven-development
+2025-10-06T13:59:17.0866266Z  * [new ref]         185c6fae08b0f27c4a0aa36125647c25c967af89 -> origin/main
+2025-10-06T13:59:17.0899205Z ##[endgroup]
+2025-10-06T13:59:17.0902399Z ##[group]Determining the checkout info
+2025-10-06T13:59:17.0903801Z ##[endgroup]
+2025-10-06T13:59:17.0908047Z [command]/usr/bin/git sparse-checkout disable
+2025-10-06T13:59:17.0947867Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-10-06T13:59:17.0976251Z ##[group]Checking out the ref
+2025-10-06T13:59:17.0980811Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-10-06T13:59:17.1228182Z Switched to a new branch 'main'
+2025-10-06T13:59:17.1230818Z branch 'main' set up to track 'origin/main'.
+2025-10-06T13:59:17.1238169Z ##[endgroup]
+2025-10-06T13:59:17.1273365Z [command]/usr/bin/git log -1 --format=%H
+2025-10-06T13:59:17.1294892Z 185c6fae08b0f27c4a0aa36125647c25c967af89
+2025-10-06T13:59:17.1483507Z ##[group]Run echo "Validating template structure..."
+2025-10-06T13:59:17.1484264Z [36;1mecho "Validating template structure..."[0m
+2025-10-06T13:59:17.1484814Z [36;1m[0m
+2025-10-06T13:59:17.1485208Z [36;1m# Check base templates exist[0m
+2025-10-06T13:59:17.1485851Z [36;1mrequired_base_templates=("spec.md" "plan.md" "tasks.md")[0m
+2025-10-06T13:59:17.1486586Z [36;1mfor template in "${required_base_templates[@]}"; do[0m
+2025-10-06T13:59:17.1487263Z [36;1m  if [ ! -f "resources/templates/base/$template" ]; then[0m
+2025-10-06T13:59:17.1487906Z [36;1m    echo "❌ Missing base template: $template"[0m
+2025-10-06T13:59:17.1488446Z [36;1m    exit 1[0m
+2025-10-06T13:59:17.1488829Z [36;1m  fi[0m
+2025-10-06T13:59:17.1489187Z [36;1mdone[0m
+2025-10-06T13:59:17.1489577Z [36;1mecho "✅ Base templates found"[0m
+2025-10-06T13:59:17.1490059Z [36;1m[0m
+2025-10-06T13:59:17.1490626Z [36;1m# Validate template format[0m
+2025-10-06T13:59:17.1491479Z [36;1mecho "Checking template format..."[0m
+2025-10-06T13:59:17.1492120Z [36;1mfind resources/templates -name "*.md" -exec bash -c '[0m
+2025-10-06T13:59:17.1492732Z [36;1m  file="$1"[0m
+2025-10-06T13:59:17.1493149Z [36;1m  echo "Validating: $file"[0m
+2025-10-06T13:59:17.1493612Z [36;1m  [0m
+2025-10-06T13:59:17.1494055Z [36;1m  # Check for placeholder format [description][0m
+2025-10-06T13:59:17.1494661Z [36;1m  if ! grep -q "\[.*\]" "$file"; then[0m
+2025-10-06T13:59:17.1495282Z [36;1m    echo "⚠️  Warning: $file may be missing placeholders"[0m
+2025-10-06T13:59:17.1495853Z [36;1m  fi[0m
+2025-10-06T13:59:17.1496216Z [36;1m  [0m
+2025-10-06T13:59:17.1496612Z [36;1m  # Check for requirement references[0m
+2025-10-06T13:59:17.1497187Z [36;1m  if grep -q "_Requirements:" "$file"; then[0m
+2025-10-06T13:59:17.1497773Z [36;1m    echo "✅ $file has requirement references"[0m
+2025-10-06T13:59:17.1498295Z [36;1m  else[0m
+2025-10-06T13:59:17.1498813Z [36;1m    echo "⚠️  Warning: $file may be missing requirement references"[0m
+2025-10-06T13:59:17.1499436Z [36;1m  fi[0m
+2025-10-06T13:59:17.1499799Z [36;1m' _ {} \;[0m
+2025-10-06T13:59:17.1535847Z shell: /usr/bin/bash -e {0}
+2025-10-06T13:59:17.1536337Z ##[endgroup]
+2025-10-06T13:59:17.1606983Z Validating template structure...
+2025-10-06T13:59:17.1607911Z ✅ Base templates found
+2025-10-06T13:59:17.1608359Z Checking template format...
+2025-10-06T13:59:17.1633711Z Validating: resources/templates/api/spec.md
+2025-10-06T13:59:17.1660373Z ✅ resources/templates/api/spec.md has requirement references
+2025-10-06T13:59:17.1674437Z Validating: resources/templates/base/tasks.md
+2025-10-06T13:59:17.1700115Z ✅ resources/templates/base/tasks.md has requirement references
+2025-10-06T13:59:17.1713931Z Validating: resources/templates/base/plan.md
+2025-10-06T13:59:17.1739806Z ✅ resources/templates/base/plan.md has requirement references
+2025-10-06T13:59:17.1753832Z Validating: resources/templates/base/spec.md
+2025-10-06T13:59:17.1779470Z ✅ resources/templates/base/spec.md has requirement references
+2025-10-06T13:59:17.1793624Z Validating: resources/templates/backend/spec.md
+2025-10-06T13:59:17.1819140Z ⚠️  Warning: resources/templates/backend/spec.md may be missing requirement references
+2025-10-06T13:59:17.1833752Z Validating: resources/templates/frontend/spec.md
+2025-10-06T13:59:17.1858937Z ⚠️  Warning: resources/templates/frontend/spec.md may be missing requirement references
+2025-10-06T13:59:17.1873308Z Validating: resources/templates/mobile/spec.md
+2025-10-06T13:59:17.1899209Z ⚠️  Warning: resources/templates/mobile/spec.md may be missing requirement references
+2025-10-06T13:59:17.1939949Z ##[group]Run echo "Validating decision trees..."
+2025-10-06T13:59:17.1940796Z [36;1mecho "Validating decision trees..."[0m
+2025-10-06T13:59:17.1941726Z [36;1mfind resources/decision-trees -name "*.md" -exec bash -c '[0m
+2025-10-06T13:59:17.1942369Z [36;1m  file="$1"[0m
+2025-10-06T13:59:17.1942798Z [36;1m  echo "Checking: $file"[0m
+2025-10-06T13:59:17.1943277Z [36;1m  [0m
+2025-10-06T13:59:17.1943647Z [36;1m  # Check for Mermaid syntax[0m
+2025-10-06T13:59:17.1944174Z [36;1m  if grep -q "```mermaid" "$file"; then[0m
+2025-10-06T13:59:17.1944743Z [36;1m    echo "✅ $file contains Mermaid diagram"[0m
+2025-10-06T13:59:17.1945262Z [36;1m  else[0m
+2025-10-06T13:59:17.1945751Z [36;1m    echo "⚠️  Warning: $file may be missing Mermaid diagram"[0m
+2025-10-06T13:59:17.1946322Z [36;1m  fi[0m
+2025-10-06T13:59:17.1946678Z [36;1m' _ {} \;[0m
+2025-10-06T13:59:17.1977396Z shell: /usr/bin/bash -e {0}
+2025-10-06T13:59:17.1977881Z ##[endgroup]
+2025-10-06T13:59:17.2026573Z Validating decision trees...
+2025-10-06T13:59:17.2050476Z _: -c: line 6: unexpected EOF while looking for matching ``'
+2025-10-06T13:59:17.2051911Z Checking: resources/decision-trees/validation-gates.md
+2025-10-06T13:59:17.2065120Z _: -c: line 6: unexpected EOF while looking for matching ``'
+2025-10-06T13:59:17.2066197Z Checking: resources/decision-trees/escalation-framework.md
+2025-10-06T13:59:17.2079503Z _: -c: line 6: unexpected EOF while looking for matching ``'
+2025-10-06T13:59:17.2080434Z Checking: resources/decision-trees/project-initiation.md
+2025-10-06T13:59:17.2093210Z _: -c: line 6: unexpected EOF while looking for matching ``'
+2025-10-06T13:59:17.2094302Z Checking: resources/decision-trees/integration-strategy.md
+2025-10-06T13:59:17.2185564Z Post job cleanup.
+2025-10-06T13:59:17.3118296Z [command]/usr/bin/git version
+2025-10-06T13:59:17.3154200Z git version 2.51.0
+2025-10-06T13:59:17.3198008Z Temporarily overriding HOME='/home/runner/work/_temp/52dda1b5-33d6-4074-8c23-36ade18da535' before making global git config changes
+2025-10-06T13:59:17.3199821Z Adding repository directory to the temporary git global config as a safe directory
+2025-10-06T13:59:17.3203382Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/spec-driven-development/spec-driven-development
+2025-10-06T13:59:17.3238437Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-10-06T13:59:17.3270277Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-10-06T13:59:17.3496603Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-10-06T13:59:17.3517926Z http.https://github.com/.extraheader
+2025-10-06T13:59:17.3531174Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-10-06T13:59:17.3562011Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-10-06T13:59:17.3908768Z Cleaning up orphan processes

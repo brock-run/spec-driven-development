@@ -1,0 +1,46 @@
+﻿2025-10-06T13:59:49.6338410Z ##[group]Run echo "## Validation Summary" >> $GITHUB_STEP_SUMMARY
+2025-10-06T13:59:49.6340189Z [36;1mecho "## Validation Summary" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6341589Z [36;1mecho "" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6342550Z [36;1m[0m
+2025-10-06T13:59:49.6343430Z [36;1mif [ "failure" == "success" ]; then[0m
+2025-10-06T13:59:49.6344677Z [36;1m  echo "✅ Markdown Linting: Passed" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6346069Z [36;1melse[0m
+2025-10-06T13:59:49.6347168Z [36;1m  echo "❌ Markdown Linting: Failed" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6348340Z [36;1mfi[0m
+2025-10-06T13:59:49.6349301Z [36;1m[0m
+2025-10-06T13:59:49.6350027Z [36;1mif [ "failure" == "success" ]; then[0m
+2025-10-06T13:59:49.6351432Z [36;1m  echo "✅ Link Validation: Passed" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6352609Z [36;1melse[0m
+2025-10-06T13:59:49.6353636Z [36;1m  echo "❌ Link Validation: Failed" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6354960Z [36;1mfi[0m
+2025-10-06T13:59:49.6355686Z [36;1m[0m
+2025-10-06T13:59:49.6356529Z [36;1mif [ "success" == "success" ]; then[0m
+2025-10-06T13:59:49.6357829Z [36;1m  echo "✅ Template Validation: Passed" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6359824Z [36;1melse[0m
+2025-10-06T13:59:49.6360875Z [36;1m  echo "❌ Template Validation: Failed" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6362124Z [36;1mfi[0m
+2025-10-06T13:59:49.6362797Z [36;1m[0m
+2025-10-06T13:59:49.6363677Z [36;1mif [ "success" == "success" ]; then[0m
+2025-10-06T13:59:49.6364879Z [36;1m  echo "✅ Content Quality: Passed" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6366094Z [36;1melse[0m
+2025-10-06T13:59:49.6367161Z [36;1m  echo "❌ Content Quality: Failed" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6368300Z [36;1mfi[0m
+2025-10-06T13:59:49.6369391Z [36;1m[0m
+2025-10-06T13:59:49.6370166Z [36;1mif [ "failure" == "success" ]; then[0m
+2025-10-06T13:59:49.6371377Z [36;1m  echo "✅ Spell Check: Passed" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6372684Z [36;1melse[0m
+2025-10-06T13:59:49.6373575Z [36;1m  echo "❌ Spell Check: Failed" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6374863Z [36;1mfi[0m
+2025-10-06T13:59:49.6375635Z [36;1m[0m
+2025-10-06T13:59:49.6376432Z [36;1m# Fail if any critical checks failed[0m
+2025-10-06T13:59:49.6377617Z [36;1mif [ "failure" != "success" ] || [ "success" != "success" ]; then[0m
+2025-10-06T13:59:49.6379228Z [36;1m  echo "" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6381287Z [36;1m  echo "❌ **Critical validation checks failed. Please fix the issues above.**" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6382852Z [36;1m  exit 1[0m
+2025-10-06T13:59:49.6383671Z [36;1mfi[0m
+2025-10-06T13:59:49.6384411Z [36;1m[0m
+2025-10-06T13:59:49.6385257Z [36;1mecho "" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6386732Z [36;1mecho "🎉 **All validation checks completed successfully!**" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.7676950Z shell: /usr/bin/bash -e {0}
+2025-10-06T13:59:49.7678141Z ##[endgroup]
+2025-10-06T13:59:49.7870101Z ##[error]Process completed with exit code 1.

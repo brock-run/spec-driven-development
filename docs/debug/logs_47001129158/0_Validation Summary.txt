@@ -1,0 +1,74 @@
+﻿2025-10-06T13:59:49.4892349Z Current runner version: '2.328.0'
+2025-10-06T13:59:49.4917630Z ##[group]Runner Image Provisioner
+2025-10-06T13:59:49.4918575Z Hosted Compute Agent
+2025-10-06T13:59:49.4919334Z Version: 20250912.392
+2025-10-06T13:59:49.4919919Z Commit: d921fda672a98b64f4f82364647e2f10b2267d0b
+2025-10-06T13:59:49.4920696Z Build Date: 2025-09-12T15:23:14Z
+2025-10-06T13:59:49.4921254Z ##[endgroup]
+2025-10-06T13:59:49.4921804Z ##[group]Operating System
+2025-10-06T13:59:49.4922374Z Ubuntu
+2025-10-06T13:59:49.4922875Z 24.04.3
+2025-10-06T13:59:49.4923300Z LTS
+2025-10-06T13:59:49.4923796Z ##[endgroup]
+2025-10-06T13:59:49.4924315Z ##[group]Runner Image
+2025-10-06T13:59:49.4924861Z Image: ubuntu-24.04
+2025-10-06T13:59:49.4925410Z Version: 20250929.60.1
+2025-10-06T13:59:49.4926395Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250929.60/images/ubuntu/Ubuntu2404-Readme.md
+2025-10-06T13:59:49.4927918Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250929.60
+2025-10-06T13:59:49.4928959Z ##[endgroup]
+2025-10-06T13:59:49.4930175Z ##[group]GITHUB_TOKEN Permissions
+2025-10-06T13:59:49.4932086Z Contents: read
+2025-10-06T13:59:49.4932600Z Metadata: read
+2025-10-06T13:59:49.4933071Z Packages: read
+2025-10-06T13:59:49.4933653Z ##[endgroup]
+2025-10-06T13:59:49.4935793Z Secret source: Actions
+2025-10-06T13:59:49.4936514Z Prepare workflow directory
+2025-10-06T13:59:49.5328872Z Prepare all required actions
+2025-10-06T13:59:49.5422687Z Complete job name: Validation Summary
+2025-10-06T13:59:49.6338446Z ##[group]Run echo "## Validation Summary" >> $GITHUB_STEP_SUMMARY
+2025-10-06T13:59:49.6340203Z [36;1mecho "## Validation Summary" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6341605Z [36;1mecho "" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6342562Z [36;1m[0m
+2025-10-06T13:59:49.6343437Z [36;1mif [ "failure" == "success" ]; then[0m
+2025-10-06T13:59:49.6344688Z [36;1m  echo "✅ Markdown Linting: Passed" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6346084Z [36;1melse[0m
+2025-10-06T13:59:49.6347176Z [36;1m  echo "❌ Markdown Linting: Failed" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6348352Z [36;1mfi[0m
+2025-10-06T13:59:49.6349312Z [36;1m[0m
+2025-10-06T13:59:49.6350032Z [36;1mif [ "failure" == "success" ]; then[0m
+2025-10-06T13:59:49.6351446Z [36;1m  echo "✅ Link Validation: Passed" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6352618Z [36;1melse[0m
+2025-10-06T13:59:49.6353809Z [36;1m  echo "❌ Link Validation: Failed" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6354974Z [36;1mfi[0m
+2025-10-06T13:59:49.6355693Z [36;1m[0m
+2025-10-06T13:59:49.6356536Z [36;1mif [ "success" == "success" ]; then[0m
+2025-10-06T13:59:49.6357840Z [36;1m  echo "✅ Template Validation: Passed" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6359846Z [36;1melse[0m
+2025-10-06T13:59:49.6360885Z [36;1m  echo "❌ Template Validation: Failed" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6362138Z [36;1mfi[0m
+2025-10-06T13:59:49.6362803Z [36;1m[0m
+2025-10-06T13:59:49.6363683Z [36;1mif [ "success" == "success" ]; then[0m
+2025-10-06T13:59:49.6364944Z [36;1m  echo "✅ Content Quality: Passed" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6366100Z [36;1melse[0m
+2025-10-06T13:59:49.6367170Z [36;1m  echo "❌ Content Quality: Failed" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6368312Z [36;1mfi[0m
+2025-10-06T13:59:49.6369403Z [36;1m[0m
+2025-10-06T13:59:49.6370172Z [36;1mif [ "failure" == "success" ]; then[0m
+2025-10-06T13:59:49.6371416Z [36;1m  echo "✅ Spell Check: Passed" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6372693Z [36;1melse[0m
+2025-10-06T13:59:49.6373581Z [36;1m  echo "❌ Spell Check: Failed" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6374878Z [36;1mfi[0m
+2025-10-06T13:59:49.6375642Z [36;1m[0m
+2025-10-06T13:59:49.6376438Z [36;1m# Fail if any critical checks failed[0m
+2025-10-06T13:59:49.6377632Z [36;1mif [ "failure" != "success" ] || [ "success" != "success" ]; then[0m
+2025-10-06T13:59:49.6379243Z [36;1m  echo "" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6381307Z [36;1m  echo "❌ **Critical validation checks failed. Please fix the issues above.**" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6382860Z [36;1m  exit 1[0m
+2025-10-06T13:59:49.6383677Z [36;1mfi[0m
+2025-10-06T13:59:49.6384423Z [36;1m[0m
+2025-10-06T13:59:49.6385269Z [36;1mecho "" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.6386740Z [36;1mecho "🎉 **All validation checks completed successfully!**" >> $GITHUB_STEP_SUMMARY[0m
+2025-10-06T13:59:49.7677015Z shell: /usr/bin/bash -e {0}
+2025-10-06T13:59:49.7678152Z ##[endgroup]
+2025-10-06T13:59:49.7870139Z ##[error]Process completed with exit code 1.
+2025-10-06T13:59:49.7996382Z Cleaning up orphan processes

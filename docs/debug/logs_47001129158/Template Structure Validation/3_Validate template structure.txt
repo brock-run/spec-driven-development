@@ -1,0 +1,50 @@
+﻿2025-10-06T13:59:17.1483487Z ##[group]Run echo "Validating template structure..."
+2025-10-06T13:59:17.1484259Z [36;1mecho "Validating template structure..."[0m
+2025-10-06T13:59:17.1484810Z [36;1m[0m
+2025-10-06T13:59:17.1485205Z [36;1m# Check base templates exist[0m
+2025-10-06T13:59:17.1485848Z [36;1mrequired_base_templates=("spec.md" "plan.md" "tasks.md")[0m
+2025-10-06T13:59:17.1486583Z [36;1mfor template in "${required_base_templates[@]}"; do[0m
+2025-10-06T13:59:17.1487259Z [36;1m  if [ ! -f "resources/templates/base/$template" ]; then[0m
+2025-10-06T13:59:17.1487901Z [36;1m    echo "❌ Missing base template: $template"[0m
+2025-10-06T13:59:17.1488443Z [36;1m    exit 1[0m
+2025-10-06T13:59:17.1488825Z [36;1m  fi[0m
+2025-10-06T13:59:17.1489184Z [36;1mdone[0m
+2025-10-06T13:59:17.1489573Z [36;1mecho "✅ Base templates found"[0m
+2025-10-06T13:59:17.1490056Z [36;1m[0m
+2025-10-06T13:59:17.1490621Z [36;1m# Validate template format[0m
+2025-10-06T13:59:17.1491435Z [36;1mecho "Checking template format..."[0m
+2025-10-06T13:59:17.1492116Z [36;1mfind resources/templates -name "*.md" -exec bash -c '[0m
+2025-10-06T13:59:17.1492729Z [36;1m  file="$1"[0m
+2025-10-06T13:59:17.1493145Z [36;1m  echo "Validating: $file"[0m
+2025-10-06T13:59:17.1493609Z [36;1m  [0m
+2025-10-06T13:59:17.1494052Z [36;1m  # Check for placeholder format [description][0m
+2025-10-06T13:59:17.1494657Z [36;1m  if ! grep -q "\[.*\]" "$file"; then[0m
+2025-10-06T13:59:17.1495272Z [36;1m    echo "⚠️  Warning: $file may be missing placeholders"[0m
+2025-10-06T13:59:17.1495849Z [36;1m  fi[0m
+2025-10-06T13:59:17.1496212Z [36;1m  [0m
+2025-10-06T13:59:17.1496609Z [36;1m  # Check for requirement references[0m
+2025-10-06T13:59:17.1497183Z [36;1m  if grep -q "_Requirements:" "$file"; then[0m
+2025-10-06T13:59:17.1497769Z [36;1m    echo "✅ $file has requirement references"[0m
+2025-10-06T13:59:17.1498292Z [36;1m  else[0m
+2025-10-06T13:59:17.1498809Z [36;1m    echo "⚠️  Warning: $file may be missing requirement references"[0m
+2025-10-06T13:59:17.1499427Z [36;1m  fi[0m
+2025-10-06T13:59:17.1499795Z [36;1m' _ {} \;[0m
+2025-10-06T13:59:17.1535828Z shell: /usr/bin/bash -e {0}
+2025-10-06T13:59:17.1536334Z ##[endgroup]
+2025-10-06T13:59:17.1606960Z Validating template structure...
+2025-10-06T13:59:17.1607902Z ✅ Base templates found
+2025-10-06T13:59:17.1608355Z Checking template format...
+2025-10-06T13:59:17.1633686Z Validating: resources/templates/api/spec.md
+2025-10-06T13:59:17.1660351Z ✅ resources/templates/api/spec.md has requirement references
+2025-10-06T13:59:17.1674413Z Validating: resources/templates/base/tasks.md
+2025-10-06T13:59:17.1700091Z ✅ resources/templates/base/tasks.md has requirement references
+2025-10-06T13:59:17.1713909Z Validating: resources/templates/base/plan.md
+2025-10-06T13:59:17.1739782Z ✅ resources/templates/base/plan.md has requirement references
+2025-10-06T13:59:17.1753811Z Validating: resources/templates/base/spec.md
+2025-10-06T13:59:17.1779446Z ✅ resources/templates/base/spec.md has requirement references
+2025-10-06T13:59:17.1793583Z Validating: resources/templates/backend/spec.md
+2025-10-06T13:59:17.1819116Z ⚠️  Warning: resources/templates/backend/spec.md may be missing requirement references
+2025-10-06T13:59:17.1833729Z Validating: resources/templates/frontend/spec.md
+2025-10-06T13:59:17.1858914Z ⚠️  Warning: resources/templates/frontend/spec.md may be missing requirement references
+2025-10-06T13:59:17.1873282Z Validating: resources/templates/mobile/spec.md
+2025-10-06T13:59:17.1899184Z ⚠️  Warning: resources/templates/mobile/spec.md may be missing requirement references

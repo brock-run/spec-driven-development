@@ -1,0 +1,20 @@
+﻿2025-10-06T13:59:18.3452071Z ##[group]Run echo "Checking file naming conventions..."
+2025-10-06T13:59:18.3452860Z [36;1mecho "Checking file naming conventions..."[0m
+2025-10-06T13:59:18.3453429Z [36;1m[0m
+2025-10-06T13:59:18.3453844Z [36;1m# Check for kebab-case in file names[0m
+2025-10-06T13:59:18.3454628Z [36;1mfind . -name "*.md" -not -path "./node_modules/*" -not -path "./.git/*" | while read file; do[0m
+2025-10-06T13:59:18.3455422Z [36;1m  basename=$(basename "$file" .md)[0m
+2025-10-06T13:59:18.3456341Z [36;1m  if [[ ! "$basename" =~ ^[a-z0-9]+(-[a-z0-9]+)*$ ]] && [[ "$basename" != "README" ]] && [[ "$basename" != "CONTRIBUTING" ]] && [[ "$basename" != "CODE_OF_CONDUCT" ]]; then[0m
+2025-10-06T13:59:18.3457383Z [36;1m    echo "⚠️  Warning: $file may not follow kebab-case convention"[0m
+2025-10-06T13:59:18.3458100Z [36;1m  fi[0m
+2025-10-06T13:59:18.3458467Z [36;1mdone[0m
+2025-10-06T13:59:18.3494370Z shell: /usr/bin/bash -e {0}
+2025-10-06T13:59:18.3494892Z ##[endgroup]
+2025-10-06T13:59:18.3564138Z Checking file naming conventions...
+2025-10-06T13:59:18.3991334Z ⚠️  Warning: ./.github/pull_request_template.md may not follow kebab-case convention
+2025-10-06T13:59:18.4003035Z ⚠️  Warning: ./.github/pull_request_template/template_contribution.md may not follow kebab-case convention
+2025-10-06T13:59:18.4015193Z ⚠️  Warning: ./.github/pull_request_template/documentation_contribution.md may not follow kebab-case convention
+2025-10-06T13:59:18.4027262Z ⚠️  Warning: ./.github/pull_request_template/tooling_contribution.md may not follow kebab-case convention
+2025-10-06T13:59:18.4039065Z ⚠️  Warning: ./.github/ISSUE_TEMPLATE/content_improvement.md may not follow kebab-case convention
+2025-10-06T13:59:18.4051538Z ⚠️  Warning: ./.github/ISSUE_TEMPLATE/feature_request.md may not follow kebab-case convention
+2025-10-06T13:59:18.4063516Z ⚠️  Warning: ./.github/ISSUE_TEMPLATE/bug_report.md may not follow kebab-case convention

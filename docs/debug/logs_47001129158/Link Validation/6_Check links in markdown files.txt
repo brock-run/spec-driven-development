@@ -1,0 +1,1349 @@
+﻿2025-10-06T13:59:30.1049134Z ##[group]Run find . -name "*.md" -not -path "./node_modules/*" | \
+2025-10-06T13:59:30.1049596Z [36;1mfind . -name "*.md" -not -path "./node_modules/*" | \[0m
+2025-10-06T13:59:30.1050014Z [36;1mxargs -I {} markdown-link-check {} --config .markdown-link-check.json[0m
+2025-10-06T13:59:30.1081349Z shell: /usr/bin/bash -e {0}
+2025-10-06T13:59:30.1081605Z ##[endgroup]
+2025-10-06T13:59:30.2753406Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:30.2754679Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:30.2755251Z                                                ^
+2025-10-06T13:59:30.2755539Z 
+2025-10-06T13:59:30.2755778Z ReferenceError: File is not defined
+2025-10-06T13:59:30.2756932Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:30.2758302Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:30.2759139Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:30.2759799Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:30.2760418Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:30.2761025Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:30.2761726Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:30.2762517Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:30.2763226Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:30.2832655Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:30.2833023Z 
+2025-10-06T13:59:30.2833125Z Node.js v18.20.8
+2025-10-06T13:59:30.4400061Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:30.4400931Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:30.4401291Z                                                ^
+2025-10-06T13:59:30.4401482Z 
+2025-10-06T13:59:30.4401658Z ReferenceError: File is not defined
+2025-10-06T13:59:30.4402364Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:30.4403085Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:30.4403535Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:30.4403960Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:30.4404344Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:30.4404732Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:30.4405104Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:30.4405849Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:30.4406524Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:30.4406952Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:30.4407211Z 
+2025-10-06T13:59:30.4407303Z Node.js v18.20.8
+2025-10-06T13:59:30.6021481Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:30.6022765Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:30.6023370Z                                                ^
+2025-10-06T13:59:30.6023638Z 
+2025-10-06T13:59:30.6023860Z ReferenceError: File is not defined
+2025-10-06T13:59:30.6024940Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:30.6026582Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:30.6027246Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:30.6027953Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:30.6028935Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:30.6029542Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:30.6030112Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:30.6031016Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:30.6031708Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:30.6032140Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:30.6032424Z 
+2025-10-06T13:59:30.6032508Z Node.js v18.20.8
+2025-10-06T13:59:30.7693717Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:30.7695268Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:30.7695958Z                                                ^
+2025-10-06T13:59:30.7696692Z 
+2025-10-06T13:59:30.7696990Z ReferenceError: File is not defined
+2025-10-06T13:59:30.7698706Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:30.7700095Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:30.7700975Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:30.7701568Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:30.7702075Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:30.7702614Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:30.7703085Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:30.7703929Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:30.7704651Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:30.7705089Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:30.7705362Z 
+2025-10-06T13:59:30.7705445Z Node.js v18.20.8
+2025-10-06T13:59:30.9320238Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:30.9321446Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:30.9322023Z                                                ^
+2025-10-06T13:59:30.9322316Z 
+2025-10-06T13:59:30.9322588Z ReferenceError: File is not defined
+2025-10-06T13:59:30.9323720Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:30.9324859Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:30.9325636Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:30.9326287Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:30.9326866Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:30.9327528Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:30.9328278Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:30.9329385Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:30.9330240Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:30.9331024Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:30.9331298Z 
+2025-10-06T13:59:30.9331378Z Node.js v18.20.8
+2025-10-06T13:59:31.0996896Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:31.0997901Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:31.0998608Z                                                ^
+2025-10-06T13:59:31.0998815Z 
+2025-10-06T13:59:31.0998991Z ReferenceError: File is not defined
+2025-10-06T13:59:31.0999846Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:31.1000694Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:31.1001178Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:31.1001647Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:31.1002091Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:31.1002517Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:31.1002929Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:31.1003982Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:31.1005490Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:31.1006321Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:31.1006850Z 
+2025-10-06T13:59:31.1007121Z Node.js v18.20.8
+2025-10-06T13:59:31.2589537Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:31.2590637Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:31.2590990Z                                                ^
+2025-10-06T13:59:31.2591206Z 
+2025-10-06T13:59:31.2591350Z ReferenceError: File is not defined
+2025-10-06T13:59:31.2592053Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:31.2592773Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:31.2593223Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:31.2593641Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:31.2594023Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:31.2594407Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:31.2594788Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:31.2595730Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:31.2596926Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:31.2597674Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:31.2598269Z 
+2025-10-06T13:59:31.2598409Z Node.js v18.20.8
+2025-10-06T13:59:31.4171154Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:31.4172597Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:31.4173381Z                                                ^
+2025-10-06T13:59:31.4173651Z 
+2025-10-06T13:59:31.4173835Z ReferenceError: File is not defined
+2025-10-06T13:59:31.4174730Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:31.4175615Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:31.4176230Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:31.4177136Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:31.4177564Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:31.4177995Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:31.4178794Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:31.4180022Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:31.4181331Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:31.4182119Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:31.4182579Z 
+2025-10-06T13:59:31.4182717Z Node.js v18.20.8
+2025-10-06T13:59:31.5792614Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:31.5793680Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:31.5794039Z                                                ^
+2025-10-06T13:59:31.5794223Z 
+2025-10-06T13:59:31.5794366Z ReferenceError: File is not defined
+2025-10-06T13:59:31.5795075Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:31.5796158Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:31.5796602Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:31.5797033Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:31.5797406Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:31.5797794Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:31.5798485Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:31.5799210Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:31.5800177Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:31.5800907Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:31.5801344Z 
+2025-10-06T13:59:31.5801478Z Node.js v18.20.8
+2025-10-06T13:59:31.7437871Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:31.7439352Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:31.7439902Z                                                ^
+2025-10-06T13:59:31.7440162Z 
+2025-10-06T13:59:31.7440383Z ReferenceError: File is not defined
+2025-10-06T13:59:31.7441476Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:31.7442598Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:31.7443291Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:31.7443910Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:31.7444497Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:31.7445122Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:31.7445538Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:31.7446253Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:31.7446950Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:31.7447379Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:31.7447643Z 
+2025-10-06T13:59:31.7447722Z Node.js v18.20.8
+2025-10-06T13:59:31.9039590Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:31.9040596Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:31.9041021Z                                                ^
+2025-10-06T13:59:31.9041237Z 
+2025-10-06T13:59:31.9041409Z ReferenceError: File is not defined
+2025-10-06T13:59:31.9042293Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:31.9043164Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:31.9043688Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:31.9044200Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:31.9044686Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:31.9045200Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:31.9045801Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:31.9047120Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:31.9048592Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:31.9049747Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:31.9050204Z 
+2025-10-06T13:59:31.9050342Z Node.js v18.20.8
+2025-10-06T13:59:32.0674499Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:32.0675723Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:32.0676245Z                                                ^
+2025-10-06T13:59:32.0676505Z 
+2025-10-06T13:59:32.0676711Z ReferenceError: File is not defined
+2025-10-06T13:59:32.0677819Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:32.0679162Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:32.0679888Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:32.0680552Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:32.0681132Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:32.0681733Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:32.0682298Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:32.0683029Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:32.0683716Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:32.0684142Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:32.0684399Z 
+2025-10-06T13:59:32.0684475Z Node.js v18.20.8
+2025-10-06T13:59:32.2273067Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:32.2273868Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:32.2274232Z                                                ^
+2025-10-06T13:59:32.2274413Z 
+2025-10-06T13:59:32.2274553Z ReferenceError: File is not defined
+2025-10-06T13:59:32.2275540Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:32.2276647Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:32.2277332Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:32.2278010Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:32.2278849Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:32.2279802Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:32.2280417Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:32.2281490Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:32.2282557Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:32.2283117Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:32.2283374Z 
+2025-10-06T13:59:32.2283452Z Node.js v18.20.8
+2025-10-06T13:59:32.3924646Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:32.3925881Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:32.3926322Z                                                ^
+2025-10-06T13:59:32.3926548Z 
+2025-10-06T13:59:32.3926705Z ReferenceError: File is not defined
+2025-10-06T13:59:32.3927489Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:32.3928654Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:32.3929495Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:32.3929969Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:32.3930395Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:32.3930824Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:32.3931236Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:32.3932021Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:32.3933010Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:32.3933809Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:32.3934289Z 
+2025-10-06T13:59:32.3934429Z Node.js v18.20.8
+2025-10-06T13:59:32.5575918Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:32.5577155Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:32.5577687Z                                                ^
+2025-10-06T13:59:32.5577958Z 
+2025-10-06T13:59:32.5578439Z ReferenceError: File is not defined
+2025-10-06T13:59:32.5579581Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:32.5580611Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:32.5581282Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:32.5581971Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:32.5582548Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:32.5583132Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:32.5583688Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:32.5584543Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:32.5585247Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:32.5585673Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:32.5585931Z 
+2025-10-06T13:59:32.5586006Z Node.js v18.20.8
+2025-10-06T13:59:32.7236834Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:32.7238342Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:32.7239328Z                                                ^
+2025-10-06T13:59:32.7239620Z 
+2025-10-06T13:59:32.7239843Z ReferenceError: File is not defined
+2025-10-06T13:59:32.7240636Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:32.7241452Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:32.7241949Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:32.7242412Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:32.7242832Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:32.7243265Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:32.7243676Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:32.7244459Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:32.7245239Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:32.7245720Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:32.7245998Z 
+2025-10-06T13:59:32.7246081Z Node.js v18.20.8
+2025-10-06T13:59:32.8857572Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:32.8858855Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:32.8859423Z                                                ^
+2025-10-06T13:59:32.8859610Z 
+2025-10-06T13:59:32.8859750Z ReferenceError: File is not defined
+2025-10-06T13:59:32.8860450Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:32.8861150Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:32.8861621Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:32.8862043Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:32.8862447Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:32.8862850Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:32.8863236Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:32.8863941Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:32.8864619Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:32.8865048Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:32.8865298Z 
+2025-10-06T13:59:32.8865373Z Node.js v18.20.8
+2025-10-06T13:59:33.0482760Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:33.0483932Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:33.0484490Z                                                ^
+2025-10-06T13:59:33.0484747Z 
+2025-10-06T13:59:33.0484947Z ReferenceError: File is not defined
+2025-10-06T13:59:33.0485974Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:33.0487131Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:33.0487776Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:33.0488724Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:33.0489230Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:33.0489631Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:33.0490022Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:33.0491068Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:33.0491745Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:33.0492171Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:33.0492442Z 
+2025-10-06T13:59:33.0492518Z Node.js v18.20.8
+2025-10-06T13:59:33.2108961Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:33.2109830Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:33.2110305Z                                                ^
+2025-10-06T13:59:33.2110857Z 
+2025-10-06T13:59:33.2111107Z ReferenceError: File is not defined
+2025-10-06T13:59:33.2112192Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:33.2112943Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:33.2113399Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:33.2113824Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:33.2114562Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:33.2114953Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:33.2115329Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:33.2116023Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:33.2116695Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:33.2117117Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:33.2117371Z 
+2025-10-06T13:59:33.2117448Z Node.js v18.20.8
+2025-10-06T13:59:33.3712526Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:33.3713709Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:33.3714060Z                                                ^
+2025-10-06T13:59:33.3714267Z 
+2025-10-06T13:59:33.3714406Z ReferenceError: File is not defined
+2025-10-06T13:59:33.3715094Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:33.3715786Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:33.3716213Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:33.3716626Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:33.3717002Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:33.3717388Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:33.3717752Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:33.3718756Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:33.3719453Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:33.3719874Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:33.3720121Z 
+2025-10-06T13:59:33.3720205Z Node.js v18.20.8
+2025-10-06T13:59:33.5307226Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:33.5308690Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:33.5309238Z                                                ^
+2025-10-06T13:59:33.5309496Z 
+2025-10-06T13:59:33.5309710Z ReferenceError: File is not defined
+2025-10-06T13:59:33.5311519Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:33.5312576Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:33.5313243Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:33.5313985Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:33.5314552Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:33.5315138Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:33.5315736Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:33.5316460Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:33.5317137Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:33.5317587Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:33.5317835Z 
+2025-10-06T13:59:33.5317916Z Node.js v18.20.8
+2025-10-06T13:59:33.6927818Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:33.6929205Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:33.6930112Z                                                ^
+2025-10-06T13:59:33.6930386Z 
+2025-10-06T13:59:33.6930623Z ReferenceError: File is not defined
+2025-10-06T13:59:33.6931671Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:33.6932764Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:33.6933462Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:33.6934093Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:33.6934705Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:33.6935316Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:33.6935693Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:33.6936384Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:33.6937095Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:33.6937532Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:33.6937782Z 
+2025-10-06T13:59:33.6937858Z Node.js v18.20.8
+2025-10-06T13:59:33.8592620Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:33.8593453Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:33.8593830Z                                                ^
+2025-10-06T13:59:33.8594052Z 
+2025-10-06T13:59:33.8594202Z ReferenceError: File is not defined
+2025-10-06T13:59:33.8594981Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:33.8595803Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:33.8596301Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:33.8596770Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:33.8597203Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:33.8597644Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:33.8598373Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:33.8599310Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:33.8600546Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:33.8601069Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:33.8601375Z 
+2025-10-06T13:59:33.8601473Z Node.js v18.20.8
+2025-10-06T13:59:34.0223629Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:34.0224782Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:34.0225289Z                                                ^
+2025-10-06T13:59:34.0225570Z 
+2025-10-06T13:59:34.0225795Z ReferenceError: File is not defined
+2025-10-06T13:59:34.0226869Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:34.0227966Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:34.0228945Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:34.0229594Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:34.0230173Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:34.0230775Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:34.0231459Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:34.0232147Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:34.0232814Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:34.0233239Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:34.0233489Z 
+2025-10-06T13:59:34.0233566Z Node.js v18.20.8
+2025-10-06T13:59:34.1856126Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:34.1857274Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:34.1857835Z                                                ^
+2025-10-06T13:59:34.1858313Z 
+2025-10-06T13:59:34.1858547Z ReferenceError: File is not defined
+2025-10-06T13:59:34.1859625Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:34.1860709Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:34.1861398Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:34.1862014Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:34.1862586Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:34.1863238Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:34.1863755Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:34.1864443Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:34.1865107Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:34.1865535Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:34.1865793Z 
+2025-10-06T13:59:34.1865869Z Node.js v18.20.8
+2025-10-06T13:59:34.3532692Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:34.3533644Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:34.3534064Z                                                ^
+2025-10-06T13:59:34.3534289Z 
+2025-10-06T13:59:34.3534462Z ReferenceError: File is not defined
+2025-10-06T13:59:34.3535326Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:34.3536605Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:34.3537134Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:34.3537652Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:34.3538491Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:34.3539364Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:34.3540151Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:34.3541705Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:34.3542972Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:34.3543736Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:34.3544197Z 
+2025-10-06T13:59:34.3544336Z Node.js v18.20.8
+2025-10-06T13:59:34.5186963Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:34.5188361Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:34.5188891Z                                                ^
+2025-10-06T13:59:34.5189149Z 
+2025-10-06T13:59:34.5189360Z ReferenceError: File is not defined
+2025-10-06T13:59:34.5190786Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:34.5191870Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:34.5192587Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:34.5193212Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:34.5193782Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:34.5194412Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:34.5194872Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:34.5195591Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:34.5196278Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:34.5196719Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:34.5196978Z 
+2025-10-06T13:59:34.5197055Z Node.js v18.20.8
+2025-10-06T13:59:34.6802758Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:34.6803742Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:34.6804083Z                                                ^
+2025-10-06T13:59:34.6804267Z 
+2025-10-06T13:59:34.6804413Z ReferenceError: File is not defined
+2025-10-06T13:59:34.6805105Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:34.6805832Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:34.6806257Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:34.6806662Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:34.6807046Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:34.6807429Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:34.6807781Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:34.6808759Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:34.6809463Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:34.6809883Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:34.6810475Z 
+2025-10-06T13:59:34.6810555Z Node.js v18.20.8
+2025-10-06T13:59:34.8411699Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:34.8413115Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:34.8415538Z                                                ^
+2025-10-06T13:59:34.8416130Z 
+2025-10-06T13:59:34.8416430Z ReferenceError: File is not defined
+2025-10-06T13:59:34.8417523Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:34.8418682Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:34.8419156Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:34.8419590Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:34.8419985Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:34.8420399Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:34.8420755Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:34.8421446Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:34.8422470Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:34.8422902Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:34.8423159Z 
+2025-10-06T13:59:34.8423234Z Node.js v18.20.8
+2025-10-06T13:59:35.0002223Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:35.0003411Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:35.0003927Z                                                ^
+2025-10-06T13:59:35.0004223Z 
+2025-10-06T13:59:35.0004436Z ReferenceError: File is not defined
+2025-10-06T13:59:35.0005576Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:35.0006632Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:35.0007349Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:35.0008016Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:35.0008880Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:35.0009491Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:35.0010030Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:35.0010772Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:35.0011481Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:35.0011925Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:35.0012176Z 
+2025-10-06T13:59:35.0012255Z Node.js v18.20.8
+2025-10-06T13:59:35.1637240Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:35.1638827Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:35.1639351Z                                                ^
+2025-10-06T13:59:35.1639599Z 
+2025-10-06T13:59:35.1639824Z ReferenceError: File is not defined
+2025-10-06T13:59:35.1640967Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:35.1642050Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:35.1642681Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:35.1643823Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:35.1644388Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:35.1644983Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:35.1645584Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:35.1646361Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:35.1647037Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:35.1647458Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:35.1647714Z 
+2025-10-06T13:59:35.1647792Z Node.js v18.20.8
+2025-10-06T13:59:35.3291841Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:35.3292772Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:35.3293163Z                                                ^
+2025-10-06T13:59:35.3293339Z 
+2025-10-06T13:59:35.3293488Z ReferenceError: File is not defined
+2025-10-06T13:59:35.3294168Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:35.3295216Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:35.3295643Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:35.3296068Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:35.3296473Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:35.3296864Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:35.3297224Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:35.3297914Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:35.3298864Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:35.3299279Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:35.3299535Z 
+2025-10-06T13:59:35.3299611Z Node.js v18.20.8
+2025-10-06T13:59:35.4870939Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:35.4872182Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:35.4872688Z                                                ^
+2025-10-06T13:59:35.4872956Z 
+2025-10-06T13:59:35.4873171Z ReferenceError: File is not defined
+2025-10-06T13:59:35.4874282Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:35.4875387Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:35.4876102Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:35.4876797Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:35.4877374Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:35.4877965Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:35.4878822Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:35.4879663Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:35.4880385Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:35.4880860Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:35.4881116Z 
+2025-10-06T13:59:35.4881192Z Node.js v18.20.8
+2025-10-06T13:59:35.6492331Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:35.6494099Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:35.6496965Z                                                ^
+2025-10-06T13:59:35.6497311Z 
+2025-10-06T13:59:35.6497552Z ReferenceError: File is not defined
+2025-10-06T13:59:35.6498944Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:35.6500127Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:35.6500634Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:35.6501108Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:35.6501531Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:35.6501966Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:35.6502362Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:35.6503150Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:35.6503907Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:35.6504382Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:35.6504943Z 
+2025-10-06T13:59:35.6505029Z Node.js v18.20.8
+2025-10-06T13:59:35.8092759Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:35.8093930Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:35.8094423Z                                                ^
+2025-10-06T13:59:35.8094676Z 
+2025-10-06T13:59:35.8094893Z ReferenceError: File is not defined
+2025-10-06T13:59:35.8095976Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:35.8097094Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:35.8097732Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:35.8098688Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:35.8099275Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:35.8099866Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:35.8100436Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:35.8101238Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:35.8101942Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:35.8102393Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:35.8102663Z 
+2025-10-06T13:59:35.8102740Z Node.js v18.20.8
+2025-10-06T13:59:35.9693624Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:35.9694860Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:35.9695514Z                                                ^
+2025-10-06T13:59:35.9695841Z 
+2025-10-06T13:59:35.9696074Z ReferenceError: File is not defined
+2025-10-06T13:59:35.9697102Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:35.9698510Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:35.9699219Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:35.9699845Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:35.9700408Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:35.9701418Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:35.9701967Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:35.9703025Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:35.9704223Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:35.9704719Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:35.9704974Z 
+2025-10-06T13:59:35.9705052Z Node.js v18.20.8
+2025-10-06T13:59:36.1286814Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:36.1288526Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:36.1289001Z                                                ^
+2025-10-06T13:59:36.1289235Z 
+2025-10-06T13:59:36.1289421Z ReferenceError: File is not defined
+2025-10-06T13:59:36.1290442Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:36.1291447Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:36.1292057Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:36.1293211Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:36.1294136Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:36.1295041Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:36.1295901Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:36.1297556Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:36.1299310Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:36.1300317Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:36.1300908Z 
+2025-10-06T13:59:36.1301091Z Node.js v18.20.8
+2025-10-06T13:59:36.2923817Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:36.2925178Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:36.2925876Z                                                ^
+2025-10-06T13:59:36.2926225Z 
+2025-10-06T13:59:36.2926473Z ReferenceError: File is not defined
+2025-10-06T13:59:36.2927799Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:36.2929323Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:36.2929991Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:36.2930665Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:36.2931149Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:36.2931578Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:36.2931980Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:36.2932763Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:36.2933523Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:36.2933992Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:36.2934268Z 
+2025-10-06T13:59:36.2934352Z Node.js v18.20.8
+2025-10-06T13:59:36.4559818Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:36.4560943Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:36.4561463Z                                                ^
+2025-10-06T13:59:36.4562356Z 
+2025-10-06T13:59:36.4562578Z ReferenceError: File is not defined
+2025-10-06T13:59:36.4563590Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:36.4564723Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:36.4565414Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:36.4566051Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:36.4566635Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:36.4567128Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:36.4567497Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:36.4568478Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:36.4569197Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:36.4569626Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:36.4569874Z 
+2025-10-06T13:59:36.4569956Z Node.js v18.20.8
+2025-10-06T13:59:36.6211029Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:36.6212610Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:36.6213146Z                                                ^
+2025-10-06T13:59:36.6213394Z 
+2025-10-06T13:59:36.6213609Z ReferenceError: File is not defined
+2025-10-06T13:59:36.6214700Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:36.6215754Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:36.6216440Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:36.6217102Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:36.6217670Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:36.6218559Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:36.6219082Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:36.6219789Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:36.6220492Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:36.6220936Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:36.6221187Z 
+2025-10-06T13:59:36.6221272Z Node.js v18.20.8
+2025-10-06T13:59:36.7839886Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:36.7840949Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:36.7841369Z                                                ^
+2025-10-06T13:59:36.7841587Z 
+2025-10-06T13:59:36.7841754Z ReferenceError: File is not defined
+2025-10-06T13:59:36.7842615Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:36.7843478Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:36.7844008Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:36.7844519Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:36.7844978Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:36.7845446Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:36.7845899Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:36.7847721Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:36.7849154Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:36.7849901Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:36.7850336Z 
+2025-10-06T13:59:36.7850459Z Node.js v18.20.8
+2025-10-06T13:59:36.9476317Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:36.9477773Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:36.9478614Z                                                ^
+2025-10-06T13:59:36.9478904Z 
+2025-10-06T13:59:36.9479141Z ReferenceError: File is not defined
+2025-10-06T13:59:36.9480012Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:36.9480747Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:36.9481180Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:36.9481604Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:36.9482022Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:36.9482742Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:36.9483260Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:36.9484463Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:36.9485627Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:36.9486351Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:36.9486775Z 
+2025-10-06T13:59:36.9486901Z Node.js v18.20.8
+2025-10-06T13:59:37.1084715Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:37.1085634Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:37.1085986Z                                                ^
+2025-10-06T13:59:37.1086164Z 
+2025-10-06T13:59:37.1086307Z ReferenceError: File is not defined
+2025-10-06T13:59:37.1087034Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:37.1087726Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:37.1088406Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:37.1088840Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:37.1089217Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:37.1089594Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:37.1089969Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:37.1090653Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:37.1091316Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:37.1091744Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:37.1091989Z 
+2025-10-06T13:59:37.1092070Z Node.js v18.20.8
+2025-10-06T13:59:37.2680921Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:37.2682167Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:37.2682722Z                                                ^
+2025-10-06T13:59:37.2683003Z 
+2025-10-06T13:59:37.2683227Z ReferenceError: File is not defined
+2025-10-06T13:59:37.2684084Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:37.2685243Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:37.2685979Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:37.2686631Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:37.2687038Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:37.2687435Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:37.2687805Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:37.2688827Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:37.2689504Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:37.2689929Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:37.2690190Z 
+2025-10-06T13:59:37.2690272Z Node.js v18.20.8
+2025-10-06T13:59:37.4316344Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:37.4317404Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:37.4318581Z                                                ^
+2025-10-06T13:59:37.4318773Z 
+2025-10-06T13:59:37.4318913Z ReferenceError: File is not defined
+2025-10-06T13:59:37.4319729Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:37.4320550Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:37.4321124Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:37.4321538Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:37.4322019Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:37.4322464Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:37.4322883Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:37.4323682Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:37.4324490Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:37.4325008Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:37.4325261Z 
+2025-10-06T13:59:37.4325343Z Node.js v18.20.8
+2025-10-06T13:59:37.5946940Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:37.5947914Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:37.5948683Z                                                ^
+2025-10-06T13:59:37.5948939Z 
+2025-10-06T13:59:37.5949109Z ReferenceError: File is not defined
+2025-10-06T13:59:37.5949990Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:37.5950861Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:37.5951413Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:37.5951973Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:37.5952457Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:37.5953017Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:37.5953696Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:37.5955547Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:37.5956853Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:37.5958016Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:37.5958643Z 
+2025-10-06T13:59:37.5958779Z Node.js v18.20.8
+2025-10-06T13:59:37.7545385Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:37.7546383Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:37.7546809Z                                                ^
+2025-10-06T13:59:37.7547021Z 
+2025-10-06T13:59:37.7547197Z ReferenceError: File is not defined
+2025-10-06T13:59:37.7548397Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:37.7549336Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:37.7549883Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:37.7550455Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:37.7551228Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:37.7552049Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:37.7552821Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:37.7554697Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:37.7555925Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:37.7556639Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:37.7557064Z 
+2025-10-06T13:59:37.7557188Z Node.js v18.20.8
+2025-10-06T13:59:37.9245033Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:37.9246390Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:37.9246992Z                                                ^
+2025-10-06T13:59:37.9247271Z 
+2025-10-06T13:59:37.9247502Z ReferenceError: File is not defined
+2025-10-06T13:59:37.9248856Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:37.9249710Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:37.9250157Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:37.9250580Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:37.9250973Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:37.9251371Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:37.9251738Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:37.9252432Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:37.9253108Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:37.9253534Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:37.9253784Z 
+2025-10-06T13:59:37.9253869Z Node.js v18.20.8
+2025-10-06T13:59:38.0836324Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:38.0837584Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:38.0838298Z                                                ^
+2025-10-06T13:59:38.0838611Z 
+2025-10-06T13:59:38.0838816Z ReferenceError: File is not defined
+2025-10-06T13:59:38.0839839Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:38.0840998Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:38.0842045Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:38.0842715Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:38.0843129Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:38.0843524Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:38.0843905Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:38.0844606Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:38.0845285Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:38.0845713Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:38.0845966Z 
+2025-10-06T13:59:38.0846043Z Node.js v18.20.8
+2025-10-06T13:59:38.2490257Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:38.2491491Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:38.2492051Z                                                ^
+2025-10-06T13:59:38.2492332Z 
+2025-10-06T13:59:38.2492570Z ReferenceError: File is not defined
+2025-10-06T13:59:38.2493370Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:38.2494447Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:38.2494886Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:38.2495309Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:38.2495695Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:38.2496071Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:38.2496428Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:38.2497128Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:38.2497789Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:38.2498490Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:38.2498765Z 
+2025-10-06T13:59:38.2498850Z Node.js v18.20.8
+2025-10-06T13:59:38.4115024Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:38.4116304Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:38.4116879Z                                                ^
+2025-10-06T13:59:38.4117166Z 
+2025-10-06T13:59:38.4117412Z ReferenceError: File is not defined
+2025-10-06T13:59:38.4118680Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:38.4119469Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:38.4119937Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:38.4120363Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:38.4120760Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:38.4121151Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:38.4121510Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:38.4122200Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:38.4122871Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:38.4123531Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:38.4124422Z 
+2025-10-06T13:59:38.4124554Z Node.js v18.20.8
+2025-10-06T13:59:38.5711257Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:38.5712296Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:38.5712722Z                                                ^
+2025-10-06T13:59:38.5712966Z 
+2025-10-06T13:59:38.5713152Z ReferenceError: File is not defined
+2025-10-06T13:59:38.5714004Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:38.5714871Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:38.5715417Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:38.5716176Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:38.5716980Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:38.5717820Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:38.5718792Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:38.5720260Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:38.5721880Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:38.5722593Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:38.5723021Z 
+2025-10-06T13:59:38.5723143Z Node.js v18.20.8
+2025-10-06T13:59:38.7300617Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:38.7301509Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:38.7301862Z                                                ^
+2025-10-06T13:59:38.7302033Z 
+2025-10-06T13:59:38.7302180Z ReferenceError: File is not defined
+2025-10-06T13:59:38.7302916Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:38.7303611Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:38.7304047Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:38.7304479Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:38.7304856Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:38.7305243Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:38.7305614Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:38.7306320Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:38.7307030Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:38.7307745Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:38.7308398Z 
+2025-10-06T13:59:38.7308530Z Node.js v18.20.8
+2025-10-06T13:59:38.8927433Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:38.8928557Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:38.8928963Z                                                ^
+2025-10-06T13:59:38.8929161Z 
+2025-10-06T13:59:38.8929310Z ReferenceError: File is not defined
+2025-10-06T13:59:38.8930086Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:38.8930873Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:38.8931360Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:38.8931826Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:38.8932582Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:38.8933017Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:38.8933613Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:38.8934932Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:38.8936236Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:38.8937023Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:38.8937477Z 
+2025-10-06T13:59:38.8937600Z Node.js v18.20.8
+2025-10-06T13:59:39.0562025Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:39.0563089Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:39.0563517Z                                                ^
+2025-10-06T13:59:39.0563773Z 
+2025-10-06T13:59:39.0563956Z ReferenceError: File is not defined
+2025-10-06T13:59:39.0564809Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:39.0565671Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:39.0566573Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:39.0567098Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:39.0567580Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:39.0568614Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:39.0569396Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:39.0570857Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:39.0572132Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:39.0572892Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:39.0573357Z 
+2025-10-06T13:59:39.0573482Z Node.js v18.20.8
+2025-10-06T13:59:39.2211935Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:39.2213209Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:39.2213761Z                                                ^
+2025-10-06T13:59:39.2214055Z 
+2025-10-06T13:59:39.2214288Z ReferenceError: File is not defined
+2025-10-06T13:59:39.2215492Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:39.2216589Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:39.2217281Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:39.2218022Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:39.2218813Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:39.2219410Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:39.2220036Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:39.2221135Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:39.2222208Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:39.2222720Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:39.2223002Z 
+2025-10-06T13:59:39.2223082Z Node.js v18.20.8
+2025-10-06T13:59:39.3877695Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:39.3879202Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:39.3879544Z                                                ^
+2025-10-06T13:59:39.3879727Z 
+2025-10-06T13:59:39.3879866Z ReferenceError: File is not defined
+2025-10-06T13:59:39.3880554Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:39.3881276Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:39.3881706Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:39.3882119Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:39.3882493Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:39.3882869Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:39.3883227Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:39.3883912Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:39.3884726Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:39.3885450Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:39.3886081Z 
+2025-10-06T13:59:39.3886213Z Node.js v18.20.8
+2025-10-06T13:59:39.5529939Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:39.5531120Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:39.5531636Z                                                ^
+2025-10-06T13:59:39.5531924Z 
+2025-10-06T13:59:39.5532125Z ReferenceError: File is not defined
+2025-10-06T13:59:39.5533279Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:39.5534375Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:39.5535104Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:39.5535754Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:39.5536324Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:39.5536950Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:39.5537464Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:39.5538429Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:39.5539145Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:39.5539567Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:39.5539822Z 
+2025-10-06T13:59:39.5539898Z Node.js v18.20.8
+2025-10-06T13:59:39.7121840Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:39.7122822Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:39.7123190Z                                                ^
+2025-10-06T13:59:39.7123384Z 
+2025-10-06T13:59:39.7123547Z ReferenceError: File is not defined
+2025-10-06T13:59:39.7124363Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:39.7125159Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:39.7125646Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:39.7126107Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:39.7126536Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:39.7126970Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:39.7127822Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:39.7129286Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:39.7130609Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:39.7131385Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:39.7131858Z 
+2025-10-06T13:59:39.7131986Z Node.js v18.20.8
+2025-10-06T13:59:39.8766471Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:39.8767711Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:39.8768547Z                                                ^
+2025-10-06T13:59:39.8768750Z 
+2025-10-06T13:59:39.8768906Z ReferenceError: File is not defined
+2025-10-06T13:59:39.8769642Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:39.8770455Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:39.8770919Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:39.8771357Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:39.8772084Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:39.8772494Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:39.8772870Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:39.8773608Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:39.8774563Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:39.8775315Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:39.8775785Z 
+2025-10-06T13:59:39.8775911Z Node.js v18.20.8
+2025-10-06T13:59:40.0411924Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:40.0412887Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:40.0413301Z                                                ^
+2025-10-06T13:59:40.0413497Z 
+2025-10-06T13:59:40.0413653Z ReferenceError: File is not defined
+2025-10-06T13:59:40.0414431Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:40.0415226Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:40.0415707Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:40.0416163Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:40.0416584Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:40.0417031Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:40.0417431Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:40.0418523Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:40.0419761Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:40.0420511Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:40.0420978Z 
+2025-10-06T13:59:40.0421100Z Node.js v18.20.8
+2025-10-06T13:59:40.2048682Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:40.2049811Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:40.2050329Z                                                ^
+2025-10-06T13:59:40.2050988Z 
+2025-10-06T13:59:40.2051223Z ReferenceError: File is not defined
+2025-10-06T13:59:40.2052287Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:40.2053344Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:40.2054054Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:40.2054688Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:40.2055271Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:40.2055910Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:40.2056311Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:40.2057011Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:40.2057684Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:40.2058380Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:40.2058639Z 
+2025-10-06T13:59:40.2058719Z Node.js v18.20.8
+2025-10-06T13:59:40.3700283Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:40.3701769Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:40.3702209Z                                                ^
+2025-10-06T13:59:40.3702421Z 
+2025-10-06T13:59:40.3702594Z ReferenceError: File is not defined
+2025-10-06T13:59:40.3703451Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:40.3704351Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:40.3704886Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:40.3705359Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:40.3705782Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:40.3706436Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:40.3707106Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:40.3708668Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:40.3709946Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:40.3710717Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:40.3711201Z 
+2025-10-06T13:59:40.3711333Z Node.js v18.20.8
+2025-10-06T13:59:40.5311469Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:40.5312256Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:40.5312645Z                                                ^
+2025-10-06T13:59:40.5312827Z 
+2025-10-06T13:59:40.5312982Z ReferenceError: File is not defined
+2025-10-06T13:59:40.5313737Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:40.5314501Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:40.5314965Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:40.5315403Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:40.5315805Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:40.5316218Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:40.5316598Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:40.5317333Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:40.5318637Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:40.5319058Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:40.5319308Z 
+2025-10-06T13:59:40.5319383Z Node.js v18.20.8
+2025-10-06T13:59:40.6901286Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:40.6902474Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:40.6902984Z                                                ^
+2025-10-06T13:59:40.6903262Z 
+2025-10-06T13:59:40.6903471Z ReferenceError: File is not defined
+2025-10-06T13:59:40.6904603Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:40.6905639Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:40.6906380Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:40.6907031Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:40.6907606Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:40.6908473Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:40.6909335Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:40.6910059Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:40.6910756Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:40.6911184Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:40.6911440Z 
+2025-10-06T13:59:40.6911524Z Node.js v18.20.8
+2025-10-06T13:59:40.8484402Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:40.8485253Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:40.8485610Z                                                ^
+2025-10-06T13:59:40.8485790Z 
+2025-10-06T13:59:40.8485934Z ReferenceError: File is not defined
+2025-10-06T13:59:40.8486614Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:40.8487327Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:40.8487764Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:40.8488494Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:40.8488890Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:40.8489276Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:40.8489629Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:40.8490328Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:40.8491155Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:40.8491806Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:40.8492071Z 
+2025-10-06T13:59:40.8492148Z Node.js v18.20.8
+2025-10-06T13:59:41.0115993Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:41.0117242Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:41.0117817Z                                                ^
+2025-10-06T13:59:41.0118287Z 
+2025-10-06T13:59:41.0118508Z ReferenceError: File is not defined
+2025-10-06T13:59:41.0119592Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:41.0121113Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:41.0121759Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:41.0122433Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:41.0123044Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:41.0123626Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:41.0124183Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:41.0125074Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:41.0125767Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:41.0126185Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:41.0126450Z 
+2025-10-06T13:59:41.0126525Z Node.js v18.20.8
+2025-10-06T13:59:41.1762313Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:41.1763176Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:41.1763550Z                                                ^
+2025-10-06T13:59:41.1764113Z 
+2025-10-06T13:59:41.1764300Z ReferenceError: File is not defined
+2025-10-06T13:59:41.1765083Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:41.1765888Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:41.1766375Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:41.1766835Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:41.1767265Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:41.1767712Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:41.1768370Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:41.1769635Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:41.1770888Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:41.1771632Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:41.1772078Z 
+2025-10-06T13:59:41.1772206Z Node.js v18.20.8
+2025-10-06T13:59:41.3409391Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:41.3410552Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:41.3411117Z                                                ^
+2025-10-06T13:59:41.3411365Z 
+2025-10-06T13:59:41.3411563Z ReferenceError: File is not defined
+2025-10-06T13:59:41.3412630Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:41.3413776Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:41.3414427Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:41.3415062Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:41.3415591Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:41.3416009Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:41.3416393Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:41.3417097Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:41.3417770Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:41.3418853Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:41.3419118Z 
+2025-10-06T13:59:41.3419193Z Node.js v18.20.8
+2025-10-06T13:59:41.5009890Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:41.5010869Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:41.5011320Z                                                ^
+2025-10-06T13:59:41.5011549Z 
+2025-10-06T13:59:41.5011719Z ReferenceError: File is not defined
+2025-10-06T13:59:41.5012599Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:41.5013473Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:41.5014021Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:41.5014546Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:41.5015027Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:41.5015558Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:41.5016177Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:41.5017386Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:41.5019107Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:41.5019843Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:41.5020269Z 
+2025-10-06T13:59:41.5020393Z Node.js v18.20.8
+2025-10-06T13:59:41.6636640Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:41.6638452Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:41.6638971Z                                                ^
+2025-10-06T13:59:41.6639207Z 
+2025-10-06T13:59:41.6639377Z ReferenceError: File is not defined
+2025-10-06T13:59:41.6640218Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:41.6641080Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:41.6641621Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:41.6642128Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:41.6642799Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:41.6643603Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:41.6644383Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:41.6645857Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:41.6647285Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:41.6648305Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:41.6648820Z 
+2025-10-06T13:59:41.6648965Z Node.js v18.20.8
+2025-10-06T13:59:41.8269074Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:41.8269917Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:41.8270265Z                                                ^
+2025-10-06T13:59:41.8270435Z 
+2025-10-06T13:59:41.8270572Z ReferenceError: File is not defined
+2025-10-06T13:59:41.8271269Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:41.8271963Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:41.8272393Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:41.8273218Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:41.8273595Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:41.8273970Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:41.8274342Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:41.8275019Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:41.8275677Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:41.8276096Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:41.8276347Z 
+2025-10-06T13:59:41.8276422Z Node.js v18.20.8
+2025-10-06T13:59:41.9936296Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:41.9937406Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:41.9937837Z                                                ^
+2025-10-06T13:59:41.9938352Z 
+2025-10-06T13:59:41.9938597Z ReferenceError: File is not defined
+2025-10-06T13:59:41.9939477Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:41.9940731Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:41.9941318Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:41.9941775Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:41.9942199Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:41.9942716Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:41.9943341Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:41.9944641Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:41.9945924Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:41.9946684Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:41.9947156Z 
+2025-10-06T13:59:41.9947281Z Node.js v18.20.8
+2025-10-06T13:59:42.1582330Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:42.1583463Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:42.1583813Z                                                ^
+2025-10-06T13:59:42.1583996Z 
+2025-10-06T13:59:42.1584134Z ReferenceError: File is not defined
+2025-10-06T13:59:42.1584825Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:42.1585562Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:42.1586001Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:42.1586412Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:42.1586781Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:42.1587173Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:42.1587528Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:42.1588591Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:42.1589460Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:42.1590197Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:42.1590626Z 
+2025-10-06T13:59:42.1590753Z Node.js v18.20.8
+2025-10-06T13:59:42.3224986Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:42.3226141Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:42.3226650Z                                                ^
+2025-10-06T13:59:42.3226924Z 
+2025-10-06T13:59:42.3227161Z ReferenceError: File is not defined
+2025-10-06T13:59:42.3228490Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:42.3229622Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:42.3230327Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:42.3230966Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:42.3231580Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:42.3232058Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:42.3232504Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:42.3233209Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:42.3233887Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:42.3234625Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:42.3234884Z 
+2025-10-06T13:59:42.3234959Z Node.js v18.20.8
+2025-10-06T13:59:42.4852605Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:42.4853764Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:42.4854282Z                                                ^
+2025-10-06T13:59:42.4854560Z 
+2025-10-06T13:59:42.4854761Z ReferenceError: File is not defined
+2025-10-06T13:59:42.4855894Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:42.4856951Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:42.4857648Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:42.4858556Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:42.4859157Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:42.4859763Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:42.4860313Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:42.4861020Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:42.4861720Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:42.4862149Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:42.4862416Z 
+2025-10-06T13:59:42.4862495Z Node.js v18.20.8
+2025-10-06T13:59:42.6496748Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:42.6497941Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:42.6498807Z                                                ^
+2025-10-06T13:59:42.6499053Z 
+2025-10-06T13:59:42.6499254Z ReferenceError: File is not defined
+2025-10-06T13:59:42.6500314Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:42.6501443Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:42.6502077Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:42.6502713Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:42.6503259Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:42.6504020Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:42.6504394Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:42.6505095Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:42.6505796Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:42.6506228Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:42.6506477Z 
+2025-10-06T13:59:42.6506567Z Node.js v18.20.8
+2025-10-06T13:59:42.8161192Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:42.8162386Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:42.8162894Z                                                ^
+2025-10-06T13:59:42.8163188Z 
+2025-10-06T13:59:42.8163413Z ReferenceError: File is not defined
+2025-10-06T13:59:42.8164543Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:42.8165589Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:42.8166791Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:42.8167465Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:42.8168266Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:42.8168878Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:42.8169396Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:42.8170113Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:42.8170790Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:42.8171228Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:42.8171475Z 
+2025-10-06T13:59:42.8171561Z Node.js v18.20.8
+2025-10-06T13:59:42.9772040Z /opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531
+2025-10-06T13:59:42.9773068Z webidl.is.File = webidl.util.MakeTypeAssertion(File)
+2025-10-06T13:59:42.9773517Z                                                ^
+2025-10-06T13:59:42.9773710Z 
+2025-10-06T13:59:42.9773858Z ReferenceError: File is not defined
+2025-10-06T13:59:42.9774627Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/webidl/index.js:531:48)
+2025-10-06T13:59:42.9775416Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:42.9775898Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:42.9776399Z     at Module.load (node:internal/modules/cjs/loader:1203:32)
+2025-10-06T13:59:42.9776834Z     at Module._load (node:internal/modules/cjs/loader:1019:12)
+2025-10-06T13:59:42.9777391Z     at Module.require (node:internal/modules/cjs/loader:1231:19)
+2025-10-06T13:59:42.9778272Z     at require (node:internal/modules/helpers:177:18)
+2025-10-06T13:59:42.9779643Z     at Object.<anonymous> (/opt/hostedtoolcache/node/18.20.8/x64/lib/node_modules/markdown-link-check/node_modules/undici/lib/web/fetch/util.js:12:20)
+2025-10-06T13:59:42.9780917Z     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+2025-10-06T13:59:42.9781705Z     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+2025-10-06T13:59:42.9782155Z 
+2025-10-06T13:59:42.9782288Z Node.js v18.20.8
+2025-10-06T13:59:42.9834173Z ##[error]Process completed with exit code 123.

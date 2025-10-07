@@ -1,0 +1,24 @@
+﻿2025-10-06T13:59:17.1939935Z ##[group]Run echo "Validating decision trees..."
+2025-10-06T13:59:17.1940791Z [36;1mecho "Validating decision trees..."[0m
+2025-10-06T13:59:17.1941720Z [36;1mfind resources/decision-trees -name "*.md" -exec bash -c '[0m
+2025-10-06T13:59:17.1942365Z [36;1m  file="$1"[0m
+2025-10-06T13:59:17.1942794Z [36;1m  echo "Checking: $file"[0m
+2025-10-06T13:59:17.1943273Z [36;1m  [0m
+2025-10-06T13:59:17.1943644Z [36;1m  # Check for Mermaid syntax[0m
+2025-10-06T13:59:17.1944171Z [36;1m  if grep -q "```mermaid" "$file"; then[0m
+2025-10-06T13:59:17.1944739Z [36;1m    echo "✅ $file contains Mermaid diagram"[0m
+2025-10-06T13:59:17.1945259Z [36;1m  else[0m
+2025-10-06T13:59:17.1945748Z [36;1m    echo "⚠️  Warning: $file may be missing Mermaid diagram"[0m
+2025-10-06T13:59:17.1946319Z [36;1m  fi[0m
+2025-10-06T13:59:17.1946674Z [36;1m' _ {} \;[0m
+2025-10-06T13:59:17.1977385Z shell: /usr/bin/bash -e {0}
+2025-10-06T13:59:17.1977877Z ##[endgroup]
+2025-10-06T13:59:17.2026504Z Validating decision trees...
+2025-10-06T13:59:17.2050450Z _: -c: line 6: unexpected EOF while looking for matching ``'
+2025-10-06T13:59:17.2051900Z Checking: resources/decision-trees/validation-gates.md
+2025-10-06T13:59:17.2065101Z _: -c: line 6: unexpected EOF while looking for matching ``'
+2025-10-06T13:59:17.2066192Z Checking: resources/decision-trees/escalation-framework.md
+2025-10-06T13:59:17.2079480Z _: -c: line 6: unexpected EOF while looking for matching ``'
+2025-10-06T13:59:17.2080429Z Checking: resources/decision-trees/project-initiation.md
+2025-10-06T13:59:17.2093193Z _: -c: line 6: unexpected EOF while looking for matching ``'
+2025-10-06T13:59:17.2094297Z Checking: resources/decision-trees/integration-strategy.md

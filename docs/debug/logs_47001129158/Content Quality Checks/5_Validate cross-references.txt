@@ -1,0 +1,57 @@
+﻿2025-10-06T13:59:18.5740129Z ##[group]Run echo "Validating internal cross-references..."
+2025-10-06T13:59:18.5741063Z [36;1mecho "Validating internal cross-references..."[0m
+2025-10-06T13:59:18.5741615Z [36;1m[0m
+2025-10-06T13:59:18.5741992Z [36;1m# Find all internal markdown links[0m
+2025-10-06T13:59:18.5742917Z [36;1mfind . -name "*.md" -not -path "./node_modules/*" -not -path "./.git/*" -exec grep -H "\]\([^)]*\.md[^)]*\)" {} \; | while IFS: read -r file link; do[0m
+2025-10-06T13:59:18.5743847Z [36;1m  # Extract the file path from the link[0m
+2025-10-06T13:59:18.5744507Z [36;1m  link_path=$(echo "$link" | sed -n 's/.*](\([^)]*\.md[^)]*\)).*/\1/p')[0m
+2025-10-06T13:59:18.5745127Z [36;1m  [0m
+2025-10-06T13:59:18.5745486Z [36;1m  # Remove any anchors[0m
+2025-10-06T13:59:18.5746006Z [36;1m  clean_path=$(echo "$link_path" | cut -d'#' -f1)[0m
+2025-10-06T13:59:18.5746536Z [36;1m  [0m
+2025-10-06T13:59:18.5746909Z [36;1m  # Check if it's a relative path[0m
+2025-10-06T13:59:18.5747516Z [36;1m  if [[ "$clean_path" != http* ]] && [[ "$clean_path" != /* ]]; then[0m
+2025-10-06T13:59:18.5748150Z [36;1m    # Resolve relative path[0m
+2025-10-06T13:59:18.5748630Z [36;1m    dir=$(dirname "$file")[0m
+2025-10-06T13:59:18.5749104Z [36;1m    full_path="$dir/$clean_path"[0m
+2025-10-06T13:59:18.5749574Z [36;1m    [0m
+2025-10-06T13:59:18.5749942Z [36;1m    # Normalize path[0m
+2025-10-06T13:59:18.5750704Z [36;1m    normalized_path=$(realpath -m "$full_path" 2>/dev/null || echo "$full_path")[0m
+2025-10-06T13:59:18.5751407Z [36;1m    [0m
+2025-10-06T13:59:18.5751810Z [36;1m    if [ ! -f "$normalized_path" ]; then[0m
+2025-10-06T13:59:18.5752429Z [36;1m      echo "❌ Broken internal link in $file: $link_path"[0m
+2025-10-06T13:59:18.5753051Z [36;1m      echo "   Resolved to: $normalized_path"[0m
+2025-10-06T13:59:18.5753559Z [36;1m    fi[0m
+2025-10-06T13:59:18.5753914Z [36;1m  fi[0m
+2025-10-06T13:59:18.5754256Z [36;1mdone[0m
+2025-10-06T13:59:18.5795804Z shell: /usr/bin/bash -e {0}
+2025-10-06T13:59:18.5796545Z ##[endgroup]
+2025-10-06T13:59:18.5848758Z Validating internal cross-references...
+2025-10-06T13:59:18.5860319Z /home/runner/work/_temp/c94d1df1-43d0-4aa2-9393-58ccc7ba497b.sh: line 4: IFS:: command not found
+2025-10-06T13:59:18.5900316Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6012979Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6027343Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6052579Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6076785Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6090222Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6128363Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6141183Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6203926Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6217689Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6230929Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6243960Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6256707Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6269958Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6283257Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6297334Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6310185Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6324068Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6660009Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6675059Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6700697Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6713532Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6798853Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6812059Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6825187Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6838004Z grep: write error: Broken pipe
+2025-10-06T13:59:18.6853145Z grep: write error: Broken pipe

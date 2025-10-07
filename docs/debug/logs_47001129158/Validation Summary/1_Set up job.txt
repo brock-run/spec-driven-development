@@ -1,0 +1,27 @@
+﻿2025-10-06T13:59:49.4891444Z Current runner version: '2.328.0'
+2025-10-06T13:59:49.4917606Z ##[group]Runner Image Provisioner
+2025-10-06T13:59:49.4918569Z Hosted Compute Agent
+2025-10-06T13:59:49.4919329Z Version: 20250912.392
+2025-10-06T13:59:49.4919915Z Commit: d921fda672a98b64f4f82364647e2f10b2267d0b
+2025-10-06T13:59:49.4920692Z Build Date: 2025-09-12T15:23:14Z
+2025-10-06T13:59:49.4921251Z ##[endgroup]
+2025-10-06T13:59:49.4921801Z ##[group]Operating System
+2025-10-06T13:59:49.4922370Z Ubuntu
+2025-10-06T13:59:49.4922872Z 24.04.3
+2025-10-06T13:59:49.4923294Z LTS
+2025-10-06T13:59:49.4923793Z ##[endgroup]
+2025-10-06T13:59:49.4924309Z ##[group]Runner Image
+2025-10-06T13:59:49.4924858Z Image: ubuntu-24.04
+2025-10-06T13:59:49.4925406Z Version: 20250929.60.1
+2025-10-06T13:59:49.4926390Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250929.60/images/ubuntu/Ubuntu2404-Readme.md
+2025-10-06T13:59:49.4927740Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250929.60
+2025-10-06T13:59:49.4928955Z ##[endgroup]
+2025-10-06T13:59:49.4930169Z ##[group]GITHUB_TOKEN Permissions
+2025-10-06T13:59:49.4932067Z Contents: read
+2025-10-06T13:59:49.4932596Z Metadata: read
+2025-10-06T13:59:49.4933068Z Packages: read
+2025-10-06T13:59:49.4933650Z ##[endgroup]
+2025-10-06T13:59:49.4935775Z Secret source: Actions
+2025-10-06T13:59:49.4936509Z Prepare workflow directory
+2025-10-06T13:59:49.5328826Z Prepare all required actions
+2025-10-06T13:59:49.5422653Z Complete job name: Validation Summary

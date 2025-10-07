@@ -1,0 +1,30 @@
+﻿2025-10-06T13:59:16.0262118Z Current runner version: '2.328.0'
+2025-10-06T13:59:16.0297157Z ##[group]Runner Image Provisioner
+2025-10-06T13:59:16.0298370Z Hosted Compute Agent
+2025-10-06T13:59:16.0299358Z Version: 20250912.392
+2025-10-06T13:59:16.0300422Z Commit: d921fda672a98b64f4f82364647e2f10b2267d0b
+2025-10-06T13:59:16.0301511Z Build Date: 2025-09-12T15:23:14Z
+2025-10-06T13:59:16.0302678Z ##[endgroup]
+2025-10-06T13:59:16.0303567Z ##[group]Operating System
+2025-10-06T13:59:16.0304747Z Ubuntu
+2025-10-06T13:59:16.0305654Z 24.04.3
+2025-10-06T13:59:16.0306434Z LTS
+2025-10-06T13:59:16.0307163Z ##[endgroup]
+2025-10-06T13:59:16.0307901Z ##[group]Runner Image
+2025-10-06T13:59:16.0308963Z Image: ubuntu-24.04
+2025-10-06T13:59:16.0310215Z Version: 20250929.60.1
+2025-10-06T13:59:16.0312008Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250929.60/images/ubuntu/Ubuntu2404-Readme.md
+2025-10-06T13:59:16.0314770Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250929.60
+2025-10-06T13:59:16.0316693Z ##[endgroup]
+2025-10-06T13:59:16.0318482Z ##[group]GITHUB_TOKEN Permissions
+2025-10-06T13:59:16.0321155Z Contents: read
+2025-10-06T13:59:16.0322156Z Metadata: read
+2025-10-06T13:59:16.0323111Z Packages: read
+2025-10-06T13:59:16.0324066Z ##[endgroup]
+2025-10-06T13:59:16.0327346Z Secret source: Actions
+2025-10-06T13:59:16.0328638Z Prepare workflow directory
+2025-10-06T13:59:16.0779272Z Prepare all required actions
+2025-10-06T13:59:16.0834362Z Getting action download info
+2025-10-06T13:59:16.3942239Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+2025-10-06T13:59:16.4603797Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2025-10-06T13:59:16.6296493Z Complete job name: Spell Check
