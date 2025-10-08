@@ -8,7 +8,7 @@
   - Maintain alphabetical order within categories
   - _Requirements: 1.1, 1.2, 1.3, 1.4_
 
-- [ ] 2. Fix Node.js Compatibility for Link Validation
+- [-] 2. Fix Node.js Compatibility for Link Validation
   - Update GitHub Actions workflow to use Node.js 20+ or compatible markdown-link-check version
   - Add package.json with pinned dependency versions
   - Test link validation with current Node.js version

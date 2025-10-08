@@ -8,6 +8,12 @@
     },
     {
       "pattern": "^file://"
+    },
+    {
+      "pattern": "^https://github.com/your-org/"
+    },
+    {
+      "pattern": "^https://github.com/\\[.*\\]/"
     }
   ],
   "replacementPatterns": [

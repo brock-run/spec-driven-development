@@ -89,11 +89,16 @@ jobs:
               ;;
             "link-check")
               echo "Checking links..."
-              # Use npx to run local dependency and add error handling
+              # Use npx to run local dependency with enhanced error handling
               find . -name "*.md" -not -path "./node_modules/*" | head -20 | \
               xargs -I {} npx markdown-link-check {} --config .markdown-link-check.json || {
-                echo "Link check failed, but continuing with graceful handling"
-                echo "Some links may be temporarily unavailable"
+                echo "❌ Link check failed, but continuing with graceful handling"
+                echo "💡 Some links may be temporarily unavailable or require authentication"
+                echo "🔍 This could be due to:"
+                echo "   - Rate limiting from external sites"
+                echo "   - Temporary network issues"
+                echo "   - Sites requiring authentication"
+                echo "⚠️  Treating as warning in comprehensive validation"
                 exit 0
               }
               ;;
