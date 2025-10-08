@@ -22,6 +22,8 @@ Comprehensive specification for mobile application features, covering iOS and An
 **I want** [Android-specific feature]  
 **So that** [Android-specific benefit]
 
+_Requirements: FR-1.1, FR-1.2_
+
 ## Mobile-Specific Requirements
 
 ### User Interface Requirements
@@ -38,6 +40,8 @@ Comprehensive specification for mobile application features, covering iOS and An
 1. **WHEN** device loses connectivity **THEN** app **SHALL** continue core functionality
 2. **IF** user creates content offline **THEN** app **SHALL** sync when connection restored
 3. **WHEN** offline **THEN** app **SHALL** clearly indicate connection status
+
+_Requirements: FR-2.1, FR-2.2_
 
 ## Platform Requirements
 
@@ -58,6 +62,8 @@ Comprehensive specification for mobile application features, covering iOS and An
 - **Platform Differences**: Native UI components where appropriate
 - **Performance**: Native performance for critical user interactions
 
+_Requirements: TR-1.1, TR-1.2_
+
 ## Performance Requirements
 
 ### App Launch and Loading
@@ -75,6 +81,8 @@ Comprehensive specification for mobile application features, covering iOS and An
 - **Caching**: **SHALL** cache frequently accessed content locally
 - **Compression**: **SHALL** use compressed data formats for API communication
 
+_Requirements: NFR-1.1, NFR-1.2_
+
 ## Device Integration
 
 ### Hardware Features
@@ -87,6 +95,8 @@ Comprehensive specification for mobile application features, covering iOS and An
 - **Deep Linking**: [URL scheme and universal links]
 - **Background Processing**: [Background sync and refresh capabilities]
 - **File System**: [Document storage and sharing integration]
+
+_Requirements: TR-2.1, TR-2.2_
 
 ## Security Requirements
 
@@ -101,6 +111,8 @@ Comprehensive specification for mobile application features, covering iOS and An
 - **GDPR/CCPA**: Compliance with applicable privacy regulations
 - **Analytics**: User consent for analytics and tracking
 
+_Requirements: NFR-2.1, NFR-2.2_
+
 ## Accessibility Requirements
 
 ### Platform Accessibility
@@ -112,6 +124,8 @@ Comprehensive specification for mobile application features, covering iOS and An
 - **Color Contrast**: Meet WCAG 2.1 AA standards
 - **Touch Targets**: Minimum 44pt (iOS) / 48dp (Android) touch targets
 - **Voice Control**: Support for voice navigation where applicable
+
+_Requirements: NFR-3.1, NFR-3.2_
 
 ## Testing Requirements
 
@@ -130,6 +144,8 @@ Comprehensive specification for mobile application features, covering iOS and An
 - **Beta Testing**: TestFlight (iOS) and Play Console (Android) beta programs
 - **Accessibility Testing**: Testing with assistive technologies
 
+_Requirements: NFR-4.1, NFR-4.2_
+
 ## App Store Requirements
 
 ### iOS App Store
@@ -144,6 +160,8 @@ Comprehensive specification for mobile application features, covering iOS and An
 - **Target API Level**: Meet current target API requirements
 - **Content Rating**: Appropriate content rating classification
 
+_Requirements: TR-3.1, TR-3.2_
+
 ## Analytics and Monitoring
 
 ### User Analytics
@@ -155,6 +173,8 @@ Comprehensive specification for mobile application features, covering iOS and An
 - **Crash Detection**: Automatic crash reporting and symbolication
 - **Error Tracking**: Non-fatal error tracking and analysis
 - **Performance Monitoring**: Real-time performance issue detection
+
+_Requirements: NFR-5.1, NFR-5.2_
 
 ## Deployment and Distribution
 
@@ -168,6 +188,8 @@ Comprehensive specification for mobile application features, covering iOS and An
 - **Automatic Updates**: Encourage users to enable automatic updates
 - **Forced Updates**: Critical security or compatibility updates
 - **Feature Flags**: Remote configuration for feature rollouts
+
+_Requirements: TR-4.1, TR-4.2_
 
 ## Success Metrics
 
@@ -183,9 +205,13 @@ Comprehensive specification for mobile application features, covering iOS and An
 - Network request success rates
 - Battery usage impact
 
+_Requirements: NFR-6.1, NFR-6.2_
+
 ## Out of Scope
 
 - Web application features
 - Desktop application functionality
 - Advanced AR/VR capabilities
 - Complex offline-first architecture
+
+_Requirements: FR-5.1, FR-5.2_

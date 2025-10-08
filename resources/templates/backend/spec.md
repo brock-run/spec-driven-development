@@ -18,6 +18,8 @@ Brief description of the backend service and its role in the system architecture
 **I want** [access control]  
 **So that** [security benefit]
 
+_Requirements: FR-1.1, FR-1.2_
+
 ## Functional Requirements
 
 ### API Endpoints
@@ -33,6 +35,8 @@ Brief description of the backend service and its role in the system architecture
 ### Integration Requirements
 1. **WHEN** external service is called **THEN** system **SHALL** [integration behavior]
 2. **IF** external service fails **THEN** system **SHALL** [fallback strategy]
+
+_Requirements: FR-2.1, FR-2.2_
 
 ## API Specification
 
@@ -90,6 +94,8 @@ Brief description of the backend service and its role in the system architecture
 }
 ```
 
+_Requirements: FR-1.3, NFR-1.1_
+
 ## Non-Functional Requirements
 
 ### Performance
@@ -107,6 +113,8 @@ Brief description of the backend service and its role in the system architecture
 - **Uptime**: Service **SHALL** maintain [X]% uptime
 - **Error Rate**: Error rate **SHALL** not exceed [X]%
 - **Recovery**: System **SHALL** recover from failures within [X] minutes
+
+_Requirements: NFR-1.2, NFR-1.3_
 
 ## Database Requirements
 
@@ -136,6 +144,8 @@ CREATE TABLE [table_name] (
 - **Cache**: [Redis/Memcached requirements]
 - **Message Queue**: [if applicable, technology choice]
 
+_Requirements: TR-1.1, TR-1.2_
+
 ## Error Handling
 
 ### Business Logic Errors
@@ -145,6 +155,8 @@ CREATE TABLE [table_name] (
 ### System Errors
 1. **WHEN** database connection fails **THEN** system **SHALL** [error response]
 2. **IF** external service timeout **THEN** system **SHALL** [timeout handling]
+
+_Requirements: FR-2.3, NFR-1.4_
 
 ## Success Metrics
 
@@ -158,8 +170,12 @@ CREATE TABLE [table_name] (
 - [Feature adoption rates]
 - [Data quality metrics]
 
+_Requirements: NFR-2.1, NFR-2.2_
+
 ## Out of Scope
 
 - [Frontend implementation]
 - [Advanced analytics features]
 - [Future API versions]
+
+_Requirements: FR-3.1, FR-3.2_

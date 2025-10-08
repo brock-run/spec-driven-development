@@ -18,6 +18,8 @@ Brief description of the frontend feature and its user experience goals.
 **I want** [interaction capability]  
 **So that** [workflow improvement]
 
+_Requirements: FR-1.1, FR-1.2_
+
 ## User Interface Requirements
 
 ### Visual Design
@@ -36,6 +38,8 @@ Brief description of the frontend feature and its user experience goals.
 3. **Color Contrast**: All text **SHALL** meet WCAG 2.1 AA contrast ratios
 4. **Focus Management**: Focus **SHALL** be clearly visible and logically ordered
 
+_Requirements: NFR-1.1, NFR-1.2_
+
 ## Performance Requirements
 
 ### Loading Performance
@@ -47,6 +51,8 @@ Brief description of the frontend feature and its user experience goals.
 - **Perceived Performance**: Loading states **SHALL** provide user feedback
 - **Smooth Animations**: Animations **SHALL** maintain 60fps
 - **Offline Capability**: [Specify offline functionality requirements]
+
+_Requirements: TR-1.1, TR-1.2_
 
 ## Browser and Device Support
 
@@ -61,6 +67,8 @@ Brief description of the frontend feature and its user experience goals.
 - **Tablet**: [responsive breakpoints]
 - **Mobile**: [minimum supported screen size]
 
+_Requirements: TR-1.3, NFR-1.3_
+
 ## Component Specifications
 
 ### [Component Name]
@@ -68,6 +76,8 @@ Brief description of the frontend feature and its user experience goals.
 - **Props/Inputs**: [required and optional inputs]
 - **States**: [different component states]
 - **Events**: [user interactions and callbacks]
+
+_Requirements: FR-2.1, FR-2.2_
 
 ## Error Handling and Edge Cases
 
@@ -78,6 +88,8 @@ Brief description of the frontend feature and its user experience goals.
 ### Network and Loading States
 1. **WHEN** network request fails **THEN** system **SHALL** [error handling]
 2. **IF** content is loading **THEN** system **SHALL** [loading indicator]
+
+_Requirements: FR-3.1, FR-3.2_
 
 ## Dependencies
 
@@ -93,6 +105,8 @@ Brief description of the frontend feature and its user experience goals.
 - [APIs and data sources]
 - [Third-party integrations]
 
+_Requirements: TR-2.1, TR-2.2_
+
 ## Success Metrics
 
 ### User Experience Metrics
@@ -105,8 +119,12 @@ Brief description of the frontend feature and its user experience goals.
 - [Load time benchmarks]
 - [Error rate thresholds]
 
+_Requirements: NFR-2.1, NFR-2.2_
+
 ## Out of Scope
 
 - [Backend functionality]
 - [Future UI enhancements]
 - [Advanced features for later phases]
+
+_Requirements: FR-4.1, FR-4.2_

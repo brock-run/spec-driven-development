@@ -8,20 +8,20 @@
   - Maintain alphabetical order within categories
   - _Requirements: 1.1, 1.2, 1.3, 1.4_
 
-- [-] 2. Fix Node.js Compatibility for Link Validation
+- [x] 2. Fix Node.js Compatibility for Link Validation
   - Update GitHub Actions workflow to use Node.js 20+ or compatible markdown-link-check version
   - Add package.json with pinned dependency versions
   - Test link validation with current Node.js version
   - _Requirements: 2.1, 2.2, 2.3, 2.4_
 
-- [ ] 3. Add Missing Template Requirement References
+- [x] 3. Add Missing Template Requirement References
   - Add "_Requirements:" sections to backend/spec.md template
   - Add "_Requirements:" sections to frontend/spec.md template  
   - Add "_Requirements:" sections to mobile/spec.md template
   - Ensure consistency with existing templates
   - _Requirements: 4.1, 4.2, 4.4_
 
-- [ ] 4. Fix Decision Tree Validation Syntax
+- [-] 4. Fix Decision Tree Validation Syntax
   - Correct bash script syntax in decision tree validation
   - Fix quote escaping issues in validation scripts
   - Test Mermaid diagram detection logic
